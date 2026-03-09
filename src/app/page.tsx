@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import HeroCanvas from '@/components/HeroCanvas'
 import AnimOnScroll from '@/components/AnimOnScroll'
 import Counter from '@/components/Counter'
 import ContactForm from '@/components/ContactForm'
@@ -41,7 +42,7 @@ export default function Home() {
         display: 'flex', alignItems: 'center',
         background: 'linear-gradient(135deg, #EBF4FD 0%, #D2E8F7 40%, #C0DDEE 70%, #B8D5E8 100%)',
       }}>
-        {/* Subtle background texture */}
+        <HeroCanvas />{/* Subtle background texture */}
         <div style={{
           position: 'absolute', inset: 0,
           backgroundImage: `url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=80')`,
