@@ -179,7 +179,7 @@ export default function Home() {
                     transition: 'background .2s',
                   }} className="kpi-cell">
                     <div style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: '2.1rem', fontWeight: 700, color: 'var(--navy)', lineHeight: 1, marginBottom: 5 }}>
-                      {kpi.value.replace('+','')}<span style={{ color: 'var(--blue)' }}>{kpi.value.includes('+') ? '+' : kpi.value.includes('%') ? '%' : ''}</span>
+                      {kpi.value.replace('%', '').replace('+', '')}<span style={{ color: 'var(--blue)' }}>{kpi.value.includes('+') ? '+' : kpi.value.includes('%') ? '%' : ''}</span>
                     </div>
                     <div style={{ fontSize: '.67rem', textTransform: 'uppercase', letterSpacing: '.1em', color: 'var(--text3)' }}>{kpi.label}</div>
                   </div>

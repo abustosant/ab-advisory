@@ -8,7 +8,7 @@ export const SITE = {
   description: 'Firma boutique de asesoría financiera, contabilidad IFRS y gestión de RRHH para empresas en Chile. Rigor técnico de multinacional, dedicación exclusiva.',
   phone: '(+56) 9 9308 4548',
   phoneRaw: '+56993084548',
-  email: 'contacto@ab-advisory.cl',
+  email: 'info@abadvisory.com',
   linkedin: 'https://linkedin.com/in/andresbustosant',
   whatsapp: 'https://wa.me/56993084548?text=Hola%20Andrés%2C%20quiero%20consultar%20sobre%20asesoría%20para%20mi%20empresa',
   whatsappCTA: 'https://wa.me/56993084548?text=Hola%20Andrés%2C%20me%20interesa%20una%20conversación%20inicial%20sobre%20asesoría',
@@ -19,7 +19,7 @@ export const SITE = {
 }
 
 export const FOUNDER = {
-  name: 'Andrés Alejandro Bustos Antil',
+  name: 'Andrés Bustos A.',
   nameShort: 'Andrés Bustos',
   role: 'Founder & Director Ejecutivo · AB Advisory',
   eyebrow: 'Director Fundador',
