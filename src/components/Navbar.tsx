@@ -36,23 +36,19 @@ export default function Navbar() {
       >
         <div style={{ maxWidth: 1180, width: '100%', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           {/* Logo */}
-          <Link href="/" style={{ display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
-            <span style={{
-              fontFamily: 'var(--font-playfair, var(--serif))',
-              fontSize: '1.2rem', fontWeight: 700, letterSpacing: '-.01em',
-              color: solid ? '#fff' : 'var(--navy)',
-              transition: 'color .3s',
-            }}>
-              AB<span style={{ color: 'var(--blue)' }}>.</span>Advisory
-            </span>
-            <span style={{
-              fontSize: '.48rem', letterSpacing: '.2em', textTransform: 'uppercase',
-              marginTop: 3, color: solid ? 'rgba(255,255,255,.3)' : 'var(--text3)',
-              transition: 'color .3s',
-            }}>
-              {SITE.tagline}
-            </span>
-          </Link>
+<Link href="/" style={{ display: 'flex', flexDirection: 'column', lineHeight: 1, textDecoration: 'none', gap: 4 }}>
+  <span style={{
+    fontFamily: 'var(--font-playfair, var(--serif))',
+    fontSize: '1.3rem', fontWeight: 700, letterSpacing: '-.02em',
+    color: solid ? '#fff' : 'var(--navy)',
+    transition: 'color .3s',
+  }}>AB Advisorys</span>
+  <span style={{
+    fontSize: '.45rem', letterSpacing: '.22em', textTransform: 'uppercase',
+    color: solid ? 'rgba(255,255,255,.4)' : 'var(--blue)',
+    transition: 'color .3s',
+  }}>Strategic Partners</span>
+</Link>
 
           {/* Desktop links */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 2 }} className="nav-links-desktop">
