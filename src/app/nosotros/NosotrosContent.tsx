@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { AnimOnScroll } from '@/components/AnimOnScroll'
+import AnimOnScroll from '@/components/AnimOnScroll'
 
 const historia = [
   {
