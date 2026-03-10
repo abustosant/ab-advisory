@@ -8,14 +8,15 @@ export const SITE = {
   description: 'Firma boutique de asesoría financiera, contabilidad IFRS y gestión de RRHH para empresas en Chile. Rigor técnico de multinacional, dedicación exclusiva.',
   phone: '(+56) 9 9308 4548',
   phoneRaw: '+56993084548',
-  email: 'info@abadvisory.com',
+  email: 'info@abadvisory.cl',
   linkedin: 'https://linkedin.com/in/andresbustosant',
   whatsapp: 'https://wa.me/56993084548?text=Hola%20Andrés%2C%20quiero%20consultar%20sobre%20asesoría%20para%20mi%20empresa',
   whatsappCTA: 'https://wa.me/56993084548?text=Hola%20Andrés%2C%20me%20interesa%20una%20conversación%20inicial%20sobre%20asesoría',
   location: 'Santiago de Chile · Presencial y remoto',
   schedule: 'Lunes a viernes · 9:00 – 18:30',
-  year: '2025',
-  formspree: 'https://formspree.io/f/XXXXXXXX', // Reemplazar con tu endpoint real
+  year: new Date().getFullYear().toString(),
+  web3forms: 'https://api.web3forms.com/submit',
+  web3formsKey: '84d4c39f-42f3-4b4e-8e8f-50648c361e75',
 }
 
 export const FOUNDER = {
@@ -58,7 +59,7 @@ export const SERVICES = [
     category: 'Finanzas Corporativas',
     title: 'Asesoría Financiera',
     description: 'Estructuración de deuda, modelamiento financiero y planificación estratégica para CFOs y directorios que exigen rigor técnico real.',
-    image: 'https://images.unsplash.com/photo-1554995207-c18c203602cb?w=700&q=85',
+    image: '/images/servicios/financiero.webp',
     items: [
       'Reestructuración y refinanciamiento de deuda',
       'Modelos DCF, valorización y M&A support',
@@ -73,7 +74,7 @@ export const SERVICES = [
     category: 'Contabilidad · IFRS',
     title: 'Contabilidad & IFRS',
     description: 'Implementación IFRS/NIC y outsourcing contable para grupos empresariales con exigencias de reporte internacional y auditorías Big Four.',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=85',
+    image: '/images/servicios/contable.webp',
     items: [
       'Implementación y actualización IFRS/NIC',
       'Consolidación de grupos (hasta 34+ entidades)',
@@ -88,7 +89,7 @@ export const SERVICES = [
     category: 'Recursos Humanos',
     title: 'Gestión de RRHH',
     description: 'Outsourcing de remuneraciones, cumplimiento laboral y Compliance RRHH para empresas con dotaciones significativas y alta complejidad.',
-    image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=700&q=85',
+    image: '/images/servicios/rrhh.webp',
     items: [
       'Liquidaciones de sueldo y nómina electrónica',
       'Contratos, finiquitos y calificaciones',
@@ -188,7 +189,7 @@ export const INSIGHTS = [
     author: 'Andrés Bustos',
     readTime: '8 min lectura',
     date: 'Noviembre 2024',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=85',
+    image: '/images/insights/ifrs-2025.webp',
     featured: true,
     href: '/insights/ifrs-2025',
   },
@@ -197,7 +198,7 @@ export const INSIGHTS = [
     title: 'Cuándo y cómo reestructurar la deuda sin perder la clasificación crediticia',
     readTime: '5 min',
     date: 'Octubre 2024',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=85',
+    image: '/images/insights/reestructuracion.webp',
     featured: false,
     href: '/insights/reestructuracion-deuda',
   },
@@ -206,7 +207,7 @@ export const INSIGHTS = [
     title: 'Power BI para directorios: 5 dashboards que transformaron la toma de decisiones ejecutiva',
     readTime: '6 min',
     date: 'Septiembre 2024',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&q=85',
+    image: '/images/insights/power-bi.webp',
     featured: false,
     href: '/insights/power-bi-directorios',
   },

@@ -5,15 +5,10 @@ import AnimOnScroll from '@/components/AnimOnScroll'
 import Counter from '@/components/Counter'
 import ContactForm from '@/components/ContactForm'
 import { SITE, METRICS, KPIS, SERVICES, COMPARISON_TABLE, PROCESS, IMPACT, TESTIMONIALS, INSIGHTS, TICKER_ITEMS, FOUNDER } from '@/lib/data'
-import { readFileSync } from 'fs'
-import path from 'path'
 
-// Load base64 photo (server-side only)
+// Foto CEO desde archivo local WebP
 function getPhotoSrc(): string {
-  try {
-    const b64 = readFileSync(path.join(process.cwd(), 'src/lib/photo_b64.txt'), 'utf-8').trim()
-    return `data:image/jpeg;base64,${b64}`
-  } catch { return '' }
+  return '/images/team/andres-bustos.webp'
 }
 
 const ArrowIcon = () => (

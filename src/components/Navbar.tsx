@@ -42,7 +42,7 @@ export default function Navbar() {
     fontSize: '1.3rem', fontWeight: 700, letterSpacing: '-.02em',
     color: solid ? '#fff' : 'var(--navy)',
     transition: 'color .3s',
-  }}>AB Advisorys</span>
+  }}>AB Advisory</span>
   <span style={{
     fontSize: '.45rem', letterSpacing: '.22em', textTransform: 'uppercase',
     color: solid ? 'rgba(255,255,255,.4)' : 'var(--blue)',
