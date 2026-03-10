@@ -61,13 +61,21 @@ const valores = [
 ]
 
 const credenciales = [
-  { institucion: 'Universidad de Chile', credencial: 'IFRS Especialista', año: '2018' },
-  { institucion: 'UAI · Adolfo Ibáñez', credencial: 'Compliance Officer Cert.', año: '2020' },
-  { institucion: 'Universidad de Chile', credencial: 'Mágister en Finanzas', año: 'En curso' },
-  { institucion: 'UTEM', credencial: 'Ingeniería Comercial', año: '2003' },
-  { institucion: 'UTEM', credencial: 'Contador Auditor', año: '2003' },
-  { institucion: 'SAP', credencial: 'FI/CO HANA Key User', año: '2016' },
-]
+const credenciales = [
+  // Universidad de Chile
+  { institucion: 'Universidad de Chile', credencial: 'Magíster en Información Financiero Contable', año: 'En curso · 2025–2028' },
+  { institucion: 'Universidad de Chile', credencial: 'Postítulo en Información Financiero Contable', año: '2025' },
+  { institucion: 'Universidad de Chile', credencial: 'Diplomado IFRS — Actualización Normativa', año: '2024' },
+  { institucion: 'Universidad de Chile', credencial: 'Diplomado en Finanzas Corporativas', año: '2021' },
+  { institucion: 'Universidad de Chile', credencial: 'Diplomado IFRS — Implementación Corporativa', año: '2020' },
+  // UAI
+  { institucion: 'Universidad Adolfo Ibáñez', credencial: 'Compliance Officer Certificado', año: '2023' },
+  { institucion: 'Universidad Adolfo Ibáñez', credencial: 'Diplomado en Compliance Corporativo', año: '2022' },
+  { institucion: 'Universidad Adolfo Ibáñez', credencial: 'Diplomado en Impuestos Corporativos', año: '2021' },
+  // UTEM
+  { institucion: 'UTEM', credencial: 'Ingeniería Comercial, mención Finanzas', año: '2011' },
+  { institucion: 'UTEM', credencial: 'Contador Auditor · Titulación con Distinción', año: '2008' },
+ ]
 
 export default function NosotrosContent() {
   return (
