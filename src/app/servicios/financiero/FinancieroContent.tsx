@@ -72,100 +72,104 @@ export default function FinancieroContent() {
   return (
     <main style={{ fontFamily: 'var(--font-dm-sans, DM Sans, sans-serif)' }}>
 
-      {/* HERO */}
-      <section style={{
-        background: NAVY,
-        paddingTop: '7rem',
-        paddingBottom: '5rem',
-        position: 'relative',
-        overflow: 'hidden',
-      }}>
-        <div style={{
-          position: 'absolute', inset: 0,
-          backgroundImage: `radial-gradient(circle at 70% 50%, rgba(26,115,167,0.2) 0%, transparent 60%)`,
-          pointerEvents: 'none',
-        }} />
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem', position: 'relative' }}>
+{/* HERO */}
+<section style={{
+  background: 'linear-gradient(135deg, #E8F4FD 0%, #F0F7FF 50%, #EAF3FB 100%)',
+  paddingTop: '7rem',
+  paddingBottom: '5rem',
+  position: 'relative',
+  overflow: 'hidden',
+}}>
+  <div style={{
+    position: 'absolute', inset: 0,
+    backgroundImage: `radial-gradient(circle at 70% 30%, rgba(26,115,167,0.1) 0%, transparent 55%)`,
+    pointerEvents: 'none',
+  }} />
+  <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem', position: 'relative' }}>
 
-          {/* Breadcrumb */}
-          <AnimOnScroll direction="up">
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '2rem', fontSize: '0.8rem' }}>
-              <Link href="/" style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Inicio</Link>
-              <span style={{ color: 'rgba(255,255,255,0.3)' }}>→</span>
-              <Link href="/#servicios" style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Servicios</Link>
-              <span style={{ color: 'rgba(255,255,255,0.3)' }}>→</span>
-              <span style={{ color: COLOR }}>Asesoría Financiera</span>
-            </div>
-          </AnimOnScroll>
+    {/* Breadcrumb */}
+    <AnimOnScroll direction="up">
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '2rem', fontSize: '0.8rem' }}>
+        <Link href="/" style={{ color: '#4A5568', textDecoration: 'none' }}>Inicio</Link>
+        <span style={{ color: '#9CA3AF' }}>→</span>
+        <Link href="/#servicios" style={{ color: '#4A5568', textDecoration: 'none' }}>Servicios</Link>
+        <span style={{ color: '#9CA3AF' }}>→</span>
+        <span style={{ color: COLOR }}>Asesoría Financiera</span>
+      </div>
+    </AnimOnScroll>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '4rem',
-            alignItems: 'center',
-          }}>
-            <div>
-              <AnimOnScroll direction="up" delay={0.05}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
-                  <div style={{ width: '2.5rem', height: '2px', background: COLOR }} />
-                  <span style={{ color: COLOR, fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
-                    01 · FINANZAS CORPORATIVAS
-                  </span>
-                </div>
-              </AnimOnScroll>
-
-              <AnimOnScroll direction="up" delay={0.1}>
-                <h1 style={{
-                  fontFamily: 'var(--font-playfair, Playfair Display, serif)',
-                  fontSize: 'clamp(2.2rem, 4vw, 3.5rem)',
-                  fontWeight: 700, color: '#fff',
-                  lineHeight: 1.15, marginBottom: '1.5rem',
-                  letterSpacing: '-0.02em',
-                }}>
-                  Decisiones financieras con respaldo técnico real.
-                </h1>
-              </AnimOnScroll>
-
-              <AnimOnScroll direction="up" delay={0.15}>
-                <p style={{
-                  fontSize: '1.05rem', color: 'rgba(255,255,255,0.75)',
-                  lineHeight: 1.75, marginBottom: '2.5rem', maxWidth: '500px',
-                }}>
-                  Estructuración de deuda, modelamiento financiero y planificación estratégica para CFOs y directorios que exigen el mismo rigor técnico de las Big Four — con acceso directo al experto.
-                </p>
-              </AnimOnScroll>
-
-              <AnimOnScroll direction="up" delay={0.2}>
-                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' as const }}>
-                  <Link href="/contacto" style={{
-                    display: 'inline-flex', alignItems: 'center',
-                    background: COLOR, color: '#fff',
-                    padding: '0.85rem 2rem', borderRadius: '4px',
-                    fontWeight: 600, fontSize: '0.9rem', textDecoration: 'none',
-                    letterSpacing: '0.05em', textTransform: 'uppercase' as const,
-                  }}>
-                    Solicitar diagnóstico gratuito →
-                  </Link>
-                </div>
-              </AnimOnScroll>
-            </div>
-
-            {/* Imagen */}
-            <AnimOnScroll direction="left" delay={0.15}>
-              <div style={{ borderRadius: '6px', overflow: 'hidden', boxShadow: '0 24px 60px rgba(0,0,0,0.4)' }}>
-                <Image
-                  src="/images/servicios/financiero.webp"
-                  alt="Asesoría Financiera Corporativa — AB Advisory"
-                  width={560}
-                  height={380}
-                  style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' as const }}
-                  priority
-                />
-              </div>
-            </AnimOnScroll>
+    <div style={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+      gap: '4rem',
+      alignItems: 'center',
+    }}>
+      <div>
+        <AnimOnScroll direction="up" delay={0.05}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
+            <div style={{ width: '2.5rem', height: '2px', background: COLOR }} />
+            <span style={{ color: COLOR, fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
+              01 · FINANZAS CORPORATIVAS
+            </span>
           </div>
+        </AnimOnScroll>
+
+        <AnimOnScroll direction="up" delay={0.1}>
+          <h1 style={{
+            fontFamily: 'var(--font-playfair, Playfair Display, serif)',
+            fontSize: 'clamp(2.2rem, 4vw, 3.5rem)',
+            fontWeight: 700, color: 'var(--navy, #0D2B45)',
+            lineHeight: 1.15, marginBottom: '1.5rem',
+            letterSpacing: '-0.02em',
+          }}>
+            Decisiones financieras con respaldo técnico real.
+          </h1>
+        </AnimOnScroll>
+
+        <AnimOnScroll direction="up" delay={0.15}>
+          <p style={{
+            fontSize: '1.05rem', color: '#4A5568',
+            lineHeight: 1.75, marginBottom: '2.5rem', maxWidth: '500px',
+          }}>
+            Estructuración de deuda, modelamiento financiero y planificación estratégica para CFOs y directorios que exigen el mismo rigor técnico de las Big Four — con acceso directo al experto.
+          </p>
+        </AnimOnScroll>
+
+        <AnimOnScroll direction="up" delay={0.2}>
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' as const }}>
+            <Link href="/contacto" style={{
+              display: 'inline-flex', alignItems: 'center',
+              background: 'var(--navy, #0D2B45)', color: '#fff',
+              padding: '0.85rem 2rem', borderRadius: '4px',
+              fontWeight: 600, fontSize: '0.9rem', textDecoration: 'none',
+              letterSpacing: '0.05em', textTransform: 'uppercase' as const,
+            }}>
+              Solicitar diagnóstico gratuito →
+            </Link>
+          </div>
+        </AnimOnScroll>
+      </div>
+
+      {/* Imagen */}
+      <AnimOnScroll direction="left" delay={0.15}>
+        <div style={{
+          borderRadius: '6px', overflow: 'hidden',
+          boxShadow: '0 24px 60px rgba(13,43,69,0.15)',
+          border: '1px solid rgba(13,43,69,0.06)',
+        }}>
+          <Image
+            src="/images/servicios/financiero.webp"
+            alt="Asesoría Financiera Corporativa — AB Advisory"
+            width={560}
+            height={380}
+            style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' as const }}
+            priority
+          />
         </div>
-      </section>
+      </AnimOnScroll>
+    </div>
+  </div>
+</section>
 
       {/* RESULTADOS */}
       <section style={{ background: COLOR, padding: '2.5rem 2rem' }}>

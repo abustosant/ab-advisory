@@ -80,128 +80,134 @@ export default function NosotrosContent() {
   return (
     <main style={{ fontFamily: 'var(--font-dm-sans, DM Sans, sans-serif)' }}>
 
-      {/* HERO */}
-      <section style={{
-        background: 'var(--navy, #0D2B45)',
-        paddingTop: '7rem',
-        paddingBottom: '5rem',
-        position: 'relative',
-        overflow: 'hidden',
-      }}>
-        <div style={{
-          position: 'absolute', inset: 0,
-          backgroundImage: 'radial-gradient(circle at 80% 50%, rgba(26,115,167,0.15) 0%, transparent 60%)',
-          pointerEvents: 'none',
-        }} />
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem', position: 'relative' }}>
-          <AnimOnScroll direction="up">
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '2rem' }}>
-              <div style={{ width: '2.5rem', height: '2px', background: 'var(--blue, #1A73A7)' }} />
-              <span style={{ color: 'var(--blue, #1A73A7)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
-                QUIÉNES SOMOS
-              </span>
-            </div>
-          </AnimOnScroll>
+{/* HERO */}
+<section style={{
+  background: 'linear-gradient(135deg, #E8F4FD 0%, #F0F7FF 50%, #EAF3FB 100%)',
+  paddingTop: '7rem',
+  paddingBottom: '5rem',
+  position: 'relative',
+  overflow: 'hidden',
+}}>
+  {/* Gradiente decorativo sutil */}
+  <div style={{
+    position: 'absolute', inset: 0,
+    backgroundImage: 'radial-gradient(circle at 80% 20%, rgba(26,115,167,0.08) 0%, transparent 55%)',
+    pointerEvents: 'none',
+  }} />
+  <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem', position: 'relative' }}>
+    <AnimOnScroll direction="up">
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '2rem' }}>
+        <div style={{ width: '2.5rem', height: '2px', background: 'var(--blue, #1A73A7)' }} />
+        <span style={{ color: 'var(--blue, #1A73A7)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
+          QUIÉNES SOMOS
+        </span>
+      </div>
+    </AnimOnScroll>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '4rem',
-            alignItems: 'center',
+    <div style={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+      gap: '4rem',
+      alignItems: 'center',
+    }}>
+      {/* Texto */}
+      <div>
+        <AnimOnScroll direction="up" delay={0.1}>
+          <h1 style={{
+            fontFamily: 'var(--font-playfair, Playfair Display, serif)',
+            fontSize: 'clamp(2.2rem, 4vw, 3.5rem)',
+            fontWeight: 700,
+            color: 'var(--navy, #0D2B45)',
+            lineHeight: 1.15,
+            marginBottom: '1.5rem',
+            letterSpacing: '-0.02em',
           }}>
-            {/* Texto */}
-            <div>
-              <AnimOnScroll direction="up" delay={0.1}>
-                <h1 style={{
-                  fontFamily: 'var(--font-playfair, Playfair Display, serif)',
-                  fontSize: 'clamp(2.2rem, 4vw, 3.5rem)',
-                  fontWeight: 700,
-                  color: '#ffffff',
-                  lineHeight: 1.15,
-                  marginBottom: '1.5rem',
-                  letterSpacing: '-0.02em',
-                }}>
-                  Una firma construida sobre veinte años de trabajo real.
-                </h1>
-              </AnimOnScroll>
-              <AnimOnScroll direction="up" delay={0.2}>
-                <p style={{
-                  fontSize: '1.1rem',
-                  color: 'rgba(255,255,255,0.75)',
-                  lineHeight: 1.75,
-                  marginBottom: '2.5rem',
-                  maxWidth: '520px',
-                }}>
-                  No somos una agencia generalista ni un contador de barrio. AB Advisory nació para cerrar la brecha entre el rigor técnico de las Big Four y la dedicación exclusiva que solo una boutique puede ofrecer.
-                </p>
-              </AnimOnScroll>
-              <AnimOnScroll direction="up" delay={0.3}>
-                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' as const }}>
-                  <Link href="/contacto" style={{
-                    display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
-                    background: 'var(--blue, #1A73A7)', color: '#fff',
-                    padding: '0.85rem 2rem', borderRadius: '4px',
-                    fontWeight: 600, fontSize: '0.9rem', textDecoration: 'none',
-                    letterSpacing: '0.05em', textTransform: 'uppercase' as const,
-                  }}>
-                    Conversemos →
-                  </Link>
-                  <Link href="/#servicios" style={{
-                    display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
-                    border: '1px solid rgba(255,255,255,0.3)', color: 'rgba(255,255,255,0.85)',
-                    padding: '0.85rem 2rem', borderRadius: '4px',
-                    fontWeight: 600, fontSize: '0.9rem', textDecoration: 'none',
-                    letterSpacing: '0.05em', textTransform: 'uppercase' as const,
-                  }}>
-                    Ver servicios
-                  </Link>
-                </div>
-              </AnimOnScroll>
-            </div>
+            Una firma construida sobre veinte años de trabajo real.
+          </h1>
+        </AnimOnScroll>
+        <AnimOnScroll direction="up" delay={0.2}>
+          <p style={{
+            fontSize: '1.1rem',
+            color: '#4A5568',
+            lineHeight: 1.75,
+            marginBottom: '2.5rem',
+            maxWidth: '520px',
+          }}>
+            No somos una agencia generalista ni un contador de barrio. AB Advisory nació para cerrar la brecha entre el rigor técnico de las Big Four y la dedicación exclusiva que solo una boutique puede ofrecer.
+          </p>
+        </AnimOnScroll>
+        <AnimOnScroll direction="up" delay={0.3}>
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' as const }}>
+            <Link href="/contacto" style={{
+              display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+              background: 'var(--navy, #0D2B45)', color: '#fff',
+              padding: '0.85rem 2rem', borderRadius: '4px',
+              fontWeight: 600, fontSize: '0.9rem', textDecoration: 'none',
+              letterSpacing: '0.05em', textTransform: 'uppercase' as const,
+            }}>
+              Conversemos →
+            </Link>
+            <Link href="/#servicios" style={{
+              display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+              border: '1px solid rgba(13,43,69,0.25)', color: 'var(--navy, #0D2B45)',
+              padding: '0.85rem 2rem', borderRadius: '4px',
+              fontWeight: 600, fontSize: '0.9rem', textDecoration: 'none',
+              letterSpacing: '0.05em', textTransform: 'uppercase' as const,
+            }}>
+              Ver servicios
+            </Link>
+          </div>
+        </AnimOnScroll>
+      </div>
 
-            {/* Foto */}
-            <AnimOnScroll direction="left" delay={0.2}>
-              <div style={{ position: 'relative' }}>
-                <div style={{
-                  position: 'absolute', top: '-1rem', right: '-1rem',
-                  width: '100%', height: '100%',
-                  border: '2px solid rgba(26,115,167,0.4)',
-                  borderRadius: '4px', zIndex: 0,
-                }} />
-                <div style={{
-                  position: 'relative', zIndex: 1,
-                  borderRadius: '4px', overflow: 'hidden',
-                  boxShadow: '0 24px 60px rgba(0,0,0,0.4)',
-                }}>
-                  <Image
-                    src="/images/team/andres-bustos.webp"
-                    alt="Andrés Bustos A. — Fundador AB Advisory"
-                    width={480}
-                    height={560}
-                    style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' as const }}
-                    priority
-                  />
-                  <div style={{
-                    position: 'absolute', bottom: 0, left: 0, right: 0,
-                    background: 'linear-gradient(to top, rgba(13,43,69,0.95) 0%, transparent 100%)',
-                    padding: '2rem 1.5rem 1.5rem',
-                  }}>
-                    <p style={{ color: '#fff', fontWeight: 700, fontSize: '1.1rem', margin: 0 }}>
-                      Andrés Bustos A.
-                    </p>
-                    <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.85rem', margin: '0.25rem 0 0' }}>
-                      Fundador & Director — AB Advisory
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </AnimOnScroll>
+      {/* Foto */}
+      <AnimOnScroll direction="left" delay={0.2}>
+        <div style={{ position: 'relative' }}>
+          <div style={{
+            position: 'absolute', top: '-1rem', right: '-1rem',
+            width: '100%', height: '100%',
+            border: '2px solid rgba(26,115,167,0.25)',
+            borderRadius: '4px', zIndex: 0,
+          }} />
+          <div style={{
+            position: 'relative', zIndex: 1,
+            borderRadius: '4px', overflow: 'hidden',
+            boxShadow: '0 24px 60px rgba(13,43,69,0.15)',
+          }}>
+            <Image
+              src="/images/team/andres-bustos.webp"
+              alt="Andrés Bustos A. — Fundador AB Advisory"
+              width={480}
+              height={560}
+              style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' as const }}
+              priority
+            />
+            <div style={{
+              position: 'absolute', bottom: 0, left: 0, right: 0,
+              background: 'linear-gradient(to top, rgba(13,43,69,0.92) 0%, transparent 100%)',
+              padding: '2rem 1.5rem 1.5rem',
+            }}>
+              <p style={{ color: '#fff', fontWeight: 700, fontSize: '1.1rem', margin: 0 }}>
+                Andrés Bustos A.
+              </p>
+              <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.85rem', margin: '0.25rem 0 0' }}>
+                Fundador & Director — AB Advisory
+              </p>
+            </div>
           </div>
         </div>
-      </section>
+      </AnimOnScroll>
+    </div>
+  </div>
+</section>
 
-  {/* MÉTRICAS */}
-<section style={{ background: 'var(--canvas, #F8FAFC)', padding: '2.5rem 2rem', borderBottom: '1px solid rgba(13,43,69,0.08)' }}>
+{/* MÉTRICAS */}
+<section style={{
+  background: '#fff',
+  padding: '2.5rem 2rem',
+  borderBottom: '1px solid rgba(13,43,69,0.08)',
+  borderTop: '1px solid rgba(13,43,69,0.08)',
+}}>
   <div style={{
     maxWidth: '1200px', margin: '0 auto',
     display: 'grid',
