@@ -6,24 +6,34 @@ import AnimOnScroll from '@/components/AnimOnScroll'
 
 const historia = [
   {
-    año: '2003',
-    hito: 'Inicio de carrera',
-    descripcion: 'Andrés Bustos inicia su trayectoria profesional en finanzas corporativas, formándose en auditoría y contabilidad bajo estándares internacionales.',
+    año: '2008',
+    hito: 'Titulación — UTEM',
+    descripcion: 'Titulado como Contador Auditor e Ingeniero Comercial en la Universidad Tecnológica Metropolitana (UTEM), Santiago de Chile. Base técnica para una carrera en finanzas corporativas de alto nivel.',
   },
   {
-    año: '2010',
-    hito: 'LATAM Airlines Group',
-    descripcion: 'Gestión contable en una de las aerolíneas más complejas de Latinoamérica. Consolidación de operaciones multinacionales y reportería bajo IFRS.',
+    año: '2011',
+    hito: 'Chief of Finances — Sitel International Chile',
+    descripcion: 'Primer rol de dirección financiera en empresa multinacional de servicios. Gestión financiera local bajo estándares corporativos internacionales.',
   },
   {
-    año: '2016',
-    hito: 'Besalco Maquinarias',
-    descripcion: 'Rol como CFO y responsable financiero. Reestructuración de USD 15M en deuda, implementación de SAP FI/CO HANA y consolidación de 34 empresas bajo IFRS.',
+    año: '2012',
+    hito: 'Jefe de Contabilidad Corporativa — LATAM Airlines Group',
+    descripcion: 'Contabilidad corporativa en una de las aerolíneas más complejas de Latinoamérica. Consolidación de operaciones multinacionales y reportería bajo IFRS. Enero 2012 – Mayo 2015.',
   },
   {
-    año: '2023',
+    año: '2015',
+    hito: 'Sub-Gerente de Contabilidad Corporativa — Besalco Maquinarias S.A.',
+    descripcion: 'Reestructuración de USD 15M en deuda, implementación de SAP FI/CO HANA y consolidación de 34 empresas bajo IFRS sin observaciones. Junio 2015 – Diciembre 2018.',
+  },
+  {
+    año: '2019',
+    hito: 'CFO — Grupo LatamWin',
+    descripcion: 'Dirección financiera corporativa completa: modelamiento financiero, planificación estratégica, cumplimiento normativo y liderazgo de equipos de finanzas y contabilidad. Enero 2019 – Septiembre 2025.',
+  },
+  {
+    año: '2025',
     hito: 'Fundación de AB Advisory',
-    descripcion: 'Con 20+ años de experiencia en primera línea corporativa, se funda AB Advisory para ofrecer ese mismo nivel de excelencia a empresas medianas con visión de crecimiento.',
+    descripcion: 'Con más de 17 años en primera línea corporativa, se funda AB Advisory para llevar ese mismo nivel de excelencia técnica a empresas medianas con visión de crecimiento.',
   },
 ]
 
@@ -319,7 +329,7 @@ export default function NosotrosContent() {
                   <span style={{
                     fontFamily: 'var(--font-playfair, Playfair Display, serif)',
                     fontSize: '2.5rem', fontWeight: 700,
-                    color: 'var(--canvas, #F8FAFC)',
+                    color: 'rgba(13,43,69,0.08)',
                     display: 'block', marginBottom: '1rem', lineHeight: 1,
                   }}>{v.numero}</span>
                   <h3 style={{ fontWeight: 700, fontSize: '1rem', color: 'var(--navy, #0D2B45)', marginBottom: '0.75rem' }}>
