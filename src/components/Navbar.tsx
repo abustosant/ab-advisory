@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { SITE } from '@/lib/data'
 
 export default function Navbar() {
-  const [solid, setSolid] = useState(false)
+  const [solid, setSolid] = useState(true)
   const [mobileOpen, setMobileOpen] = useState(false)
 
   useEffect(() => {
