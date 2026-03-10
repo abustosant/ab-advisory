@@ -200,34 +200,34 @@ export default function NosotrosContent() {
         </div>
       </section>
 
-      {/* MÉTRICAS */}
-      <section style={{ background: 'var(--blue, #1A73A7)', padding: '2.5rem 2rem' }}>
-        <div style={{
-          maxWidth: '1200px', margin: '0 auto',
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
-          gap: '2rem',
-          textAlign: 'center' as const,
-        }}>
-          {[
-            { valor: '20+', label: 'Años de experiencia' },
-            { valor: 'USD 15M', label: 'Deuda reestructurada' },
-            { valor: '34', label: 'Empresas bajo IFRS' },
-            { valor: 'USD 500K', label: 'Ahorros anuales' },
-          ].map((m) => (
-            <div key={m.label}>
-              <p style={{
-                fontFamily: 'var(--font-playfair, Playfair Display, serif)',
-                fontSize: 'clamp(1.6rem, 3vw, 2.2rem)',
-                fontWeight: 700, color: '#fff', margin: 0,
-              }}>{m.valor}</p>
-              <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.85rem', margin: '0.25rem 0 0' }}>
-                {m.label}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+  {/* MÉTRICAS */}
+<section style={{ background: 'var(--canvas, #F8FAFC)', padding: '2.5rem 2rem', borderBottom: '1px solid rgba(13,43,69,0.08)' }}>
+  <div style={{
+    maxWidth: '1200px', margin: '0 auto',
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
+    gap: '2rem',
+    textAlign: 'center' as const,
+  }}>
+    {[
+      { valor: '20+', label: 'Años de experiencia' },
+      { valor: 'USD 15M', label: 'Deuda reestructurada' },
+      { valor: '34', label: 'Empresas bajo IFRS' },
+      { valor: 'USD 500K', label: 'Ahorros anuales' },
+    ].map((m) => (
+      <div key={m.label}>
+        <p style={{
+          fontFamily: 'var(--font-playfair, Playfair Display, serif)',
+          fontSize: 'clamp(1.6rem, 3vw, 2.2rem)',
+          fontWeight: 700, color: 'var(--navy, #0D2B45)', margin: 0,
+        }}>{m.valor}</p>
+        <p style={{ color: '#4A5568', fontSize: '0.85rem', margin: '0.25rem 0 0' }}>
+          {m.label}
+        </p>
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* HISTORIA */}
       <section style={{ background: '#fff', padding: '6rem 2rem' }}>
