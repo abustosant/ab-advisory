@@ -61,7 +61,6 @@ const valores = [
 ]
 
 const credenciales = [
-const credenciales = [
   // Universidad de Chile
   { institucion: 'Universidad de Chile', credencial: 'Magíster en Información Financiero Contable', año: 'En curso · 2025–2028' },
   { institucion: 'Universidad de Chile', credencial: 'Postítulo en Información Financiero Contable', año: '2025' },
