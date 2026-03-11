@@ -16,7 +16,7 @@ export default function Footer() {
               <img
                 src="/logo_nav.png"
                 alt="AB Advisory — Strategic Partners"
-                style={{ height: 64, width: 'auto', maxWidth: 200, filter: 'brightness(0) invert(1)', opacity: 0.85 }}
+                style={{ height: 78, width: 'auto', maxWidth: 230, filter: 'brightness(0) invert(1)', opacity: 0.85 }}
               />
             </div>
             <p style={{ fontSize: '.79rem', lineHeight: 1.74, color: 'rgba(255,255,255,.3)', maxWidth: 245, marginBottom: 20 }}>

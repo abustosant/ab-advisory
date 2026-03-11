@@ -41,9 +41,9 @@ export default function Navbar() {
     src="/logo_nav.png"
     alt="AB Advisory — Strategic Partners"
     style={{
-      height: 52,
+      height: 62,
       width: 'auto',
-      maxWidth: 180,
+      maxWidth: 210,
       filter: solid ? 'brightness(0) invert(1)' : 'none',
       transition: 'filter .3s',
     }}
