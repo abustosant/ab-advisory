@@ -489,14 +489,15 @@ export default function Home() {
 
           <AnimOnScroll style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 0, border: '1px solid var(--border)' }} className="ins-grid">
             {/* Featured */}
-            <div style={{ position: 'relative', overflow: 'hidden', borderRight: '1px solid var(--border)' }} className="ins-feat">
+            <Link href={INSIGHTS[0].href} style={{ textDecoration: 'none', display: 'block', position: 'relative', overflow: 'hidden', borderRight: '1px solid var(--border)' }} className="ins-feat">
               <img src={INSIGHTS[0].image} alt={INSIGHTS[0].title} style={{ width: '100%', height: 400, objectFit: 'cover', filter: 'grayscale(10%)', transition: 'transform .6s, filter .4s', display: 'block' }} loading="lazy" className="ins-feat-img" />
               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(0deg,rgba(13,43,69,.94) 0%,rgba(13,43,69,.4) 45%,transparent 70%)', padding: 28, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
                 <div style={{ fontSize: '.6rem', fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--blue-mid)', marginBottom: 9 }}>{INSIGHTS[0].category}</div>
                 <h3 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: '1.2rem', fontWeight: 600, color: '#fff', lineHeight: 1.3, marginBottom: 10 }}>{INSIGHTS[0].title}</h3>
-                <div style={{ fontSize: '.67rem', color: 'rgba(255,255,255,.35)' }}>{INSIGHTS[0].author} · {INSIGHTS[0].readTime} · {INSIGHTS[0].date}</div>
+                <div style={{ fontSize: '.67rem', color: 'rgba(255,255,255,.35)', marginBottom: 12 }}>{INSIGHTS[0].author} · {INSIGHTS[0].readTime} · {INSIGHTS[0].date}</div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 5, fontSize: '.7rem', fontWeight: 600, color: 'var(--blue-mid)' }}>Leer artículo <ArrowIcon /></div>
               </div>
-            </div>
+            </Link>
             {/* Stack */}
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               {INSIGHTS.slice(1).map((ins, i) => (
