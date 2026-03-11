@@ -4,77 +4,77 @@ import Link from 'next/link'
 import Image from 'next/image'
 import AnimOnScroll from '@/components/AnimOnScroll'
 
-const COLOR = '#1B5E3B'
+const COLOR = '#7C3AED'
 const NAVY = '#0D2B45'
 
 const alcance = [
   {
-    titulo: 'Implementación y actualización IFRS/NIC',
-    descripcion: 'Diagnóstico de brechas entre normativa local y IFRS, diseño del plan de convergencia e implementación completa. Actualización permanente ante cambios normativos del IASB con impacto en Chile.',
+    titulo: 'Liquidaciones de sueldo y nómina electrónica',
+    descripcion: 'Procesamiento mensual de remuneraciones con cálculo de haberes, descuentos legales, cotizaciones previsionales y nómina electrónica al SII. Cero errores, cero multas.',
   },
   {
-    titulo: 'Consolidación de grupos empresariales',
-    descripcion: 'Consolidación contable de grupos con múltiples entidades — experiencia comprobada en consolidación de hasta 34 empresas simultáneas sin observaciones de auditores externos.',
+    titulo: 'Contratos, finiquitos y calificaciones',
+    descripcion: 'Redacción y revisión de contratos de trabajo, anexos y finiquitos legales. Proceso de calificaciones anual conforme a la normativa vigente del Código del Trabajo.',
   },
   {
-    titulo: 'Shared Services Center contable',
-    descripcion: 'Diseño e implementación de centros de servicios compartidos para grupos empresariales, estandarizando procesos, reduciendo costos y mejorando el control interno.',
+    titulo: 'Compliance Ley 20.393',
+    descripcion: 'Implementación y mantención del modelo de prevención de delitos corporativos. Matriz de riesgos laborales, políticas internas y capacitación a colaboradores clave.',
   },
   {
-    titulo: 'Preparación para auditorías Big Four',
-    descripcion: 'Preparación técnica exhaustiva para enfrentar auditorías de Deloitte, PwC, EY y KPMG. Revisión de estados financieros, notas y documentación de soporte bajo estándares internacionales.',
+    titulo: 'Planificación tributaria de remuneraciones',
+    descripcion: 'Optimización de la carga tributaria del personal ejecutivo mediante beneficios no remuneracionales, bono vacaciones, seguros y otros mecanismos legales vigentes en Chile.',
   },
   {
-    titulo: 'Cierre contable y reporting mensual',
-    descripcion: 'Gestión del proceso de cierre mensual con metodologías que reducen los tiempos en hasta un 40%. Preparación de estados financieros bajo IFRS y normativa SII.',
+    titulo: 'Auditoría interna de RRHH',
+    descripcion: 'Revisión integral de carpetas de personal, registros de asistencia, horas extra y cumplimiento de obligaciones previsionales. Identificación de contingencias antes de una fiscalización.',
   },
   {
-    titulo: 'Contabilidad SAP FI/CO',
-    descripcion: 'Configuración, parametrización y operación de módulos SAP FI/CO HANA. Key User certificado con experiencia en implantaciones corporativas de gran escala.',
+    titulo: 'Reportería de RRHH para gerencia',
+    descripcion: 'Dashboards de costo laboral por área, centro de costo y sociedad. Indicadores de dotación, rotación y ausentismo en tiempo real para decisiones ejecutivas de negocio.',
   },
 ]
 
 const paraQuien = [
-  'Grupos empresariales con múltiples entidades que deben consolidar',
-  'Empresas que requieren reportes bajo IFRS para bancos o socios extranjeros',
-  'Compañías que enfrentan auditorías Big Four y necesitan preparación técnica',
-  'CFOs que quieren reducir tiempos de cierre sin comprometer la calidad',
-  'Empresas en proceso de implementación o actualización SAP FI/CO',
+  'Empresas con dotaciones de 30+ trabajadores y nóminas complejas',
+  'Grupos empresariales con múltiples sociedades y contratos distintos',
+  'CFOs que necesitan visibilidad real del costo laboral por área',
+  'Gerentes de RRHH que buscan soporte técnico externo especializado',
+  'Empresas con riesgo de fiscalización por la Dirección del Trabajo',
 ]
 
 const resultados = [
-  { valor: '34', label: 'Empresas consolidadas sin observaciones' },
-  { valor: '40%', label: 'Reducción en tiempos de cierre' },
-  { valor: '100%', label: 'Cumplimiento normativa SII e IFRS' },
-  { valor: 'Big 4', label: 'Auditorías superadas sin salvedades' },
+  { valor: '100%', label: 'Cumplimiento laboral y previsional' },
+  { valor: '0', label: 'Observaciones en fiscalizaciones DT' },
+  { valor: '40%', label: 'Reducción de errores en liquidaciones' },
+  { valor: '+50', label: 'Procesos internos automatizados' },
 ]
 
 const faqs = [
   {
-    pregunta: '¿Qué diferencia hay entre IFRS y las normas contables chilenas?',
-    respuesta: 'Las IFRS (International Financial Reporting Standards) son normas internacionales emitidas por el IASB. Chile adoptó IFRS para empresas que cotizan en bolsa y grupos con reporte internacional. La diferencia principal está en el reconocimiento de activos, leasing (IFRS 16), instrumentos financieros e impuestos diferidos, entre otros.',
+    pregunta: '¿Qué tamaño de empresa necesita este servicio?',
+    respuesta: 'Nos especializamos en empresas con dotaciones de 30 a 500 trabajadores con nóminas de complejidad media-alta. Podemos trabajar con empresas más pequeñas si tienen estructuras de remuneración especiales o riesgo de compliance elevado.',
   },
   {
-    pregunta: '¿Cuánto tiempo toma implementar IFRS en una empresa mediana?',
-    respuesta: 'Un proyecto de convergencia completo toma entre 6 y 18 meses, dependiendo de la complejidad de la empresa y el nivel de preparación inicial. Lo dividimos en fases: diagnóstico, diseño, implementación y monitoreo, para minimizar el impacto operacional.',
+    pregunta: '¿Pueden manejar contratos especiales como part-time, por obra o teletrabajo?',
+    respuesta: 'Sí. Gestionamos toda la variedad de contratos contemplados en el Código del Trabajo chileno: indefinidos, a plazo fijo, por obra o faena, part-time y teletrabajo, con sus respectivos registros ante la Dirección del Trabajo.',
   },
   {
-    pregunta: '¿Pueden tomar a cargo la contabilidad completa de nuestra empresa?',
-    respuesta: 'Sí, operamos en modalidad de outsourcing contable completo o como soporte técnico especializado al equipo interno. Definimos el alcance según sus necesidades específicas y el tamaño de su operación.',
+    pregunta: '¿Qué pasa si la Dirección del Trabajo nos fiscaliza?',
+    respuesta: 'Con nuestra auditoría previa, su documentación estará en regla. En caso de fiscalización, le acompañamos en la respuesta, preparamos la documentación requerida y coordinamos con su equipo para minimizar contingencias y multas.',
   },
   {
-    pregunta: '¿Trabajan con SAP u otros ERP?',
-    respuesta: 'Tenemos certificación SAP FI/CO HANA y experiencia en implantaciones corporativas. También trabajamos con otros ERP según el sistema de su empresa. La herramienta se adapta a sus procesos, no al revés.',
+    pregunta: '¿Pueden trabajar con el software de RRHH que ya usamos?',
+    respuesta: 'Sí. Nos adaptamos a los principales sistemas del mercado chileno. Si no tienen un sistema, podemos recomendar e implementar una solución acorde al tamaño de su empresa para optimizar el proceso.',
   },
 ]
 
-export default function ContableContent() {
+export default function RRHHContent() {
   return (
     <main style={{ fontFamily: 'var(--font-dm-sans, DM Sans, sans-serif)' }}>
 
 {/* HERO */}
 <section style={{
-  background: 'linear-gradient(135deg, #E8F4FD 0%, #F0F7FF 50%, #EAF3FB 100%)',
+  background: 'linear-gradient(135deg, #F5F0FF 0%, #FAF7FF 50%, #F2EEFF 100%)',
   paddingTop: '7rem',
   paddingBottom: '5rem',
   position: 'relative',
@@ -82,7 +82,7 @@ export default function ContableContent() {
 }}>
   <div style={{
     position: 'absolute', inset: 0,
-    backgroundImage: `radial-gradient(circle at 70% 30%, rgba(19,128,64,0.07) 0%, transparent 55%)`,
+    backgroundImage: `radial-gradient(circle at 70% 30%, rgba(124,58,237,0.1) 0%, transparent 55%)`,
     pointerEvents: 'none',
   }} />
   <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem', position: 'relative' }}>
@@ -94,7 +94,7 @@ export default function ContableContent() {
         <span style={{ color: '#9CA3AF' }}>→</span>
         <Link href="/#servicios" style={{ color: '#4A5568', textDecoration: 'none' }}>Servicios</Link>
         <span style={{ color: '#9CA3AF' }}>→</span>
-        <span style={{ color: COLOR }}>Contabilidad & IFRS</span>
+        <span style={{ color: COLOR }}>Gestión de RRHH</span>
       </div>
     </AnimOnScroll>
 
@@ -109,7 +109,7 @@ export default function ContableContent() {
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
             <div style={{ width: '2.5rem', height: '2px', background: COLOR }} />
             <span style={{ color: COLOR, fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
-              02 · CONTABILIDAD · IFRS
+              03 · RECURSOS HUMANOS
             </span>
           </div>
         </AnimOnScroll>
@@ -122,7 +122,7 @@ export default function ContableContent() {
             lineHeight: 1.15, marginBottom: '1.5rem',
             letterSpacing: '-0.02em',
           }}>
-            Contabilidad IFRS sin observaciones. Siempre.
+            Remuneraciones y RRHH sin errores ni riesgos laborales.
           </h1>
         </AnimOnScroll>
 
@@ -131,26 +131,22 @@ export default function ContableContent() {
             fontSize: '1.05rem', color: '#4A5568',
             lineHeight: 1.75, marginBottom: '2.5rem', maxWidth: '500px',
           }}>
-            Implementación IFRS/NIC, consolidación de grupos y outsourcing contable para empresas con exigencias de reporte internacional. Preparación técnica para auditorías Big Four.
+            Outsourcing de nómina, compliance laboral y planificación tributaria de remuneraciones para empresas con dotaciones significativas — con el rigor técnico de quien gestionó RRHH en multinacionales.
           </p>
         </AnimOnScroll>
 
         <AnimOnScroll direction="up" delay={0.2}>
-          <Link
-            href="/contacto"
-            style={{
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' as const }}>
+            <Link href="/contacto" style={{
               display: 'inline-flex', alignItems: 'center',
               background: 'var(--navy, #0D2B45)', color: '#fff',
               padding: '0.85rem 2rem', borderRadius: '4px',
               fontWeight: 600, fontSize: '0.9rem', textDecoration: 'none',
               letterSpacing: '0.05em', textTransform: 'uppercase' as const,
-              transition: 'background 0.2s',
-            }}
-            onMouseEnter={e => (e.currentTarget.style.background = '#1B5E3B')}
-            onMouseLeave={e => (e.currentTarget.style.background = 'var(--navy, #0D2B45)')}
-          >
-            Solicitar diagnóstico gratuito →
-          </Link>
+            }}>
+              Solicitar diagnóstico gratuito →
+            </Link>
+          </div>
         </AnimOnScroll>
       </div>
 
@@ -162,8 +158,8 @@ export default function ContableContent() {
           border: '1px solid rgba(13,43,69,0.06)',
         }}>
           <Image
-            src="/images/servicios/contable.webp"
-            alt="Contabilidad IFRS — AB Advisory"
+            src="/images/servicios/rrhh.webp"
+            alt="Gestión de RRHH y Remuneraciones — AB Advisory"
             width={560}
             height={380}
             style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' as const }}
@@ -175,7 +171,7 @@ export default function ContableContent() {
   </div>
 </section>
 
-      {/* MÉTRICAS */}
+      {/* RESULTADOS */}
       <section style={{ background: COLOR, padding: '2.5rem 2rem' }}>
         <div style={{
           maxWidth: '1200px', margin: '0 auto',
@@ -198,7 +194,7 @@ export default function ContableContent() {
         </div>
       </section>
 
-      {/* ALCANCE */}
+      {/* ALCANCE DEL SERVICIO */}
       <section style={{ background: '#fff', padding: '6rem 2rem' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <AnimOnScroll direction="up">
@@ -214,7 +210,7 @@ export default function ContableContent() {
               fontWeight: 700, color: NAVY,
               lineHeight: 1.2, marginBottom: '3rem',
             }}>
-              ¿Qué incluye el servicio contable?
+              ¿Qué incluye la gestión de RRHH?
             </h2>
           </AnimOnScroll>
 
@@ -231,13 +227,16 @@ export default function ContableContent() {
                   borderTop: `3px solid ${COLOR}`,
                   borderRadius: '6px',
                   background: '#fff',
+                  transition: 'box-shadow 0.2s',
                 }}>
-                  <h3 style={{ fontWeight: 700, fontSize: '0.95rem', color: NAVY, marginBottom: '0.75rem' }}>
-                    {item.titulo}
-                  </h3>
-                  <p style={{ color: '#4A5568', fontSize: '0.875rem', lineHeight: 1.7, margin: 0 }}>
-                    {item.descripcion}
-                  </p>
+                  <h3 style={{
+                    fontWeight: 700, fontSize: '0.95rem',
+                    color: NAVY, marginBottom: '0.75rem',
+                  }}>{item.titulo}</h3>
+                  <p style={{
+                    color: '#4A5568', fontSize: '0.875rem',
+                    lineHeight: 1.7, margin: 0,
+                  }}>{item.descripcion}</p>
                 </div>
               </AnimOnScroll>
             ))}
@@ -287,12 +286,24 @@ export default function ContableContent() {
               </div>
             </AnimOnScroll>
 
-            {/* Quote */}
+            {/* Quote del fundador */}
             <AnimOnScroll direction="left" delay={0.1}>
-              <div style={{ background: NAVY, borderRadius: '8px', padding: '2.5rem', position: 'relative' }}>
-                <div style={{ fontFamily: 'Georgia, serif', fontSize: '4rem', color: COLOR, lineHeight: 1, marginBottom: '1rem', opacity: 0.6 }}>"</div>
-                <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '1rem', lineHeight: 1.75, fontStyle: 'italic', marginBottom: '2rem' }}>
-                  Consolidamos 34 empresas bajo IFRS sin una sola observación de auditoría. Ese es el estándar que llevamos a cada cliente.
+              <div style={{
+                background: NAVY, borderRadius: '8px',
+                padding: '2.5rem', position: 'relative',
+              }}>
+                <div style={{
+                  fontFamily: 'Georgia, serif',
+                  fontSize: '4rem', color: COLOR,
+                  lineHeight: 1, marginBottom: '1rem',
+                  opacity: 0.6,
+                }}>"</div>
+                <p style={{
+                  color: 'rgba(255,255,255,0.9)',
+                  fontSize: '1rem', lineHeight: 1.75,
+                  fontStyle: 'italic', marginBottom: '2rem',
+                }}>
+                  Un error en la liquidación de sueldo no es solo un problema técnico: es un juicio laboral esperando ocurrir. Nuestro trabajo es que eso nunca suceda.
                 </p>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                   <div style={{
@@ -341,8 +352,14 @@ export default function ContableContent() {
                   borderRadius: '6px',
                   borderLeft: `3px solid ${COLOR}`,
                 }}>
-                  <h3 style={{ fontWeight: 700, fontSize: '0.95rem', color: NAVY, marginBottom: '0.75rem' }}>{faq.pregunta}</h3>
-                  <p style={{ color: '#4A5568', fontSize: '0.875rem', lineHeight: 1.7, margin: 0 }}>{faq.respuesta}</p>
+                  <h3 style={{
+                    fontWeight: 700, fontSize: '0.95rem',
+                    color: NAVY, marginBottom: '0.75rem',
+                  }}>{faq.pregunta}</h3>
+                  <p style={{
+                    color: '#4A5568', fontSize: '0.875rem',
+                    lineHeight: 1.7, margin: 0,
+                  }}>{faq.respuesta}</p>
                 </div>
               </AnimOnScroll>
             ))}
@@ -361,10 +378,10 @@ export default function ContableContent() {
             fontSize: 'clamp(1.8rem, 3vw, 2.8rem)',
             fontWeight: 700, color: '#fff', lineHeight: 1.2, marginBottom: '1.5rem',
           }}>
-            ¿Su contabilidad está lista para<br />una auditoría internacional?
+            ¿Listo para externalizar la nómina<br />de su empresa sin riesgos?
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1rem', maxWidth: '480px', margin: '0 auto 2.5rem' }}>
-            Le ayudamos a saberlo. Diagnóstico inicial sin costo, respuesta en menos de 24 horas hábiles.
+            Cuéntenos su dotación y estructura actual. Le respondemos en menos de 24 horas hábiles con una propuesta inicial sin compromiso.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' as const }}>
             <Link href="/contacto" style={{

@@ -70,7 +70,7 @@ export default function Home() {
                 Decisiones<br/>financieras con<br/><em style={{ fontStyle: 'italic', color: 'var(--blue)' }}>precisión real</em>
               </h1>
               <p style={{ fontSize: '1.05rem', lineHeight: 1.85, color: 'var(--text2)', maxWidth: 500, marginBottom: 44 }}>
-                Asesoría de nivel corporativo para empresas medianas y grandes que exigen la misma profundidad técnica que las Big Four — con la agilidad y dedicación exclusiva de una firma boutique.
+                Asesoría de nivel corporativo para startups, pymes y empresas medianas en crecimiento que exigen la misma profundidad técnica que las Big Four — con la agilidad y dedicación exclusiva de una firma boutique.
               </p>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                 <Link href="/contacto" style={{
