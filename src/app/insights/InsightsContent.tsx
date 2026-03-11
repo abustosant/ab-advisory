@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { INSIGHTS, FOUNDER } from '@/lib/data'
+import { INSIGHTS } from '@/lib/data'
 
 export default function InsightsContent() {
   const featured = INSIGHTS.find(i => i.featured)
@@ -84,7 +84,7 @@ export default function InsightsContent() {
                   {featured.title}
                 </h2>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', fontSize: '0.76rem', color: '#9CA3AF', marginBottom: '1.5rem' }}>
-                  <span>{FOUNDER.nameShort}</span>
+                  <span>{featured.author}</span>
                   <span>·</span>
                   <span>{featured.date}</span>
                   <span>·</span>

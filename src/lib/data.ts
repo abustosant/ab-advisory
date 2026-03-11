@@ -184,14 +184,74 @@ export const TESTIMONIALS = [
 
 export const INSIGHTS = [
   {
+    slug: 'ifrs-18-presentacion',
+    category: 'IFRS · Normativa',
+    title: 'IFRS 18: La nueva norma de presentación de estados financieros que entrará en vigor en 2027',
+    author: 'AB Advisory',
+    readTime: '7 min lectura',
+    date: 'Marzo 2026',
+    image: '/images/insights/ifrs-18.svg',
+    featured: true,
+    href: '/insights/ifrs-18-presentacion',
+    description: 'El IASB publicó la IFRS 18 para reemplazar la IAS 1. La nueva norma introduce cambios estructurales en la presentación del estado de resultados, con tres categorías obligatorias que afectarán cómo las empresas chilenas comunican su desempeño a partir del 1 de enero de 2027.',
+    body: [
+      {
+        type: 'paragraph',
+        text: 'En abril de 2024, el IASB publicó la IFRS 18 "Presentación e Información a Revelar en los Estados Financieros", reemplazando a la IAS 1 vigente desde 1997. Esta nueva norma, de aplicación obligatoria para ejercicios iniciados el 1 de enero de 2027, introduce cambios estructurales que los CFOs y equipos contables deben comenzar a analizar hoy.',
+      },
+      {
+        type: 'heading',
+        text: 'Las tres categorías obligatorias del estado de resultados',
+      },
+      {
+        type: 'paragraph',
+        text: 'El cambio más relevante de la IFRS 18 es la introducción de tres categorías obligatorias en el estado de resultados: actividades de operación, actividades de inversión y actividades de financiamiento. Esto elimina la flexibilidad actual de la IAS 1 y exige que cada partida quede clasificada de forma consistente y comparable entre empresas.',
+      },
+      {
+        type: 'list',
+        items: [
+          'Categoría de operación: incluye todos los ingresos y gastos que no sean de inversión ni financiamiento, más los elementos definidos como "principales" por la norma.',
+          'Categoría de inversión: retornos de activos que generan ingresos de forma independiente de otras actividades del negocio.',
+          'Categoría de financiamiento: costos de financiamiento del pasivo y rendimientos del efectivo y equivalentes.',
+        ],
+      },
+      {
+        type: 'heading',
+        text: 'El concepto de "subtotal de beneficio operativo de gestión" (MPM)',
+      },
+      {
+        type: 'paragraph',
+        text: 'La IFRS 18 introduce los Management-defined Performance Measures (MPM): métricas de rendimiento definidas por la administración que se incluyen en comunicaciones públicas y deben ser conciliadas en los estados financieros. Si su empresa utiliza EBITDA ajustado, NOI u otras métricas propias, deberá revelar una conciliación detallada con las líneas del estado de resultados bajo IFRS.',
+      },
+      {
+        type: 'heading',
+        text: 'Impacto práctico para empresas chilenas',
+      },
+      {
+        type: 'list',
+        items: [
+          'Revisar la clasificación actual de todas las partidas del estado de resultados bajo los nuevos criterios.',
+          'Evaluar si las métricas de rendimiento comunicadas a directorios e inversionistas califican como MPM y requerirán revelación formal.',
+          'Actualizar sistemas ERP (SAP FI/CO y similares) para permitir la extracción de datos bajo la nueva estructura.',
+          'Preparar comparativos del ejercicio 2026 bajo IFRS 18, ya que la norma exige presentación retroactiva.',
+          'Capacitar al equipo contable y alinear con el auditor externo con al menos 12 meses de anticipación.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'En AB Advisory acompañamos procesos de convergencia y actualización normativa IFRS en empresas chilenas con exigencias de reporte internacional. Si necesita evaluar el impacto específico de la IFRS 18 en sus estados financieros, contáctenos — el diagnóstico inicial no tiene costo.',
+      },
+    ],
+  },
+  {
     slug: 'ifrs-2025',
     category: 'IFRS · Normativa',
-    title: 'Cambios críticos en IFRS 17 y 9 para empresas chilenas en 2025: lo que su CFO debe saber antes de diciembre',
-    author: 'Andrés Bustos',
+    title: 'Cambios críticos en IFRS 17 y 9 para empresas chilenas: lo que su CFO debe saber',
+    author: 'AB Advisory',
     readTime: '8 min lectura',
-    date: 'Noviembre 2024',
+    date: 'Noviembre 2026',
     image: '/images/insights/ifrs-2025.webp',
-    featured: true,
+    featured: false,
     href: '/insights/ifrs-2025',
     description: 'Las actualizaciones a IFRS 17 (contratos de seguros) e IFRS 9 (instrumentos financieros) generan impactos concretos en los estados financieros de empresas chilenas. Este artículo analiza los cambios más relevantes y cómo prepararse.',
     body: [
@@ -230,7 +290,7 @@ export const INSIGHTS = [
       {
         type: 'list',
         items: [
-          'Realizar un diagnóstico de impacto específico para su empresa antes de diciembre 2024.',
+          'Realizar un diagnóstico de impacto específico para su empresa antes del cierre anual.',
           'Revisar todos los contratos que podrían caer bajo el alcance de IFRS 17.',
           'Actualizar el modelo de ECL para cuentas por cobrar e instrumentos financieros.',
           'Comunicar los impactos esperados al directorio antes del cierre anual.',
@@ -247,9 +307,9 @@ export const INSIGHTS = [
     slug: 'reestructuracion-deuda',
     category: 'Finanzas Corporativas',
     title: 'Cuándo y cómo reestructurar la deuda sin perder la clasificación crediticia',
-    author: 'Andrés Bustos',
+    author: 'AB Advisory',
     readTime: '5 min',
-    date: 'Octubre 2024',
+    date: 'Octubre 2026',
     image: '/images/insights/reestructuracion.webp',
     featured: false,
     href: '/insights/reestructuracion-deuda',
@@ -298,9 +358,9 @@ export const INSIGHTS = [
     slug: 'power-bi-directorios',
     category: 'Tecnología Financiera',
     title: 'Power BI para directorios: 5 dashboards que transformaron la toma de decisiones ejecutiva',
-    author: 'Andrés Bustos',
+    author: 'AB Advisory',
     readTime: '6 min',
-    date: 'Septiembre 2024',
+    date: 'Septiembre 2026',
     image: '/images/insights/power-bi.webp',
     featured: false,
     href: '/insights/power-bi-directorios',

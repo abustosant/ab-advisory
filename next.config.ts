@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
     ],
     // Next.js convierte automáticamente a WebP/AVIF según el browser
     formats: ['image/avif', 'image/webp'],
+    // Permitir SVG para ilustraciones internas
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 };
 

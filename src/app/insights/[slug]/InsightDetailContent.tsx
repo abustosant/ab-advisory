@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { INSIGHTS, FOUNDER, SITE } from '@/lib/data'
+import { INSIGHTS, SITE } from '@/lib/data'
 
 type BodyBlock =
   | { type: 'paragraph'; text: string }
@@ -52,7 +52,7 @@ export default function InsightDetailContent({ insight }: { insight: Insight }) 
             {insight.title}
           </h1>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', fontSize: '0.78rem', color: '#9CA3AF' }}>
-            <span style={{ fontWeight: 600, color: 'var(--navy, #0D2B45)' }}>{FOUNDER.name}</span>
+            <span style={{ fontWeight: 600, color: 'var(--navy, #0D2B45)' }}>{insight.author}</span>
             <span>·</span>
             <span>{insight.date}</span>
             <span>·</span>
@@ -144,8 +144,8 @@ export default function InsightDetailContent({ insight }: { insight: Insight }) 
             <span style={{ color: '#fff', fontWeight: 700, fontSize: '1rem' }}>AB</span>
           </div>
           <div>
-            <div style={{ fontWeight: 700, color: 'var(--navy, #0D2B45)', marginBottom: '0.2rem' }}>{FOUNDER.name}</div>
-            <div style={{ fontSize: '0.8rem', color: '#6B7280', marginBottom: '0.5rem' }}>{FOUNDER.role}</div>
+            <div style={{ fontWeight: 700, color: 'var(--navy, #0D2B45)', marginBottom: '0.2rem' }}>AB Advisory</div>
+            <div style={{ fontSize: '0.8rem', color: '#6B7280', marginBottom: '0.5rem' }}>Asesoría Financiera · Santiago de Chile</div>
             <p style={{ fontSize: '0.82rem', color: '#4A5568', lineHeight: 1.65, margin: 0 }}>
               Fundador de AB Advisory con 20+ años en finanzas corporativas, IFRS y reestructuración de deuda en Chile y LATAM.
             </p>
