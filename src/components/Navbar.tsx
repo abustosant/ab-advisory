@@ -26,7 +26,7 @@ export default function Navbar() {
       <nav
         style={{
           position: 'fixed', top: 0, left: 0, right: 0, zIndex: 900,
-          height: 62, display: 'flex', alignItems: 'center',
+          height: 80, display: 'flex', alignItems: 'center',
           padding: '0 52px',
           transition: 'background .3s, box-shadow .3s',
           background: solid ? 'rgba(13,43,69,.97)' : 'transparent',
@@ -41,9 +41,9 @@ export default function Navbar() {
     src="/logo_nav.png"
     alt="AB Advisory — Strategic Partners"
     style={{
-      height: 62,
+      height: 52,
       width: 'auto',
-      maxWidth: 210,
+      maxWidth: 190,
       filter: solid ? 'brightness(0) invert(1)' : 'none',
       transition: 'filter .3s',
     }}
@@ -93,7 +93,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div style={{
-          position: 'fixed', top: 62, left: 0, right: 0, bottom: 0,
+          position: 'fixed', top: 80, left: 0, right: 0, bottom: 0,
           background: 'var(--navy)', padding: '40px 32px',
           display: 'flex', flexDirection: 'column', zIndex: 899,
         }}>
