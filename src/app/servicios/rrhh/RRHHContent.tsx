@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import AnimOnScroll from '@/components/AnimOnScroll'
 
-const COLOR = '#0D2B45'
+const COLOR = '#7C3AED'
 const NAVY = '#0D2B45'
 
 const alcance = [
@@ -74,7 +74,7 @@ export default function RRHHContent() {
 
 {/* HERO */}
 <section style={{
-  background: 'linear-gradient(135deg, #E8F4FD 0%, #F0F7FF 50%, #EAF3FB 100%)',
+  background: 'linear-gradient(135deg, #F5F0FF 0%, #FAF7FF 50%, #F2EEFF 100%)',
   paddingTop: '7rem',
   paddingBottom: '5rem',
   position: 'relative',
@@ -82,7 +82,7 @@ export default function RRHHContent() {
 }}>
   <div style={{
     position: 'absolute', inset: 0,
-    backgroundImage: `radial-gradient(circle at 70% 30%, rgba(13,43,69,0.08) 0%, transparent 55%)`,
+    backgroundImage: `radial-gradient(circle at 70% 30%, rgba(124,58,237,0.1) 0%, transparent 55%)`,
     pointerEvents: 'none',
   }} />
   <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem', position: 'relative' }}>
