@@ -16,7 +16,7 @@ export const SITE = {
   schedule: 'Lunes a viernes · 9:00 – 18:30',
   year: new Date().getFullYear().toString(),
   web3forms: 'https://api.web3forms.com/submit',
-  web3formsKey: '84d4c39f-42f3-4b4e-8e8f-50648c361e75',
+  web3formsKey: 'd4aaabdb-3cca-4359-9e6d-2ba442945287',
 }
 
 export const FOUNDER = {
