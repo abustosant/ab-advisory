@@ -190,7 +190,7 @@ export const INSIGHTS = [
     author: 'AB Advisory',
     readTime: '7 min lectura',
     date: 'Marzo 2026',
-    image: '/images/insights/ifrs-18.svg',
+    image: '/images/insights/ifrs-18.webp',
     featured: true,
     href: '/insights/ifrs-18-presentacion',
     description: 'El IASB publicó la IFRS 18 para reemplazar la IAS 1. La nueva norma introduce cambios estructurales en la presentación del estado de resultados, con tres categorías obligatorias que afectarán cómo las empresas chilenas comunican su desempeño a partir del 1 de enero de 2027.',
