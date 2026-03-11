@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import AnimOnScroll from '@/components/AnimOnScroll'
 
-const COLOR = '#138040'
+const COLOR = '#1B5E3B'
 const NAVY = '#0D2B45'
 
 const alcance = [
@@ -136,13 +136,19 @@ export default function ContableContent() {
         </AnimOnScroll>
 
         <AnimOnScroll direction="up" delay={0.2}>
-          <Link href="/contacto" style={{
-            display: 'inline-flex', alignItems: 'center',
-            background: 'var(--navy, #0D2B45)', color: '#fff',
-            padding: '0.85rem 2rem', borderRadius: '4px',
-            fontWeight: 600, fontSize: '0.9rem', textDecoration: 'none',
-            letterSpacing: '0.05em', textTransform: 'uppercase' as const,
-          }}>
+          <Link
+            href="/contacto"
+            style={{
+              display: 'inline-flex', alignItems: 'center',
+              background: 'var(--navy, #0D2B45)', color: '#fff',
+              padding: '0.85rem 2rem', borderRadius: '4px',
+              fontWeight: 600, fontSize: '0.9rem', textDecoration: 'none',
+              letterSpacing: '0.05em', textTransform: 'uppercase' as const,
+              transition: 'background 0.2s',
+            }}
+            onMouseEnter={e => (e.currentTarget.style.background = '#1B5E3B')}
+            onMouseLeave={e => (e.currentTarget.style.background = 'var(--navy, #0D2B45)')}
+          >
             Solicitar diagnóstico gratuito →
           </Link>
         </AnimOnScroll>
