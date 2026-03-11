@@ -164,7 +164,7 @@ export default function Home() {
                 Rigor de firma internacional.<br/>Precio y dedicación de boutique.
               </h2>
               <p style={{ fontSize: '1.05rem', lineHeight: 1.85, color: 'var(--text2)', marginBottom: 40 }}>
-                Su empresa necesita rigor técnico IFRS, herramientas de gestión financiera de clase mundial, estructuración tributaria avanzada y estrategia real — no reportes básicos ni honorarios desde 80 UF/hora.
+                Su empresa merece el mismo rigor técnico que exigen los grupos empresariales de primer nivel — implementación IFRS, estructuración de deuda y estrategia financiera real — con la dedicación exclusiva de una firma boutique y acceso directo al experto, no a un equipo de juniors.
               </p>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 0, border: '1px solid var(--border)' }}>
                 {KPIS.map((kpi, i) => (
