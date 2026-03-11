@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import AnimOnScroll from '@/components/AnimOnScroll'
 
-const COLOR = '#1A73A7'
+const COLOR = '#0284C7'
 const NAVY = '#0D2B45'
 
 const alcance = [
@@ -74,7 +74,7 @@ export default function FinancieroContent() {
 
 {/* HERO */}
 <section style={{
-  background: 'linear-gradient(135deg, #E8F4FD 0%, #F0F7FF 50%, #EAF3FB 100%)',
+  background: 'linear-gradient(135deg, #E0F2FE 0%, #F0F9FF 50%, #E0F2FE 100%)',
   paddingTop: '7rem',
   paddingBottom: '5rem',
   position: 'relative',
@@ -82,7 +82,7 @@ export default function FinancieroContent() {
 }}>
   <div style={{
     position: 'absolute', inset: 0,
-    backgroundImage: `radial-gradient(circle at 70% 30%, rgba(26,115,167,0.1) 0%, transparent 55%)`,
+    backgroundImage: `radial-gradient(circle at 70% 30%, rgba(2,132,199,0.1) 0%, transparent 55%)`,
     pointerEvents: 'none',
   }} />
   <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem', position: 'relative' }}>

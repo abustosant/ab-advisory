@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import AnimOnScroll from '@/components/AnimOnScroll'
 
-const COLOR = '#1B5E3B'
+const COLOR = '#16A34A'
 const NAVY = '#0D2B45'
 
 const alcance = [
@@ -74,7 +74,7 @@ export default function ContableContent() {
 
 {/* HERO */}
 <section style={{
-  background: 'linear-gradient(135deg, #E8F4FD 0%, #F0F7FF 50%, #EAF3FB 100%)',
+  background: 'linear-gradient(135deg, #F0FDF4 0%, #ECFDF5 50%, #F0FFF4 100%)',
   paddingTop: '7rem',
   paddingBottom: '5rem',
   position: 'relative',
@@ -82,7 +82,7 @@ export default function ContableContent() {
 }}>
   <div style={{
     position: 'absolute', inset: 0,
-    backgroundImage: `radial-gradient(circle at 70% 30%, rgba(19,128,64,0.07) 0%, transparent 55%)`,
+    backgroundImage: `radial-gradient(circle at 70% 30%, rgba(22,163,74,0.1) 0%, transparent 55%)`,
     pointerEvents: 'none',
   }} />
   <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem', position: 'relative' }}>
@@ -146,7 +146,7 @@ export default function ContableContent() {
               letterSpacing: '0.05em', textTransform: 'uppercase' as const,
               transition: 'background 0.2s',
             }}
-            onMouseEnter={e => (e.currentTarget.style.background = '#1B5E3B')}
+            onMouseEnter={e => (e.currentTarget.style.background = '#16A34A')}
             onMouseLeave={e => (e.currentTarget.style.background = 'var(--navy, #0D2B45)')}
           >
             Solicitar diagnóstico gratuito →
