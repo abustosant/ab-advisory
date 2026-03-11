@@ -36,18 +36,17 @@ export default function Navbar() {
       >
         <div style={{ maxWidth: 1180, width: '100%', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           {/* Logo */}
-<Link href="/" style={{ display: 'flex', flexDirection: 'column', lineHeight: 1, textDecoration: 'none', gap: 4 }}>
-  <span style={{
-    fontFamily: 'var(--font-playfair, var(--serif))',
-    fontSize: '1.3rem', fontWeight: 700, letterSpacing: '-.02em',
-    color: solid ? '#fff' : 'var(--navy)',
-    transition: 'color .3s',
-  }}>AB Advisory</span>
-  <span style={{
-    fontSize: '.45rem', letterSpacing: '.22em', textTransform: 'uppercase',
-    color: solid ? 'rgba(255,255,255,.4)' : 'var(--blue)',
-    transition: 'color .3s',
-  }}>Strategic Partners</span>
+<Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+  <img
+    src="/logo_nav.png"
+    alt="AB Advisory — Strategic Partners"
+    style={{
+      height: 38,
+      width: 'auto',
+      filter: solid ? 'brightness(0) invert(1)' : 'none',
+      transition: 'filter .3s',
+    }}
+  />
 </Link>
 
           {/* Desktop links */}

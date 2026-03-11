@@ -12,8 +12,12 @@ export default function Footer() {
         }} className="foot-grid">
           {/* Brand */}
           <div>
-            <div style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: '1.25rem', fontWeight: 700, color: '#fff', marginBottom: 13 }}>
-              AB<span style={{ color: 'var(--blue-mid)' }}>.</span>Advisory
+            <div style={{ marginBottom: 13 }}>
+              <img
+                src="/logo_nav.png"
+                alt="AB Advisory — Strategic Partners"
+                style={{ height: 48, width: 'auto', filter: 'brightness(0) invert(1)', opacity: 0.85 }}
+              />
             </div>
             <p style={{ fontSize: '.79rem', lineHeight: 1.74, color: 'rgba(255,255,255,.3)', maxWidth: 245, marginBottom: 20 }}>
               Firma boutique de asesoría financiera, contabilidad IFRS y gestión de RRHH para empresas en Chile. Rigor técnico de multinacional. Dedicación exclusiva.
