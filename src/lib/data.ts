@@ -8,7 +8,7 @@ export const SITE = {
   description: 'Firma boutique de asesoría financiera, contabilidad IFRS y gestión de RRHH para empresas en Chile. Rigor técnico de multinacional, dedicación exclusiva.',
   phone: '(+56) 9 9308 4548',
   phoneRaw: '+56993084548',
-  email: 'info@abadvisory.cl',
+  email: 'contacto@abadvisory.cl',
   linkedin: 'https://linkedin.com/in/andresbustosant',
   whatsapp: 'https://wa.me/56993084548?text=Hola%20Andrés%2C%20quiero%20consultar%20sobre%20asesoría%20para%20mi%20empresa',
   whatsappCTA: 'https://wa.me/56993084548?text=Hola%20Andrés%2C%20me%20interesa%20una%20conversación%20inicial%20sobre%20asesoría',
@@ -184,6 +184,7 @@ export const TESTIMONIALS = [
 
 export const INSIGHTS = [
   {
+    slug: 'ifrs-2025',
     category: 'IFRS · Normativa',
     title: 'Cambios críticos en IFRS 17 y 9 para empresas chilenas en 2025: lo que su CFO debe saber antes de diciembre',
     author: 'Andrés Bustos',
@@ -192,24 +193,158 @@ export const INSIGHTS = [
     image: '/images/insights/ifrs-2025.webp',
     featured: true,
     href: '/insights/ifrs-2025',
+    description: 'Las actualizaciones a IFRS 17 (contratos de seguros) e IFRS 9 (instrumentos financieros) generan impactos concretos en los estados financieros de empresas chilenas. Este artículo analiza los cambios más relevantes y cómo prepararse.',
+    body: [
+      {
+        type: 'paragraph',
+        text: 'Las International Financial Reporting Standards no son un cuerpo normativo estático. Cada ciclo de actualización del IASB trae consigo cambios que, aunque parezcan técnicos y distantes, tienen impacto directo en cómo su empresa reconoce ingresos, valora activos y reporta a sus stakeholders.',
+      },
+      {
+        type: 'heading',
+        text: 'IFRS 9: Lo que cambia en instrumentos financieros',
+      },
+      {
+        type: 'paragraph',
+        text: 'La última enmienda a IFRS 9 introduce ajustes en el modelo de pérdidas crediticias esperadas (ECL) y en la clasificación de activos financieros. Para empresas chilenas con cartera de cuentas por cobrar significativa o con deuda estructurada, esto significa revisar los modelos de deterioro existentes y actualizar las políticas contables.',
+      },
+      {
+        type: 'paragraph',
+        text: 'El punto más crítico: las empresas que no hayan actualizado sus modelos de ECL enfrentarán observaciones en sus próximas auditorías. Si su empresa tiene deuda con covenants financieros, un cambio en la clasificación de instrumentos puede alterar el cumplimiento de esos covenants sin que haya ocurrido ningún evento operacional.',
+      },
+      {
+        type: 'heading',
+        text: 'IFRS 17: El impacto en grupos con empresas aseguradoras o contratos de tipo seguro',
+      },
+      {
+        type: 'paragraph',
+        text: 'Si bien IFRS 17 aplica directamente a compañías de seguros, su alcance se extiende a cualquier contrato que transfiera riesgo de seguro. Grupos empresariales con subsidiarias en el sector financiero o con contratos de garantía financiera deben evaluar si alguno de sus acuerdos cae dentro del alcance de esta norma.',
+      },
+      {
+        type: 'paragraph',
+        text: 'La adopción completa de IFRS 17 requiere un sistema de medición de contratos de seguro bajo tres modelos posibles: General Measurement Model (GMM), Premium Allocation Approach (PAA) y Variable Fee Approach (VFA). La elección incorrecta del modelo puede generar volatilidad innecesaria en el estado de resultados.',
+      },
+      {
+        type: 'heading',
+        text: 'Pasos concretos para su CFO',
+      },
+      {
+        type: 'list',
+        items: [
+          'Realizar un diagnóstico de impacto específico para su empresa antes de diciembre 2024.',
+          'Revisar todos los contratos que podrían caer bajo el alcance de IFRS 17.',
+          'Actualizar el modelo de ECL para cuentas por cobrar e instrumentos financieros.',
+          'Comunicar los impactos esperados al directorio antes del cierre anual.',
+          'Asegurarse de que el auditor externo esté alineado con las políticas adoptadas.',
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'En AB Advisory hemos acompañado múltiples procesos de convergencia IFRS en empresas chilenas con exigencias de reporte internacional. Si necesita un diagnóstico específico para su caso, contáctenos — el primer análisis no tiene costo.',
+      },
+    ],
   },
   {
+    slug: 'reestructuracion-deuda',
     category: 'Finanzas Corporativas',
     title: 'Cuándo y cómo reestructurar la deuda sin perder la clasificación crediticia',
+    author: 'Andrés Bustos',
     readTime: '5 min',
     date: 'Octubre 2024',
     image: '/images/insights/reestructuracion.webp',
     featured: false,
     href: '/insights/reestructuracion-deuda',
+    description: 'Reestructurar deuda no es sinónimo de crisis. Cuando se hace bien y en el momento correcto, es una herramienta de gestión financiera que mejora el flujo de caja y protege la clasificación crediticia.',
+    body: [
+      {
+        type: 'paragraph',
+        text: 'Uno de los errores más costosos que cometen los CFOs es esperar a estar en una posición de debilidad negociadora antes de abordar una reestructuración de deuda. La reestructuración proactiva, realizada cuando la empresa aún cumple sus compromisos, es radicalmente diferente — tanto en términos de condiciones obtenidas como de impacto en la clasificación crediticia.',
+      },
+      {
+        type: 'heading',
+        text: '¿Cuándo es el momento correcto?',
+      },
+      {
+        type: 'paragraph',
+        text: 'Hay señales tempranas que justifican iniciar una evaluación: margen de cobertura de intereses cayendo hacia 2x, concentración de vencimientos en los próximos 18 meses, o cambios estructurales en el negocio que alteran el perfil de flujos. Esperar a que los covenants sean incumplidos elimina prácticamente todo el poder de negociación.',
+      },
+      {
+        type: 'heading',
+        text: 'El proceso en cuatro etapas',
+      },
+      {
+        type: 'list',
+        items: [
+          'Diagnóstico de estructura de pasivos: análisis de vencimientos, tasas, covenants y garantías vigentes.',
+          'Modelamiento de escenarios: construcción de un modelo de flujo de caja a 3-5 años con distintos supuestos operacionales.',
+          'Estrategia de negociación: definición de la estructura objetivo y priorización de acreedores.',
+          'Implementación y monitoreo: cierre de acuerdos, actualización de contratos y seguimiento post-reestructuración.',
+        ],
+      },
+      {
+        type: 'heading',
+        text: 'Proteger la clasificación crediticia',
+      },
+      {
+        type: 'paragraph',
+        text: 'Las clasificadoras de riesgo (Fitch, Moody\'s, Humphreys en Chile) evalúan una reestructuración en función de si responde a una gestión proactiva del pasivo o a dificultades operacionales. La narrativa importa tanto como los números. Una reestructuración bien comunicada, con un plan de negocios sólido y acceso al experto en el proceso, puede mantener o incluso mejorar la clasificación.',
+      },
+      {
+        type: 'paragraph',
+        text: 'En AB Advisory hemos liderado procesos de reestructuración de hasta USD 15M, con mejoras documentadas en eficiencia de caja superiores al 20%. Si está evaluando una reestructuración o quiere entender las opciones disponibles para su estructura de pasivos, solicite un diagnóstico inicial.',
+      },
+    ],
   },
   {
+    slug: 'power-bi-directorios',
     category: 'Tecnología Financiera',
     title: 'Power BI para directorios: 5 dashboards que transformaron la toma de decisiones ejecutiva',
+    author: 'Andrés Bustos',
     readTime: '6 min',
     date: 'Septiembre 2024',
     image: '/images/insights/power-bi.webp',
     featured: false,
     href: '/insights/power-bi-directorios',
+    description: 'Los directorios más efectivos toman decisiones sobre información en tiempo real, no sobre reportes de 40 páginas preparados semanas después del cierre. Así implementamos cinco dashboards que cambiaron la dinámica de tres grupos empresariales chilenos.',
+    body: [
+      {
+        type: 'paragraph',
+        text: 'El reporte mensual de directorio de 40 páginas preparado tres semanas después del cierre es una práctica que tiene los días contados. En un entorno donde los ciclos de decisión se acortan, los directorios que operan con información rezagada asumen un riesgo competitivo concreto.',
+      },
+      {
+        type: 'heading',
+        text: 'El problema de los reportes tradicionales',
+      },
+      {
+        type: 'paragraph',
+        text: 'El modelo clásico tiene tres fallas estructurales: el tiempo de preparación genera información obsoleta al momento de ser presentada; el formato estático no permite explorar hipótesis en la sala de directorio; y la dependencia del área financiera para cualquier consulta crea cuellos de botella que frenan la toma de decisiones.',
+      },
+      {
+        type: 'heading',
+        text: 'Los 5 dashboards que implementamos',
+      },
+      {
+        type: 'list',
+        items: [
+          'Dashboard de P&L en tiempo real: resultado operacional, EBITDA y márgenes por unidad de negocio, actualizado al día anterior al cierre.',
+          'Monitor de flujo de caja: posición de caja diaria, proyección a 13 semanas y alertas de tensión de liquidez.',
+          'Tablero de KPIs comerciales: pipeline, conversión, ticket promedio y proyección de ingresos vs. presupuesto.',
+          'Dashboard de RRHH y costo de dotación: headcount por área, costo total de personal y desviaciones vs. budget.',
+          'Indicadores de cumplimiento: estado de covenants financieros, obligaciones tributarias y cumplimiento normativo SII.',
+        ],
+      },
+      {
+        type: 'heading',
+        text: 'Resultados medibles',
+      },
+      {
+        type: 'paragraph',
+        text: 'En los tres grupos donde implementamos esta arquitectura de datos, el tiempo de preparación del reporte de directorio se redujo de 3 semanas a 2 días. Más importante: las sesiones de directorio pasaron de revisar el pasado a discutir el futuro — con modelos de escenarios disponibles en tiempo real.',
+      },
+      {
+        type: 'paragraph',
+        text: 'La implementación técnica en Power BI, conectada a SAP FI/CO o al ERP de la empresa, toma entre 6 y 10 semanas dependiendo de la complejidad de las fuentes de datos. Si quiere evaluar si esta solución aplica para su grupo empresarial, conversemos.',
+      },
+    ],
   },
 ]
 
