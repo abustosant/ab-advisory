@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import AnimOnScroll from '@/components/AnimOnScroll'
 
-const COLOR = '#1B5E3B'
+const COLOR = '#138040'
 const NAVY = '#0D2B45'
 
 const alcance = [
@@ -146,7 +146,7 @@ export default function ContableContent() {
               letterSpacing: '0.05em', textTransform: 'uppercase' as const,
               transition: 'background 0.2s',
             }}
-            onMouseEnter={e => (e.currentTarget.style.background = '#1B5E3B')}
+            onMouseEnter={e => (e.currentTarget.style.background = '#138040')}
             onMouseLeave={e => (e.currentTarget.style.background = 'var(--navy, #0D2B45)')}
           >
             Solicitar diagnóstico gratuito →
