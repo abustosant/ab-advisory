@@ -120,13 +120,13 @@
     <text x="38" y="68" fill="rgba(255,255,255,0.5)" font-family="Arial, sans-serif" font-size="10">Ingresos y gastos core</text>
 
     <!-- Inversión -->
-    <rect x="20" y="98" width="160" height="56" rx="6" fill="#1A73A7" opacity="0.15" stroke="#1A73A7" stroke-width="1" opacity="0.6"/>
+    <rect x="20" y="98" width="160" height="56" rx="6" fill="#1A73A7" opacity="0.15" stroke="#1A73A7" stroke-width="1"/>
     <rect x="20" y="98" width="4" height="56" rx="2" fill="#4A9EC7" opacity="0.7"/>
     <text x="38" y="120" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="700">Inversión</text>
     <text x="38" y="136" fill="rgba(255,255,255,0.5)" font-family="Arial, sans-serif" font-size="10">Retorno de activos</text>
 
     <!-- Financiamiento -->
-    <rect x="20" y="166" width="160" height="56" rx="6" fill="#1A73A7" opacity="0.1" stroke="#1A73A7" stroke-width="1" opacity="0.4"/>
+    <rect x="20" y="166" width="160" height="56" rx="6" fill="#1A73A7" opacity="0.1" stroke="#1A73A7" stroke-width="1"/>
     <rect x="20" y="166" width="4" height="56" rx="2" fill="#4A9EC7" opacity="0.4"/>
     <text x="38" y="188" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="700">Financiamiento</text>
     <text x="38" y="204" fill="rgba(255,255,255,0.5)" font-family="Arial, sans-serif" font-size="10">Costos de capital</text>
