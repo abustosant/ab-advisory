@@ -42,26 +42,6 @@ export default function Footer() {
             <h4 style={{ fontSize: '.6rem', fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,.2)', marginBottom: 16 }}>Servicios</h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 8 }}>
               {['Asesoría Financiera','Contabilidad & IFRS','Gestión de RRHH','Compliance','Due Diligence'].map(s => (
-                <li key={s}><Link href="/#servicios" className="foot-link">{s}</Link></li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Empresa */}
-          <div>
-            <h4 style={{ fontSize: '.6rem', fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,.2)', marginBottom: 16 }}>Empresa</h4>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 8 }}>
-              {[['Director Fundador','/nosotros'],['Por qué elegirnos','/#diferenciador'],['Insights','/insights'],['Contacto','/contacto']].map(([l,h]) => (
-                <li key={l}><Link href={h} className="foot-link">{l}</Link></li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contacto */}
-          <div>
-            <h4 style={{ fontSize: '.6rem', fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,.2)', marginBottom: 16 }}>Contacto</h4>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 8 }}>
-              <li><a href={`tel:${SITE.phoneRaw}`} className="foot-link">{SITE.phone}</a></li>
               <li><a href={`mailto:${SITE.email}`} className="foot-link">{SITE.email}</a></li>
               <li><a href={SITE.whatsapp} target="_blank" className="foot-link">WhatsApp</a></li>
               <li><a href={SITE.linkedin} target="_blank" className="foot-link">LinkedIn</a></li>
