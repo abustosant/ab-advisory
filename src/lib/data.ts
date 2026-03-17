@@ -106,7 +106,7 @@ export const COMPARISON_TABLE = [
   { feature: 'Modelamiento financiero', ab: 'check', indie: 'none', big4: 'check' },
   { feature: 'Acceso directo al experto', ab: 'check', indie: 'check', big4: 'none' },
   { feature: 'SAP FI/CO avanzado', ab: 'check', indie: 'none', big4: 'check' },
-  { feature: 'Tarifa accesible', ab: 'check', indie: 'check', big4: 'none' },
+  { feature: 'Honorarios transparentes', ab: 'check', indie: 'check', big4: 'none' },
   { feature: 'Experiencia multinacional', ab: 'check', indie: 'none', big4: 'check' },
   { feature: 'Power BI / Reporting', ab: 'check', indie: 'none', big4: 'check' },
 ]
