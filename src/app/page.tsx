@@ -190,14 +190,14 @@ export default function Home() {
                 Comparativa de valor
               </div>
               <h3 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.25rem,2vw,1.7rem)', fontWeight: 600, color: 'var(--navy)', marginBottom: 6, lineHeight: 1.3 }}>
-                ¿Qué obtiene con<br/>cada alternativa?
+                El estándar que marca<br/>la diferencia.
               </h3>
               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.81rem', marginTop: 30 }}>
                 <thead>
                   <tr>
                     <th style={{ background: 'var(--navy)', color: '#fff', padding: '11px 13px', textAlign: 'left', fontSize: '.67rem', fontWeight: 600, letterSpacing: '.07em', textTransform: 'uppercase' }}>Capacidad</th>
                     <th style={{ background: '#1A3D5C', color: '#fff', padding: '11px 13px', fontSize: '.67rem', fontWeight: 600, textTransform: 'uppercase', textAlign: 'center' }}>AB Advisory</th>
-                    <th style={{ background: 'var(--navy)', color: '#fff', padding: '11px 13px', fontSize: '.67rem', fontWeight: 600, textTransform: 'uppercase', textAlign: 'center' }}>Ctr. Indep.</th>
+                    <th style={{ background: 'var(--navy)', color: '#fff', padding: '11px 13px', fontSize: '.67rem', fontWeight: 600, textTransform: 'uppercase', textAlign: 'center' }}>Independiente</th>
                     <th style={{ background: 'var(--navy)', color: '#fff', padding: '11px 13px', fontSize: '.67rem', fontWeight: 600, textTransform: 'uppercase', textAlign: 'center' }}>Big Four</th>
                   </tr>
                 </thead>

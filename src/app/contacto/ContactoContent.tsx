@@ -115,7 +115,7 @@ export default function ContactoContent() {
                 Reunión Inicial — AB Advisory
               </p>
               <p style={{ fontSize: '0.78rem', color: '#6B7280', margin: '0.1rem 0 0' }}>
-                45 minutos · Video call · Santiago de Chile
+                35 minutos · Zoom · Santiago de Chile
               </p>
             </div>
           </div>
