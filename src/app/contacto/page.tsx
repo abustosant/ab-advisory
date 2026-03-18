@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import ContactoContent from './ContactoContent'
 
 export const metadata: Metadata = {
-  title: 'Contacto | AB Advisory — Diagnóstico Gratuito',
-  description: 'Solicite un diagnóstico gratuito con Andrés Bustos A. Asesoría financiera, contabilidad IFRS y RRHH en Santiago de Chile. Respuesta en menos de 24 horas.',
+  title: 'Conversemos | AB Advisory — Agende una Reunión',
+  description: 'Agende una reunión inicial con un socio de AB Advisory. Asesoría financiera, contabilidad IFRS y gestión de RRHH para empresas en Chile.',
 }
 
 export default function Page() {
