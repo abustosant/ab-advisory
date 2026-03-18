@@ -1,4 +1,3 @@
-
 import Image from 'next/image'
 import Link from 'next/link'
 import HeroCanvas from '@/components/HeroCanvas'
@@ -268,7 +267,7 @@ export default function Home() {
                   ))}
                 </ul>
                 <Link href={svc.href} style={{ display: 'flex', alignItems: 'center', gap: 7, fontSize: '.76rem', fontWeight: 600, color: 'var(--blue)', paddingTop: 17, borderTop: '1px solid var(--border)', transition: 'all .3s' }}>
-                  Solicitar asesoría <ArrowIcon />
+                  Ver servicio <ArrowIcon />
                 </Link>
               </AnimOnScroll>
             ))}
