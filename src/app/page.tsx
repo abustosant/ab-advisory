@@ -247,13 +247,7 @@ export default function Home() {
                 Tres pilares.<br/>Un socio estratégico.
               </h2>
             </AnimOnScroll>
-            <Link href="/servicios/financiero" style={{
-              display: 'inline-flex', alignItems: 'center', gap: 9,
-              fontSize: '.78rem', fontWeight: 600, letterSpacing: '.05em', textTransform: 'uppercase',
-              padding: '13px 26px', background: 'var(--navy)', color: '#fff', flexShrink: 0,
-            }}>
-              Ver servicios <ArrowIcon />
-            </Link>
+
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 0, border: '1px solid var(--border)' }} className="svc-grid">
