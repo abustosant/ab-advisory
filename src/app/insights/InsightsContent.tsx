@@ -19,6 +19,14 @@ export default function InsightsContent() {
         borderBottom: '1px solid var(--border)',
       }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem' }}>
+
+          {/* BREADCRUMB */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.78rem', color: '#6B7280', marginBottom: '2rem' }}>
+            <Link href="/" style={{ color: '#4A5568', textDecoration: 'none' }}>Inicio</Link>
+            <span style={{ color: '#9CA3AF' }}>→</span>
+            <span style={{ color: 'var(--navy, #0D2B45)' }}>Insights</span>
+          </div>
+
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
             <div style={{ width: '2.5rem', height: '2px', background: 'var(--blue, #1A73A7)' }} />
             <span style={{ color: 'var(--blue, #1A73A7)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
@@ -152,15 +160,26 @@ export default function InsightsContent() {
         }}>
           Conversemos sobre su desafío específico.
         </h2>
-        <Link href="/contacto" style={{
-          display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
-          padding: '0.875rem 2rem',
-          background: '#fff', color: 'var(--navy, #0D2B45)',
-          fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.07em', textTransform: 'uppercase' as const,
-          textDecoration: 'none',
-        }}>
-          Conversemos →
-        </Link>
+        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' as const }}>
+          <Link href="/contacto" style={{
+            display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+            padding: '0.875rem 2rem',
+            background: '#fff', color: 'var(--navy, #0D2B45)',
+            fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.07em', textTransform: 'uppercase' as const,
+            textDecoration: 'none',
+          }}>
+            Conversemos →
+          </Link>
+          <Link href="/" style={{
+            display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+            padding: '0.875rem 2rem',
+            border: '1px solid rgba(255,255,255,0.3)', color: 'rgba(255,255,255,0.85)',
+            fontSize: '0.78rem', fontWeight: 600, letterSpacing: '0.07em', textTransform: 'uppercase' as const,
+            textDecoration: 'none',
+          }}>
+            Volver al inicio
+          </Link>
+        </div>
       </section>
 
       <style>{`
