@@ -2,25 +2,24 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { SITE } from '@/lib/data'
-
+ 
 export default function Navbar() {
   const [solid, setSolid] = useState(true)
   const [mobileOpen, setMobileOpen] = useState(false)
-
+ 
   useEffect(() => {
     const onScroll = () => setSolid(window.scrollY > 50)
     window.addEventListener('scroll', onScroll, { passive: true })
     onScroll()
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
-
+ 
   const links = [
     { href: '/#servicios', label: 'Servicios' },
     { href: '/nosotros', label: 'Nosotros' },
     { href: '/insights', label: 'Insights' },
-    { href: '/contacto', label: 'Contacto' },
   ]
-
+ 
   return (
     <>
       <nav
@@ -49,7 +48,7 @@ export default function Navbar() {
     }}
   />
 </Link>
-
+ 
           {/* Desktop links */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 2 }} className="nav-links-desktop">
             {links.map(l => (
@@ -74,7 +73,7 @@ export default function Navbar() {
               Conversemos
             </Link>
           </div>
-
+ 
           {/* Hamburger */}
           <button onClick={() => setMobileOpen(!mobileOpen)} className="ham-btn" style={{
             display: 'none', flexDirection: 'column', gap: 5, padding: 8,
@@ -89,7 +88,7 @@ export default function Navbar() {
           </button>
         </div>
       </nav>
-
+ 
       {/* Mobile menu */}
       {mobileOpen && (
         <div style={{
@@ -113,7 +112,7 @@ export default function Navbar() {
           </Link>
         </div>
       )}
-
+ 
       <style>{`
         @media (max-width: 768px) {
           .nav-links-desktop { display: none !important; }
