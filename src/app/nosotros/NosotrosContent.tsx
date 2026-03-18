@@ -1,9 +1,9 @@
 'use client'
-
+ 
 import Image from 'next/image'
 import Link from 'next/link'
 import AnimOnScroll from '@/components/AnimOnScroll'
-
+ 
 const historia = [
   {
     año: '2008',
@@ -36,7 +36,7 @@ const historia = [
     descripcion: 'Con más de 17 años en primera línea corporativa, se funda AB Advisory para llevar ese mismo nivel de excelencia técnica a empresas medianas con visión de crecimiento.',
   },
 ]
-
+ 
 const valores = [
   {
     numero: '01',
@@ -56,10 +56,10 @@ const valores = [
   {
     numero: '04',
     titulo: 'Acceso directo al experto',
-    descripcion: 'Usted no habla con un analista junior. Habla directamente con Andrés Bustos — el mismo profesional que ejecuta el trabajo.',
+    descripcion: 'Usted no habla con un analista junior. Habla directamente con un socio de la firma — el mismo profesional que ejecuta el trabajo.',
   },
 ]
-
+ 
 const credenciales = [
   // Universidad de Chile
   { institucion: 'Universidad de Chile', credencial: 'Magíster en Información Financiero Contable', año: 'En curso · 2025–2028' },
@@ -75,11 +75,11 @@ const credenciales = [
   { institucion: 'UTEM', credencial: 'Ingeniería Comercial, mención Finanzas', año: '2011' },
   { institucion: 'UTEM', credencial: 'Contador Auditor · Titulación con Distinción', año: '2008' },
  ]
-
+ 
 export default function NosotrosContent() {
   return (
     <main style={{ fontFamily: 'var(--font-dm-sans, DM Sans, sans-serif)' }}>
-
+ 
 {/* HERO */}
 <section style={{
   background: 'linear-gradient(135deg, #E8F4FD 0%, #F0F7FF 50%, #EAF3FB 100%)',
@@ -103,7 +103,7 @@ export default function NosotrosContent() {
         </span>
       </div>
     </AnimOnScroll>
-
+ 
     <div style={{
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
@@ -133,7 +133,7 @@ export default function NosotrosContent() {
             marginBottom: '2.5rem',
             maxWidth: '520px',
           }}>
-            No somos una agencia generalista ni un contador de barrio. AB Advisory nació para cerrar la brecha entre el rigor técnico de las Big Four y la dedicación exclusiva que solo una boutique puede ofrecer.
+            AB Advisory nació para cerrar la brecha entre el rigor técnico de las Big Four y la dedicación exclusiva que solo una boutique puede ofrecer.
           </p>
         </AnimOnScroll>
         <AnimOnScroll direction="up" delay={0.3}>
@@ -159,7 +159,7 @@ export default function NosotrosContent() {
           </div>
         </AnimOnScroll>
       </div>
-
+ 
       {/* Foto */}
       <AnimOnScroll direction="left" delay={0.2}>
         <div style={{ position: 'relative' }}>
@@ -200,7 +200,7 @@ export default function NosotrosContent() {
     </div>
   </div>
 </section>
-
+ 
 {/* MÉTRICAS */}
 <section style={{
   background: '#fff',
@@ -234,7 +234,7 @@ export default function NosotrosContent() {
     ))}
   </div>
 </section>
-
+ 
       {/* HISTORIA */}
       <section style={{ background: '#fff', padding: '6rem 2rem' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -254,7 +254,7 @@ export default function NosotrosContent() {
               Veinte años en primera línea<br />de las finanzas corporativas.
             </h2>
           </AnimOnScroll>
-
+ 
           <div style={{ position: 'relative' }}>
             <div style={{
               position: 'absolute', left: '5.5rem', top: 0, bottom: 0,
@@ -307,7 +307,7 @@ export default function NosotrosContent() {
           </div>
         </div>
       </section>
-
+ 
       {/* VALORES */}
       <section style={{ background: 'var(--canvas, #F8FAFC)', padding: '6rem 2rem' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -357,7 +357,7 @@ export default function NosotrosContent() {
           </div>
         </div>
       </section>
-
+ 
       {/* CREDENCIALES */}
       <section style={{ background: '#fff', padding: '6rem 2rem' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -414,12 +414,12 @@ export default function NosotrosContent() {
           </div>
         </div>
       </section>
-
+ 
       {/* CTA FINAL */}
       <section style={{ background: 'var(--navy, #0D2B45)', padding: '5rem 2rem', textAlign: 'center' as const }}>
         <AnimOnScroll direction="up">
           <p style={{ color: 'var(--blue, #1A73A7)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const, marginBottom: '1.5rem' }}>
-            PRIMERA CONVERSACIÓN SIN COSTO
+            CONVERSEMOS
           </p>
           <h2 style={{
             fontFamily: 'var(--font-playfair, Playfair Display, serif)',
@@ -442,7 +442,7 @@ export default function NosotrosContent() {
           </Link>
         </AnimOnScroll>
       </section>
-
+ 
     </main>
   )
 }
