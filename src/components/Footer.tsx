@@ -37,8 +37,14 @@ export default function Footer() {
           <div>
             <h4 style={{ fontSize: '.6rem', fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,.2)', marginBottom: 16 }}>Servicios</h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 8 }}>
-              {['Asesoría Financiera','Contabilidad & IFRS','Gestión de RRHH','Compliance','Due Diligence'].map(s => (
-                <li key={s}><Link href="/#servicios" className="foot-link">{s}</Link></li>
+              {[
+                { label: 'Asesoría Financiera', href: '/servicios/financiero' },
+                { label: 'Contabilidad & IFRS', href: '/servicios/contable' },
+                { label: 'Gestión de RRHH', href: '/servicios/rrhh' },
+                { label: 'Compliance', href: '/contacto' },
+                { label: 'Due Diligence', href: '/contacto' },
+              ].map(s => (
+                <li key={s.label}><Link href={s.href} className="foot-link">{s.label}</Link></li>
               ))}
             </ul>
           </div>

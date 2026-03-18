@@ -115,7 +115,7 @@ export const PROCESS = [
   {
     num: '01',
     title: 'Diagnóstico Inicial',
-    description: 'Reunión sin costo. Entendemos su operación, identificamos brechas y definimos el alcance exacto del trabajo necesario.',
+    description: 'Primera conversación. Entendemos su operación, identificamos brechas y definimos el alcance exacto del trabajo necesario.',
   },
   {
     num: '02',
