@@ -1,34 +1,33 @@
+
 import Image from 'next/image'
 import Link from 'next/link'
 import HeroCanvas from '@/components/HeroCanvas'
 import AnimOnScroll from '@/components/AnimOnScroll'
 import Counter from '@/components/Counter'
-import ContactForm from '@/components/ContactForm'
 import { SITE, METRICS, KPIS, SERVICES, COMPARISON_TABLE, PROCESS, IMPACT, TESTIMONIALS, INSIGHTS, TICKER_ITEMS, FOUNDER } from '@/lib/data'
-
-// Foto CEO desde archivo local WebP
+ 
 function getPhotoSrc(): string {
   return '/images/team/andres-bustos.webp'
 }
-
+ 
 const ArrowIcon = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ flexShrink: 0, transition: 'transform .2s' }}>
     <path d="M5 12h14M12 5l7 7-7 7"/>
   </svg>
 )
-
+ 
 export default function Home() {
   const photoSrc = getPhotoSrc()
   const doubledTicker = [...TICKER_ITEMS, ...TICKER_ITEMS]
-
+ 
   const eyebrowStyle: React.CSSProperties = {
     fontSize: '.63rem', fontWeight: 600, letterSpacing: '.22em', textTransform: 'uppercase',
     color: 'var(--blue)', display: 'inline-flex', alignItems: 'center', gap: 10, marginBottom: 16,
   }
-
+ 
   const sectionStyle: React.CSSProperties = { padding: '108px 0' }
   const wrapStyle: React.CSSProperties = { maxWidth: 1180, margin: '0 auto', padding: '0 52px' }
-
+ 
   return (
     <>
       {/* ═══════════════════ HERO ═══════════════════ */}
@@ -37,28 +36,26 @@ export default function Home() {
         display: 'flex', alignItems: 'center',
         background: 'linear-gradient(135deg, #EBF4FD 0%, #D2E8F7 40%, #C0DDEE 70%, #B8D5E8 100%)',
       }}>
-        <HeroCanvas />{/* Subtle background texture */}
+        <HeroCanvas />
         <div style={{
           position: 'absolute', inset: 0,
           backgroundImage: `url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=80')`,
           backgroundSize: 'cover', backgroundPosition: 'center 40%',
           opacity: .07, mixBlendMode: 'multiply',
         }} />
-        {/* Top line */}
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: 'var(--blue)', zIndex: 2 }} />
-        {/* Wave */}
         <div style={{ position: 'absolute', bottom: -1, left: 0, right: 0, zIndex: 2, height: 80, overflow: 'hidden' }}>
           <svg viewBox="0 0 1440 80" preserveAspectRatio="none" style={{ width: '100%', height: '100%', display: 'block' }}>
             <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
           </svg>
         </div>
-
+ 
         <div style={{ position: 'relative', zIndex: 3, width: '100%', maxWidth: 1180, margin: '0 auto', padding: '100px 52px' }}>
           <div style={{ fontSize: '.63rem', fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--blue)', display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 24 }}>
             <span style={{ width: 20, height: 2, background: 'var(--blue)', display: 'inline-block' }} />
             Firma boutique · Santiago de Chile
           </div>
-
+ 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 400px', gap: 80, alignItems: 'center' }} className="hero-grid">
             <div>
               <h1 style={{
@@ -91,8 +88,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-
-            {/* Stats box */}
+ 
             <AnimOnScroll>
               <div style={{
                 background: 'rgba(255,255,255,.65)', backdropFilter: 'blur(12px)',
@@ -124,7 +120,7 @@ export default function Home() {
             </AnimOnScroll>
           </div>
         </div>
-
+ 
         <style>{`
           .btn-hover-navy:hover { background:var(--navy2)!important; transform:translateY(-1px); }
           .btn-hover-outline:hover { background:var(--navy)!important; color:#fff!important; }
@@ -132,7 +128,7 @@ export default function Home() {
           @media(max-width:768px){ section > div[style*="padding: 100px"] { padding:90px 22px 80px!important; } }
         `}</style>
       </section>
-
+ 
       {/* ═══════════════════ CREDENTIAL BAR ═══════════════════ */}
       <div style={{ background: 'var(--navy)', height: 46, overflow: 'hidden', display: 'flex', alignItems: 'center' }}>
         <div className="ticker-track">
@@ -149,12 +145,11 @@ export default function Home() {
           ))}
         </div>
       </div>
-
+ 
       {/* ═══════════════════ DIFFERENTIATOR ═══════════════════ */}
       <section id="diferenciador" style={{ ...sectionStyle, background: '#fff' }}>
         <div style={wrapStyle}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 0, borderTop: '1px solid var(--border)' }} className="diff-grid">
-            {/* Left */}
             <AnimOnScroll style={{ padding: '92px 68px 92px 0', borderRight: '1px solid var(--border)' }} className="diff-l">
               <div style={eyebrowStyle}>
                 <span style={{ width: 24, height: 2, background: 'var(--blue)', display: 'inline-block' }} />
@@ -182,8 +177,7 @@ export default function Home() {
                 ))}
               </div>
             </AnimOnScroll>
-
-            {/* Right — comparison table */}
+ 
             <AnimOnScroll delay={0.16} style={{ padding: '92px 0 92px 68px' }} className="diff-r">
               <div style={eyebrowStyle}>
                 <span style={{ width: 24, height: 2, background: 'var(--blue)', display: 'inline-block' }} />
@@ -233,7 +227,7 @@ export default function Home() {
           }
         `}</style>
       </section>
-
+ 
       {/* ═══════════════════ SERVICES ═══════════════════ */}
       <section id="servicios" style={{ ...sectionStyle, background: 'var(--canvas)' }}>
         <div style={wrapStyle}>
@@ -247,9 +241,8 @@ export default function Home() {
                 Tres pilares.<br/>Un socio estratégico.
               </h2>
             </AnimOnScroll>
-
           </div>
-
+ 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 0, border: '1px solid var(--border)' }} className="svc-grid">
             {SERVICES.map((svc, i) => (
               <AnimOnScroll key={i} delay={i * 0.08} className="svc-card" style={{
@@ -293,7 +286,7 @@ export default function Home() {
           @media(max-width:768px){ .svcs-head { flex-direction:column!important; align-items:flex-start!important; } }
         `}</style>
       </section>
-
+ 
       {/* ═══════════════════ METRICS ═══════════════════ */}
       <section style={{ background: 'var(--navy)', padding: '76px 0', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, opacity: .03, backgroundImage: 'linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px)', backgroundSize: '60px 60px' }} />
@@ -301,12 +294,7 @@ export default function Home() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)' }} className="met-grid">
             {METRICS.map((m, i) => (
               <div key={i} style={{ padding: '32px 24px', borderRight: i < 3 ? '1px solid rgba(255,255,255,.07)' : 'none', textAlign: 'center', transition: 'background .25s' }} className="met-cell">
-                <Counter
-                  target={m.value}
-                  prefix={m.prefix}
-                  suffix={m.suffix}
-                  className="met-n"
-                />
+                <Counter target={m.value} prefix={m.prefix} suffix={m.suffix} className="met-n" />
                 <div style={{ fontSize: '.66rem', textTransform: 'uppercase', letterSpacing: '.12em', color: 'rgba(255,255,255,.3)', lineHeight: 1.5, marginTop: 9, whiteSpace: 'pre-line' }}>
                   {m.label}
                 </div>
@@ -317,24 +305,16 @@ export default function Home() {
         <style>{`
           .met-n { font-family:var(--font-playfair,var(--serif)); font-size:2.8rem; font-weight:700; color:#fff; line-height:1; }
           .met-cell:hover { background:rgba(255,255,255,.04)!important; }
-          @media(max-width:1100px){
-            .met-grid { grid-template-columns:1fr 1fr!important; }
-            .met-cell { border-bottom:1px solid rgba(255,255,255,.07)!important; }
-            .met-cell:nth-child(odd) { border-right:1px solid rgba(255,255,255,.07)!important; }
-            .met-cell:nth-child(even) { border-right:none!important; }
-            .met-cell:nth-last-child(-n+2) { border-bottom:none!important; }
-          }
+          @media(max-width:1100px){ .met-grid { grid-template-columns:1fr 1fr!important; } .met-cell { border-bottom:1px solid rgba(255,255,255,.07)!important; } .met-cell:nth-child(odd) { border-right:1px solid rgba(255,255,255,.07)!important; } .met-cell:nth-child(even) { border-right:none!important; } .met-cell:nth-last-child(-n+2) { border-bottom:none!important; } }
           @media(max-width:768px){ .met-grid { grid-template-columns:1fr!important; } .met-cell { border-right:none!important; } }
         `}</style>
       </section>
-
+ 
       {/* ═══════════════════ PARTNER PROFILE ═══════════════════ */}
       <section id="nosotros" style={{ ...sectionStyle, background: '#fff' }}>
         <div style={wrapStyle}>
           <div style={{ borderTop: '1px solid var(--border)' }}>
-            {/* Top: photo + bio */}
             <div style={{ display: 'grid', gridTemplateColumns: '420px 1fr', gap: 0, borderBottom: '1px solid var(--border)' }} className="partner-top">
-              {/* Photo */}
               <AnimOnScroll direction="left" style={{ borderRight: '1px solid var(--border)', position: 'relative', overflow: 'hidden' }} className="partner-photo-col">
                 <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 4, background: 'var(--blue)', zIndex: 2 }} />
                 {photoSrc ? (
@@ -343,15 +323,14 @@ export default function Home() {
                   <div style={{ width: '100%', aspectRatio: '4/5', background: 'var(--ice)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text3)' }}>Foto</div>
                 )}
               </AnimOnScroll>
-
-              {/* Bio */}
+ 
               <AnimOnScroll direction="right" style={{ padding: '56px 60px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }} className="partner-info">
                 <div style={eyebrowStyle}>
                   <span style={{ width: 24, height: 2, background: 'var(--blue)', display: 'inline-block' }} />
                   {FOUNDER.eyebrow}
                 </div>
                 <h2 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(2rem,3.5vw,3rem)', fontWeight: 700, color: 'var(--navy)', letterSpacing: '-.025em', lineHeight: 1.05, marginBottom: 8 }}>
-                  Andrés Alejandro<br/>Bustos Antil
+                  Andrés Bustos A.
                 </h2>
                 <div style={{ fontSize: '.68rem', fontWeight: 600, letterSpacing: '.17em', textTransform: 'uppercase', color: 'var(--blue)', marginBottom: 28 }}>
                   {FOUNDER.role}
@@ -383,8 +362,7 @@ export default function Home() {
                 </div>
               </AnimOnScroll>
             </div>
-
-            {/* Impact grid */}
+ 
             <div style={{ padding: '64px 0 0' }}>
               <AnimOnScroll style={{ marginBottom: 36 }}>
                 <div style={eyebrowStyle}>
@@ -420,17 +398,10 @@ export default function Home() {
           .partner-photo-col:hover .partner-photo { transform:scale(1.02)!important; filter:grayscale(0%)!important; }
           .exp-tag:hover { background:var(--navy)!important; color:#fff!important; border-color:var(--navy)!important; }
           .ic-cell:hover { background:var(--ice)!important; }
-          @media(max-width:1100px){
-            .partner-top { grid-template-columns:1fr!important; }
-            .partner-photo-col { border-right:none!important; border-bottom:1px solid var(--border)!important; }
-            .partner-photo { aspect-ratio:16/9!important; max-height:420px!important; }
-            .partner-info { padding:40px 0!important; }
-            .impact-grid { grid-template-columns:1fr!important; }
-            .ic-cell { border-right:none!important; }
-          }
+          @media(max-width:1100px){ .partner-top { grid-template-columns:1fr!important; } .partner-photo-col { border-right:none!important; border-bottom:1px solid var(--border)!important; } .partner-photo { aspect-ratio:16/9!important; max-height:420px!important; } .partner-info { padding:40px 0!important; } .impact-grid { grid-template-columns:1fr!important; } .ic-cell { border-right:none!important; } }
         `}</style>
       </section>
-
+ 
       {/* ═══════════════════ PROCESS ═══════════════════ */}
       <section style={{ ...sectionStyle, background: 'var(--canvas)' }}>
         <div style={wrapStyle}>
@@ -440,7 +411,7 @@ export default function Home() {
               Cómo trabajamos
             </div>
             <h2 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.8rem,3vw,2.8rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-.02em', color: 'var(--navy)' }}>
-              Un proceso diseñado<br/>para su tranquilidad
+              Un proceso diseñado<br/>para su certeza
             </h2>
           </AnimOnScroll>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 0, border: '1px solid var(--border)' }} className="proc-grid">
@@ -462,7 +433,7 @@ export default function Home() {
           @media(max-width:768px){ .proc-grid { grid-template-columns:1fr!important; } .proc-cell{ border-right:none!important; border-bottom:1px solid var(--border)!important; } .proc-cell:last-child{ border-bottom:none!important; } }
         `}</style>
       </section>
-
+ 
       {/* ═══════════════════ INSIGHTS ═══════════════════ */}
       <section id="insights" style={{ ...sectionStyle, background: '#fff' }}>
         <div style={wrapStyle}>
@@ -476,9 +447,7 @@ export default function Home() {
             </AnimOnScroll>
             <a href="/insights" style={{ fontSize: '.76rem', fontWeight: 600, color: 'var(--blue)', display: 'flex', alignItems: 'center', gap: 5, flexShrink: 0 }}>Ver todos →</a>
           </div>
-
           <AnimOnScroll style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 0, border: '1px solid var(--border)' }} className="ins-grid">
-            {/* Featured */}
             <Link href={INSIGHTS[0].href} style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden', borderRight: '1px solid var(--border)' }} className="ins-feat">
               <img src={INSIGHTS[0].image} alt={INSIGHTS[0].title} style={{ width: '100%', height: '100%', minHeight: 320, objectFit: 'cover', filter: 'grayscale(10%)', transition: 'transform .6s, filter .4s', display: 'block', flex: 1 }} loading="lazy" className="ins-feat-img" />
               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(0deg,rgba(13,43,69,.94) 0%,rgba(13,43,69,.4) 45%,transparent 70%)', padding: 28, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', zIndex: 2 }}>
@@ -488,7 +457,6 @@ export default function Home() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: 5, fontSize: '.7rem', fontWeight: 600, color: 'var(--blue-mid)' }}>Leer artículo <ArrowIcon /></div>
               </div>
             </Link>
-            {/* Stack */}
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               {INSIGHTS.slice(1).map((ins, i) => (
                 <Link key={i} href={ins.href} style={{ flex: 1, padding: 22, borderBottom: i === 0 ? '1px solid var(--border)' : 'none', display: 'flex', flexDirection: 'column', gap: 10, transition: 'background .2s', textDecoration: 'none' }} className="ins-sm">
@@ -509,7 +477,7 @@ export default function Home() {
           @media(max-width:768px){ .ins-head { flex-direction:column!important; align-items:flex-start!important; } }
         `}</style>
       </section>
-
+ 
       {/* ═══════════════════ TESTIMONIALS ═══════════════════ */}
       <section style={{ ...sectionStyle, background: 'var(--canvas)' }}>
         <div style={wrapStyle}>
@@ -551,7 +519,7 @@ export default function Home() {
           @media(max-width:1100px){ .test-grid { grid-template-columns:1fr!important; } .test-card { border-right:none!important; border-bottom:1px solid var(--border)!important; } .test-card:last-child { border-bottom:none!important; } }
         `}</style>
       </section>
-
+ 
       {/* ═══════════════════ CTA BAND ═══════════════════ */}
       <section style={{ background: 'var(--navy)', padding: '100px 0', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 70% 50% at 50% 110%, rgba(26,115,167,.18), transparent)' }} />
@@ -567,73 +535,11 @@ export default function Home() {
             <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,.44)', maxWidth: 450, margin: '0 auto 46px', lineHeight: 1.8 }}>
               Cuéntenos el desafío de su empresa. Cada consulta es evaluada directamente por un socio de la firma.
             </p>
-            <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-              
-              <Link href="/contacto" style={{ display: 'inline-flex', alignItems: 'center', gap: 9, background: '#fff', color: 'var(--navy)', fontSize: '.78rem', fontWeight: 700, letterSpacing: '.05em', textTransform: 'uppercase', padding: '13px 26px' }}>
-                Enviar consulta →
-              </Link>
-            </div>
+            <Link href="/contacto" style={{ display: 'inline-flex', alignItems: 'center', gap: 9, background: '#fff', color: 'var(--navy)', fontSize: '.78rem', fontWeight: 700, letterSpacing: '.05em', textTransform: 'uppercase', padding: '13px 26px' }}>
+              Agendar una reunión <ArrowIcon />
+            </Link>
           </AnimOnScroll>
         </div>
-      </section>
-
-      {/* ═══════════════════ CONTACT ═══════════════════ */}
-      <section id="contacto" style={{ ...sectionStyle, background: '#fff' }}>
-        <div style={wrapStyle}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: 0, borderTop: '1px solid var(--border)' }} className="contact-grid">
-            {/* Left info */}
-            <AnimOnScroll style={{ padding: '0 68px 0 0', borderRight: '1px solid var(--border)' }} className="contact-l">
-              <div style={eyebrowStyle}>
-                <span style={{ width: 24, height: 2, background: 'var(--blue)', display: 'inline-block' }} />
-                Contacto
-              </div>
-              <h2 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.8rem,3vw,2.8rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-.02em', color: 'var(--navy)', marginBottom: 16 }}>
-                Hablemos de<br/>su empresa
-              </h2>
-              <p style={{ fontSize: '1.05rem', lineHeight: 1.85, color: 'var(--text2)' }}>
-                Cada consulta es atendida directamente por un socio de la firma.
-              </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 20, marginTop: 36 }}>
-                {[
-                  { icon: 'mail', label: 'Email', value: SITE.email, href: `mailto:${SITE.email}` },
-                  { icon: 'map', label: 'Ubicación', value: SITE.location },
-                  { icon: 'clock', label: 'Horario', value: SITE.schedule },
-                ].map((cd, i) => (
-                  <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 14 }}>
-                    <div style={{ width: 38, height: 38, background: 'var(--navy)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                      {cd.icon === 'phone' && <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="white" strokeWidth="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6.5 6.5l.91-.91a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>}
-                      {cd.icon === 'mail' && <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="white" strokeWidth="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>}
-                      {cd.icon === 'map' && <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="white" strokeWidth="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>}
-                      {cd.icon === 'clock' && <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="white" strokeWidth="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>}
-                    </div>
-                    <div>
-                      <label style={{ fontSize: '.6rem', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--text3)', fontWeight: 600 }}>{cd.label}</label>
-                      {cd.href ? (
-                        <a href={cd.href} style={{ display: 'block', fontSize: '.87rem', fontWeight: 600, color: 'var(--navy)', marginTop: 3 }}>{cd.value}</a>
-                      ) : (
-                        <p style={{ fontSize: '.87rem', fontWeight: 600, color: 'var(--navy)', marginTop: 3 }}>{cd.value}</p>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </AnimOnScroll>
-
-            {/* Right: form */}
-            <AnimOnScroll delay={0.16} style={{ paddingLeft: 68 }} className="contact-r">
-              <h3 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: '1.5rem', fontWeight: 700, color: 'var(--navy)', marginBottom: 6 }}>Iniciar conversación</h3>
-              <p style={{ fontSize: '.82rem', color: 'var(--text2)', marginBottom: 30 }}>Le responderemos con una propuesta de primer acercamiento.</p>
-              <ContactForm />
-            </AnimOnScroll>
-          </div>
-        </div>
-        <style>{`
-          @media(max-width:1100px){
-            .contact-grid { grid-template-columns:1fr!important; }
-            .contact-l { padding-right:0!important; border-right:none!important; border-bottom:1px solid var(--border)!important; padding-bottom:48px!important; margin-bottom:48px!important; }
-            .contact-r { padding-left:0!important; }
-          }
-        `}</style>
       </section>
     </>
   )
