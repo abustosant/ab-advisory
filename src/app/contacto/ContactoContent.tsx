@@ -38,10 +38,10 @@ export default function ContactoContent() {
             letterSpacing: '-0.02em',
             marginBottom: '1rem',
           }}>
-            Diagnóstico gratuito.<br/>Sin compromiso.
+            Conversemos sobre su desafío.
           </h1>
           <p style={{ fontSize: '1.05rem', color: '#4A5568', lineHeight: 1.75, maxWidth: '560px' }}>
-            Cuéntenos su desafío. Andrés revisará su caso personalmente y le responderá en menos de 24 horas hábiles.
+            Cuéntenos su situación. Un socio de la firma revisará su caso y le responderá a la brevedad.
           </p>
         </div>
       </section>

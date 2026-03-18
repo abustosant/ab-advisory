@@ -144,7 +144,7 @@ export default function FinancieroContent() {
               fontWeight: 600, fontSize: '0.9rem', textDecoration: 'none',
               letterSpacing: '0.05em', textTransform: 'uppercase' as const,
             }}>
-              Solicitar diagnóstico gratuito →
+              Agendar una reunión →
             </Link>
           </div>
         </AnimOnScroll>
@@ -381,7 +381,7 @@ export default function FinancieroContent() {
             ¿Listo para ordenar las finanzas<br />de su empresa?
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1rem', maxWidth: '480px', margin: '0 auto 2.5rem' }}>
-            Cuéntenos su situación. Le respondemos en menos de 24 horas hábiles con una propuesta inicial sin compromiso.
+            Cuéntenos su situación. Un socio de la firma analizará su caso y le presentará una propuesta a medida.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' as const }}>
             <Link href="/contacto" style={{
@@ -391,7 +391,7 @@ export default function FinancieroContent() {
               fontWeight: 700, fontSize: '0.9rem', textDecoration: 'none',
               letterSpacing: '0.08em', textTransform: 'uppercase' as const,
             }}>
-              Solicitar diagnóstico gratuito →
+              Agendar una reunión →
             </Link>
             <Link href="/#servicios" style={{
               display: 'inline-flex', alignItems: 'center',

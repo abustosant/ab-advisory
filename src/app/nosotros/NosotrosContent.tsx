@@ -429,7 +429,7 @@ export default function NosotrosContent() {
             ¿Listo para trabajar con un<br />verdadero socio financiero?
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1rem', maxWidth: '500px', margin: '0 auto 2.5rem' }}>
-            Cuéntenos su desafío. Le responderemos en menos de 24 horas hábiles con una propuesta inicial sin compromiso.
+            Cuéntenos su desafío. Un socio de la firma analizará su caso y le presentará una propuesta a medida.
           </p>
           <Link href="/contacto" style={{
             display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
@@ -438,7 +438,7 @@ export default function NosotrosContent() {
             fontWeight: 700, fontSize: '0.9rem', textDecoration: 'none',
             letterSpacing: '0.08em', textTransform: 'uppercase' as const,
           }}>
-            Solicitar diagnóstico gratuito →
+            Agendar una reunión →
           </Link>
         </AnimOnScroll>
       </section>

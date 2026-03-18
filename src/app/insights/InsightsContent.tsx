@@ -159,7 +159,7 @@ export default function InsightsContent() {
           fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.07em', textTransform: 'uppercase' as const,
           textDecoration: 'none',
         }}>
-          Diagnóstico gratuito →
+          Conversemos →
         </Link>
       </section>
 
