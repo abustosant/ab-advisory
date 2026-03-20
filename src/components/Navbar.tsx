@@ -43,7 +43,7 @@ export default function Navbar() {
       height: 52,
       width: 'auto',
       maxWidth: 190,
-      filter: solid ? 'brightness(0) invert(1)' : 'none',
+      filter: 'brightness(0) invert(1)',
       transition: 'filter .3s',
     }}
   />
@@ -54,21 +54,20 @@ export default function Navbar() {
             {links.map(l => (
               <Link key={l.href} href={l.href} style={{
                 fontSize: '.78rem', fontWeight: 500, padding: '8px 15px',
-                color: solid ? 'rgba(255,255,255,.65)' : 'var(--text2)',
+                color: 'rgba(255,255,255,.72)',
                 transition: 'color .2s',
               }}
-              onMouseEnter={e => (e.currentTarget.style.color = solid ? '#fff' : 'var(--navy)')}
-              onMouseLeave={e => (e.currentTarget.style.color = solid ? 'rgba(255,255,255,.65)' : 'var(--text2)')}
+              onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
+              onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,.72)')}
               >
                 {l.label}
               </Link>
             ))}
-            <Link href="/contacto" style={{
-              fontSize: '.75rem', fontWeight: 700, padding: '8px 20px',
-              marginLeft: 8,
-              background: solid ? '#fff' : 'var(--navy)',
-              color: solid ? 'var(--navy)' : '#fff',
-              transition: 'all .2s',
+            <Link href="/contacto" className="nav-cta-gold" style={{
+              fontSize: '.72rem', fontWeight: 600, letterSpacing: '.1em', textTransform: 'uppercase',
+              padding: '9px 22px', marginLeft: 8,
+              background: 'var(--gold)', color: '#0A0F1C',
+              transition: 'background .2s',
             }}>
               Conversemos
             </Link>
@@ -114,6 +113,7 @@ export default function Navbar() {
       )}
  
       <style>{`
+        .nav-cta-gold:hover { background: #E8C98A !important; }
         @media (max-width: 768px) {
           .nav-links-desktop { display: none !important; }
           .ham-btn { display: flex !important; }
