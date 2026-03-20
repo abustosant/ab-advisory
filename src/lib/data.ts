@@ -65,7 +65,7 @@ export const SERVICES = [
       'Dashboards Power BI para directorio',
     ],
     href: '/servicios/financiero',
-    color: '#1A73A7',
+    color: '#0F4C7A',
   },
   {
     num: '02',

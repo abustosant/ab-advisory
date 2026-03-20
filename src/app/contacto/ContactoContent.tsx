@@ -54,8 +54,8 @@ export default function ContactoContent() {
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
-            <div style={{ width: '2.5rem', height: '2px', background: 'var(--blue, #1A73A7)' }} />
-            <span style={{ color: 'var(--blue, #1A73A7)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
+            <div style={{ width: '2.5rem', height: '2px', background: 'var(--blue)' }} />
+            <span style={{ color: 'var(--blue)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
               Conversemos
             </span>
           </div>
@@ -78,7 +78,7 @@ export default function ContactoContent() {
 
           <a href={`mailto:${SITE.email}`} style={{
             display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
-            fontSize: '0.88rem', color: 'var(--blue, #1A73A7)',
+            fontSize: '0.88rem', color: 'var(--blue)',
             textDecoration: 'none', fontWeight: 500,
           }}>
             <span style={{ fontSize: '0.9rem' }}>✉</span>
@@ -133,7 +133,7 @@ export default function ContactoContent() {
           marginTop: '1.5rem', lineHeight: 1.6,
         }}>
           Toda consulta es estrictamente confidencial. Para consultas generales escriba a{' '}
-          <a href={`mailto:${SITE.email}`} style={{ color: 'var(--blue, #1A73A7)', textDecoration: 'none' }}>
+          <a href={`mailto:${SITE.email}`} style={{ color: 'var(--blue)', textDecoration: 'none' }}>
             {SITE.email}
           </a>
         </p>

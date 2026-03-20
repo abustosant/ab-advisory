@@ -28,8 +28,8 @@ export default function InsightsContent() {
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
-            <div style={{ width: '2.5rem', height: '2px', background: 'var(--blue, #1A73A7)' }} />
-            <span style={{ color: 'var(--blue, #1A73A7)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
+            <div style={{ width: '2.5rem', height: '2px', background: 'var(--blue)' }} />
+            <span style={{ color: 'var(--blue)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
               Perspectivas técnicas
             </span>
           </div>
@@ -74,7 +74,7 @@ export default function InsightsContent() {
                   <span style={{
                     padding: '0.3rem 0.75rem',
                     background: 'var(--blue-lt, #EBF4FA)',
-                    color: 'var(--blue, #1A73A7)',
+                    color: 'var(--blue)',
                     fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const,
                   }}>
                     Destacado
@@ -98,7 +98,7 @@ export default function InsightsContent() {
                   <span>·</span>
                   <span>{featured.readTime}</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.78rem', fontWeight: 600, color: 'var(--blue, #1A73A7)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.78rem', fontWeight: 600, color: 'var(--blue)' }}>
                   Leer artículo <span>→</span>
                 </div>
               </div>
@@ -123,7 +123,7 @@ export default function InsightsContent() {
                   />
                 </div>
                 <div style={{ padding: '1.75rem' }}>
-                  <div style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: 'var(--blue, #1A73A7)', marginBottom: '0.75rem' }}>
+                  <div style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: 'var(--blue)', marginBottom: '0.75rem' }}>
                     {ins.category}
                   </div>
                   <h3 style={{
@@ -138,7 +138,7 @@ export default function InsightsContent() {
                     <div style={{ fontSize: '0.72rem', color: '#9CA3AF' }}>
                       {ins.date} · {ins.readTime}
                     </div>
-                    <span style={{ fontSize: '0.76rem', fontWeight: 600, color: 'var(--blue, #1A73A7)' }}>Leer →</span>
+                    <span style={{ fontSize: '0.76rem', fontWeight: 600, color: 'var(--blue)' }}>Leer →</span>
                   </div>
                 </div>
               </div>

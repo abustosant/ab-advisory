@@ -24,7 +24,7 @@ export default function NosotrosContent() {
         }} className="nosotros-photo-col">
           <div style={{
             position: 'absolute', top: 0, left: 0, bottom: 0,
-            width: '4px', background: 'var(--blue, #1A73A7)', zIndex: 2,
+            width: '4px', background: 'var(--blue)', zIndex: 2,
           }} />
           <img
             src="/images/team/andres-bustos.webp"
@@ -58,9 +58,9 @@ export default function NosotrosContent() {
             <div style={{
               display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem',
             }}>
-              <div style={{ width: '2rem', height: '2px', background: 'var(--blue, #1A73A7)', flexShrink: 0 }} />
+              <div style={{ width: '2rem', height: '2px', background: 'var(--blue)', flexShrink: 0 }} />
               <span style={{
-                color: 'var(--blue, #1A73A7)', fontSize: '0.65rem', fontWeight: 700,
+                color: 'var(--blue)', fontSize: '0.65rem', fontWeight: 700,
                 letterSpacing: '0.22em', textTransform: 'uppercase' as const,
               }}>
                 Director Fundador
@@ -86,7 +86,7 @@ export default function NosotrosContent() {
             <p style={{
               fontSize: '0.68rem', fontWeight: 600,
               letterSpacing: '0.18em', textTransform: 'uppercase' as const,
-              color: 'var(--blue, #1A73A7)', margin: '0 0 32px',
+              color: 'var(--blue)', margin: '0 0 32px',
             }}>
               {FOUNDER.role}
             </p>
@@ -97,7 +97,7 @@ export default function NosotrosContent() {
               fontFamily: 'var(--font-playfair, Playfair Display, serif)',
               fontSize: '1rem', lineHeight: 1.8,
               color: '#4A5568', fontStyle: 'italic',
-              borderLeft: '3px solid var(--blue, #1A73A7)',
+              borderLeft: '3px solid var(--blue)',
               paddingLeft: '20px',
               margin: '0 0 36px',
               maxWidth: '500px',
@@ -132,7 +132,7 @@ export default function NosotrosContent() {
               borderTop: '1px solid rgba(13,43,69,0.08)',
             }}>
               <a href={`mailto:${SITE.email}`} style={{
-                fontSize: '0.78rem', color: 'var(--blue, #1A73A7)',
+                fontSize: '0.78rem', color: 'var(--blue)',
                 textDecoration: 'none', fontWeight: 500,
                 display: 'flex', alignItems: 'center', gap: '7px',
               }}>
@@ -143,7 +143,7 @@ export default function NosotrosContent() {
                 {SITE.email}
               </a>
               <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer" style={{
-                fontSize: '0.78rem', color: 'var(--blue, #1A73A7)',
+                fontSize: '0.78rem', color: 'var(--blue)',
                 textDecoration: 'none', fontWeight: 500,
                 display: 'flex', alignItems: 'center', gap: '7px',
               }}>
@@ -168,7 +168,7 @@ export default function NosotrosContent() {
       }}>
         <AnimOnScroll direction="up">
           <p style={{
-            color: 'var(--blue, #1A73A7)', fontSize: '0.75rem', fontWeight: 700,
+            color: 'var(--blue)', fontSize: '0.75rem', fontWeight: 700,
             letterSpacing: '0.15em', textTransform: 'uppercase' as const, marginBottom: '1.5rem',
           }}>
             Conversemos
@@ -182,7 +182,7 @@ export default function NosotrosContent() {
           </h2>
           <Link href="/contacto" style={{
             display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
-            background: 'var(--blue, #1A73A7)', color: '#fff',
+            background: 'var(--blue)', color: '#fff',
             padding: '1rem 2.5rem', borderRadius: '4px',
             fontWeight: 700, fontSize: '0.9rem', textDecoration: 'none',
             letterSpacing: '0.08em', textTransform: 'uppercase' as const,

@@ -35,8 +35,8 @@ export default function InsightDetailContent({ insight }: { insight: Insight }) 
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
-            <div style={{ width: '2.5rem', height: '2px', background: 'var(--blue, #1A73A7)' }} />
-            <span style={{ color: 'var(--blue, #1A73A7)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
+            <div style={{ width: '2.5rem', height: '2px', background: 'var(--blue)' }} />
+            <span style={{ color: 'var(--blue)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
               {insight.category}
             </span>
           </div>
@@ -118,7 +118,7 @@ export default function InsightDetailContent({ insight }: { insight: Insight }) 
                     fontSize: '1rem', lineHeight: 1.75, color: '#374151',
                     marginBottom: '0.75rem',
                   }}>
-                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--blue, #1A73A7)', marginTop: '0.65rem', flexShrink: 0 }} />
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--blue)', marginTop: '0.65rem', flexShrink: 0 }} />
                     {item}
                   </li>
                 ))}
@@ -192,7 +192,7 @@ export default function InsightDetailContent({ insight }: { insight: Insight }) 
                       <Image src={ins.image} alt={ins.title} fill style={{ objectFit: 'cover' }} />
                     </div>
                     <div style={{ padding: '1.25rem' }}>
-                      <div style={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: 'var(--blue, #1A73A7)', marginBottom: '0.5rem' }}>
+                      <div style={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: 'var(--blue)', marginBottom: '0.5rem' }}>
                         {ins.category}
                       </div>
                       <h4 style={{
