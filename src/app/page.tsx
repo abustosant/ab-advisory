@@ -527,7 +527,7 @@ export default function Home() {
  
       {/* ═══════════════════ CTA BAND ═══════════════════ */}
       <section style={{ background: 'var(--navy)', padding: '100px 0', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 70% 50% at 50% 110%, rgba(26,115,167,.18), transparent)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 70% 50% at 50% 110%, rgba(15,76,122,.18), transparent)' }} />
         <div style={{ position: 'relative', zIndex: 1, maxWidth: 1180, margin: '0 auto', padding: '0 52px' }}>
           <AnimOnScroll>
             <div style={{ ...eyebrowStyle, justifyContent: 'center', color: 'rgba(74,158,199,.9)' }}>
