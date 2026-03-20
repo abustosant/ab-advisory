@@ -99,7 +99,7 @@ export default function HeroCanvas() {
             ctx.beginPath()
             ctx.moveTo(nodes[i].x, nodes[i].y)
             ctx.lineTo(nodes[j].x, nodes[j].y)
-            ctx.strokeStyle = `rgba(0, 149, 220, ${alpha})`
+            ctx.strokeStyle = `rgba(15, 76, 122, ${alpha})`
             ctx.lineWidth = 0.7
             ctx.stroke()
             nodes[i].connections++
@@ -117,8 +117,8 @@ export default function HeroCanvas() {
         // Hub nodes (many connections) get extra glow
         if (n.connections >= 4) {
           const glow = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, r * 5)
-          glow.addColorStop(0, `rgba(0, 169, 255, ${alpha * 0.5})`)
-          glow.addColorStop(1, 'rgba(0, 169, 255, 0)')
+          glow.addColorStop(0, `rgba(15, 76, 122, ${alpha * 0.5})`)
+          glow.addColorStop(1, 'rgba(15, 76, 122, 0)')
           ctx.beginPath()
           ctx.arc(n.x, n.y, r * 5, 0, Math.PI * 2)
           ctx.fillStyle = glow
@@ -128,7 +128,7 @@ export default function HeroCanvas() {
         // Core dot
         ctx.beginPath()
         ctx.arc(n.x, n.y, r, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(0, 169, 255, ${alpha})`
+        ctx.fillStyle = `rgba(15, 76, 122, ${alpha})`
         ctx.fill()
       })
 

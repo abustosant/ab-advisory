@@ -45,7 +45,7 @@ export default function Home() {
  
         <div style={{ position: 'relative', zIndex: 3, width: '100%', maxWidth: 1180, margin: '0 auto', padding: '100px 52px' }}>
           <div style={{ fontSize: '.63rem', fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--blue)', display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 24 }}>
-            <span style={{ width: 20, height: 2, background: 'var(--blue)', display: 'inline-block' }} />
+            <span style={{ width: 20, height: 2, background: 'var(--gold)', display: 'inline-block' }} />
             Firma boutique · Santiago de Chile
           </div>
  
@@ -147,7 +147,7 @@ export default function Home() {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 0, borderTop: '1px solid var(--border)' }} className="diff-grid">
             <AnimOnScroll style={{ padding: '92px 68px 92px 0', borderRight: '1px solid var(--border)' }} className="diff-l">
               <div style={eyebrowStyle}>
-                <span style={{ width: 24, height: 2, background: 'var(--blue)', display: 'inline-block' }} />
+                <span style={{ width: 24, height: 2, background: 'var(--gold)', display: 'inline-block' }} />
                 ¿Por qué AB Advisory?
               </div>
               <h2 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.8rem,3vw,2.8rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-.02em', color: 'var(--navy)', marginBottom: 16 }}>
@@ -175,7 +175,7 @@ export default function Home() {
  
             <AnimOnScroll delay={0.16} style={{ padding: '92px 0 92px 68px' }} className="diff-r">
               <div style={eyebrowStyle}>
-                <span style={{ width: 24, height: 2, background: 'var(--blue)', display: 'inline-block' }} />
+                <span style={{ width: 24, height: 2, background: 'var(--gold)', display: 'inline-block' }} />
                 Comparativa de valor
               </div>
               <h3 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.25rem,2vw,1.7rem)', fontWeight: 600, color: 'var(--navy)', marginBottom: 6, lineHeight: 1.3 }}>
@@ -232,7 +232,7 @@ export default function Home() {
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: 52, paddingBottom: 26, borderBottom: '1px solid var(--border)' }} className="svcs-head">
             <AnimOnScroll>
               <div style={eyebrowStyle}>
-                <span style={{ width: 24, height: 2, background: 'var(--blue)', display: 'inline-block' }} />
+                <span style={{ width: 24, height: 2, background: 'var(--gold)', display: 'inline-block' }} />
                 Lo que ofrecemos
               </div>
               <h2 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.8rem,3vw,2.8rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-.02em', color: 'var(--navy)' }}>
@@ -248,7 +248,7 @@ export default function Home() {
                 background: '#fff', position: 'relative', overflow: 'hidden', transition: 'background .3s',
               }}>
                 <img src={svc.image} alt={svc.title} style={{ width: '100%', height: 175, objectFit: 'cover', marginBottom: 30, filter: 'grayscale(15%)', transition: 'filter .4s' }} loading="lazy" />
-                <div style={{ fontSize: '.6rem', fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--blue)', marginBottom: 11, transition: 'color .3s' }}>
+                <div style={{ fontSize: '.6rem', fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 11, transition: 'color .3s' }}>
                   {svc.num} · {svc.category}
                 </div>
                 <h3 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: '1.25rem', fontWeight: 600, color: 'var(--navy)', marginBottom: 11, lineHeight: 1.2, transition: 'color .3s' }}>
@@ -325,7 +325,7 @@ export default function Home() {
  
               <AnimOnScroll direction="right" style={{ padding: '56px 60px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }} className="partner-info">
                 <div style={eyebrowStyle}>
-                  <span style={{ width: 24, height: 2, background: 'var(--blue)', display: 'inline-block' }} />
+                  <span style={{ width: 24, height: 2, background: 'var(--gold)', display: 'inline-block' }} />
                   {FOUNDER.eyebrow}
                 </div>
                 <h2 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(2rem,3.5vw,3rem)', fontWeight: 700, color: 'var(--navy)', letterSpacing: '-.025em', lineHeight: 1.05, marginBottom: 8 }}>
@@ -365,7 +365,7 @@ export default function Home() {
             <div style={{ padding: '64px 0 0' }}>
               <AnimOnScroll style={{ marginBottom: 36 }}>
                 <div style={eyebrowStyle}>
-                  <span style={{ width: 24, height: 2, background: 'var(--blue)', display: 'inline-block' }} />
+                  <span style={{ width: 24, height: 2, background: 'var(--gold)', display: 'inline-block' }} />
                   Impacto demostrado por sector
                 </div>
                 <h3 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.25rem,2vw,1.7rem)', fontWeight: 600, color: 'var(--navy)' }}>Su trabajo habla por él</h3>
@@ -406,7 +406,7 @@ export default function Home() {
         <div style={wrapStyle}>
           <AnimOnScroll style={{ maxWidth: 540, margin: '0 auto 60px', textAlign: 'center' }}>
             <div style={{ ...eyebrowStyle, justifyContent: 'center' }}>
-              <span style={{ width: 24, height: 2, background: 'var(--blue)', display: 'inline-block' }} />
+              <span style={{ width: 24, height: 2, background: 'var(--gold)', display: 'inline-block' }} />
               Cómo trabajamos
             </div>
             <h2 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.8rem,3vw,2.8rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-.02em', color: 'var(--navy)' }}>
@@ -416,7 +416,7 @@ export default function Home() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 0, border: '1px solid var(--border)' }} className="proc-grid">
             {PROCESS.map((step, i) => (
               <AnimOnScroll key={i} delay={i * 0.08} className="proc-cell" style={{ padding: '40px 30px', borderRight: i < 3 ? '1px solid var(--border)' : 'none', background: '#fff', transition: 'background .3s' }}>
-                <div style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: '3rem', fontWeight: 700, color: 'var(--border)', lineHeight: 1, marginBottom: 18, transition: 'color .3s' }} className="proc-num">{step.num}</div>
+                <div style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: '3rem', fontWeight: 700, color: 'var(--gold)', lineHeight: 1, marginBottom: 18, transition: 'color .3s' }} className="proc-num">{step.num}</div>
                 <h4 style={{ fontSize: '.87rem', fontWeight: 700, color: 'var(--navy)', marginBottom: 9, transition: 'color .3s' }} className="proc-title">{step.title}</h4>
                 <p style={{ fontSize: '.79rem', lineHeight: 1.68, color: 'var(--text2)', transition: 'color .3s' }} className="proc-desc">{step.description}</p>
               </AnimOnScroll>
@@ -439,7 +439,7 @@ export default function Home() {
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: 40, paddingBottom: 26, borderBottom: '1px solid var(--border)' }} className="ins-head">
             <AnimOnScroll>
               <div style={eyebrowStyle}>
-                <span style={{ width: 24, height: 2, background: 'var(--blue)', display: 'inline-block' }} />
+                <span style={{ width: 24, height: 2, background: 'var(--gold)', display: 'inline-block' }} />
                 Conocimiento aplicado
               </div>
               <h2 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.8rem,3vw,2.8rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-.02em', color: 'var(--navy)' }}>Insights Financieros</h2>
@@ -482,7 +482,7 @@ export default function Home() {
         <div style={wrapStyle}>
           <AnimOnScroll style={{ textAlign: 'center', maxWidth: 500, margin: '0 auto 52px' }}>
             <div style={{ ...eyebrowStyle, justifyContent: 'center' }}>
-              <span style={{ width: 24, height: 2, background: 'var(--blue)', display: 'inline-block' }} />
+              <span style={{ width: 24, height: 2, background: 'var(--gold)', display: 'inline-block' }} />
               Testimonios
             </div>
             <h2 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.8rem,3vw,2.8rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-.02em', color: 'var(--navy)' }}>
