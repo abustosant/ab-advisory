@@ -37,18 +37,19 @@ export default function Home() {
       }}>
         {/* Video de fondo */}
         <video autoPlay muted loop playsInline style={{
-          position: 'absolute', inset: 0, width: '100%', height: '100%',
+          position: 'absolute', top: 0, right: 0, bottom: 0, left: 0,
+          width: '100%', height: '100%', display: 'block',
           objectFit: 'cover', objectPosition: 'center 30%',
         }}>
           <source src="/hero-santiago-compressed.mp4" type="video/mp4" />
         </video>
 
         {/* Overlay navy 65% */}
-        <div style={{ position: 'absolute', inset: 0, zIndex: 1, background: 'rgba(13,43,69,0.65)' }} />
+        <div style={{ position: 'absolute', top: 0, right: 0, bottom: 0, left: 0, zIndex: 1, background: 'rgba(13,43,69,0.65)' }} />
 
         {/* Overlay degradado direccional */}
         <div style={{
-          position: 'absolute', inset: 0, zIndex: 1,
+          position: 'absolute', top: 0, right: 0, bottom: 0, left: 0, zIndex: 1,
           background: 'linear-gradient(to right, rgba(10,15,28,0.55) 0%, rgba(10,15,28,0.25) 55%, transparent 100%), linear-gradient(to top, rgba(10,15,28,0.80) 0%, rgba(10,15,28,0.20) 40%, transparent 70%)',
         }} />
 
