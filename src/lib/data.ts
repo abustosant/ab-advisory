@@ -411,11 +411,11 @@ export const INSIGHTS = [
 export const TICKER_ITEMS = [
   ['IFRS Especialista', 'Universidad de Chile'],
   ['Compliance Officer Cert.', 'UAI · Adolfo Ibáñez'],
-  ['SAP FI/CO HANA Key User', 'Implementación corporativa'],
   ['Mágister Finanzas', 'U. de Chile · en curso'],
   ['Big Four Audits', 'Cero observaciones'],
   ['LATAM Airlines Group', 'Gestión contable multinacional'],
-  ['Besalco Maquinarias', 'CFO · Finanzas corporativas'],
+  ['Besalco Maquinarias', 'Sub Gerente de Contabilidad Corporativa'],
+  ['Grupo LatamWin', 'CFO · Finanzas Corporativas'],
   ['USD 15M', 'Deuda reestructurada'],
   ['34 empresas', 'Consolidadas bajo IFRS'],
   ['Ingeniería Comercial', 'UTEM · Santiago'],
