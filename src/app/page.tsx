@@ -41,7 +41,7 @@ export default function Home() {
           width: '100%', height: '100%', display: 'block',
           objectFit: 'cover', objectPosition: 'center 30%',
         }}>
-          <source src="/hero-santiago-compressed.mp4" type="video/mp4" />
+          <source src="/hero-santiago-v2.mp4" type="video/mp4" />
         </video>
 
         {/* Overlay navy 65% */}
