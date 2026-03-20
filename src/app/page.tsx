@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import HeroCanvas from '@/components/HeroCanvas'
+
 import AnimOnScroll from '@/components/AnimOnScroll'
 import Counter from '@/components/Counter'
 import { SITE, METRICS, KPIS, SERVICES, COMPARISON_TABLE, PROCESS, IMPACT, TESTIMONIALS, INSIGHTS, TICKER_ITEMS, FOUNDER } from '@/lib/data'
@@ -30,96 +30,134 @@ export default function Home() {
   return (
     <>
       {/* ═══════════════════ HERO ═══════════════════ */}
-      <section style={{
+      <section className="hero-section-wrap" style={{
         minHeight: '100vh', position: 'relative', overflow: 'hidden',
-        display: 'flex', alignItems: 'center',
-        background: 'linear-gradient(135deg, #EBF4FD 0%, #D2E8F7 40%, #C0DDEE 70%, #B8D5E8 100%)',
+        display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
+        padding: '0 80px 90px', background: '#0A0F1C',
       }}>
-        <HeroCanvas />
-        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: 'var(--blue)', zIndex: 2 }} />
-        <div style={{ position: 'absolute', bottom: -1, left: 0, right: 0, zIndex: 2, height: 80, overflow: 'hidden' }}>
+        {/* Video de fondo */}
+        <video autoPlay muted loop playsInline style={{
+          position: 'absolute', inset: 0, width: '100%', height: '100%',
+          objectFit: 'cover', objectPosition: 'center 30%',
+        }}>
+          <source src="/hero-santiago-compressed.mp4" type="video/mp4" />
+        </video>
+
+        {/* Overlay navy 65% */}
+        <div style={{ position: 'absolute', inset: 0, zIndex: 1, background: 'rgba(13,43,69,0.65)' }} />
+
+        {/* Overlay degradado direccional */}
+        <div style={{
+          position: 'absolute', inset: 0, zIndex: 1,
+          background: 'linear-gradient(to right, rgba(10,15,28,0.55) 0%, rgba(10,15,28,0.25) 55%, transparent 100%), linear-gradient(to top, rgba(10,15,28,0.80) 0%, rgba(10,15,28,0.20) 40%, transparent 70%)',
+        }} />
+
+        {/* Línea dorada vertical izquierda */}
+        <div className="hero-line-left" style={{
+          position: 'absolute', left: 80, top: 0, bottom: 0, width: 1, zIndex: 2,
+          background: 'linear-gradient(to bottom, transparent 10%, var(--gold) 40%, var(--gold) 60%, transparent 90%)',
+          opacity: 0.28,
+        }} />
+
+        {/* Línea superior dorada */}
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: 'var(--gold)', zIndex: 4, opacity: 0.45 }} />
+        {/* Ola inferior → transición a sección blanca */}
+        <div style={{ position: 'absolute', bottom: -1, left: 0, right: 0, zIndex: 4, height: 80, overflow: 'hidden' }}>
           <svg viewBox="0 0 1440 80" preserveAspectRatio="none" style={{ width: '100%', height: '100%', display: 'block' }}>
             <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
           </svg>
         </div>
- 
-        <div style={{ position: 'relative', zIndex: 3, width: '100%', maxWidth: 1180, margin: '0 auto', padding: '100px 52px' }}>
-          <div style={{ fontSize: '.63rem', fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--blue)', display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 24 }}>
-            <span style={{ width: 20, height: 2, background: 'var(--gold)', display: 'inline-block' }} />
-            Firma boutique · Santiago de Chile
+
+        {/* Contenido principal */}
+        <div style={{ position: 'relative', zIndex: 3, maxWidth: 680 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 28 }}>
+            <span style={{ width: 36, height: 1, background: 'var(--gold)', display: 'inline-block', flexShrink: 0 }} />
+            <span style={{ fontSize: '.63rem', fontWeight: 500, letterSpacing: '.3em', textTransform: 'uppercase', color: 'var(--gold)' }}>
+              Firma boutique · Santiago de Chile
+            </span>
           </div>
- 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 400px', gap: 80, alignItems: 'center' }} className="hero-grid">
-            <div>
-              <h1 style={{
-                fontFamily: 'var(--font-playfair,var(--serif))',
-                fontSize: 'clamp(3.4rem, 6vw, 6rem)',
-                fontWeight: 700, lineHeight: 1.01, letterSpacing: '-.03em',
-                color: 'var(--navy)', marginBottom: 28,
-              }}>
-                Decisiones<br/>financieras con<br/><em style={{ fontStyle: 'italic', color: 'var(--blue)' }}>precisión real</em>
-              </h1>
-              <p style={{ fontSize: '1.05rem', lineHeight: 1.85, color: 'var(--text2)', maxWidth: 500, marginBottom: 44 }}>
-                Asesoría de nivel corporativo para startups, pymes y empresas medianas en crecimiento que exigen la misma profundidad técnica que las Big Four — con la agilidad y dedicación exclusiva de una firma boutique.
-              </p>
-              <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-                <Link href="/contacto" style={{
-                  display: 'inline-flex', alignItems: 'center', gap: 9,
-                  fontSize: '.78rem', fontWeight: 600, letterSpacing: '.05em', textTransform: 'uppercase',
-                  padding: '13px 26px', background: 'var(--navy)', color: '#fff',
-                  transition: 'all .25s',
-                }} className="btn-hover-navy">
-                  Agendar una reunión <ArrowIcon />
-                </Link>
-                <Link href="#servicios" style={{
-                  display: 'inline-flex', alignItems: 'center', gap: 9,
-                  fontSize: '.78rem', fontWeight: 600, letterSpacing: '.05em', textTransform: 'uppercase',
-                  padding: '13px 26px', background: 'transparent', color: 'var(--navy)',
-                  border: '1.5px solid var(--border2)', transition: 'all .25s',
-                }} className="btn-hover-outline">
-                  Ver servicios
-                </Link>
-              </div>
-            </div>
- 
-            <AnimOnScroll>
-              <div style={{
-                background: 'rgba(255,255,255,.65)', backdropFilter: 'blur(12px)',
-                border: '1px solid rgba(255,255,255,.9)', padding: '40px 36px',
-                boxShadow: '0 8px 40px rgba(13,43,69,.08)',
-              }}>
-                <div style={{ fontSize: '.62rem', fontWeight: 600, letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--text3)', marginBottom: 28, display: 'flex', alignItems: 'center', gap: 8 }}>
-                  Resultados comprobados
-                  <span style={{ flex: 1, height: 1, background: 'var(--border)' }} />
-                </div>
-                {[
-                  { n: '20+', l: 'Años en finanzas\ncorporativas de alto nivel' },
-                  { n: 'USD 15M', l: 'En deuda\nreestructurada' },
-                  { n: '34', l: 'Empresas consolidadas\nbajo IFRS sin observaciones' },
-                  { n: '0', l: 'Observaciones en\nauditorías Big Four' },
-                ].map((item, i) => (
-                  <div key={i} style={{ padding: '18px 0', borderBottom: i < 3 ? '1px solid var(--border)' : 'none' }}>
-                    <div style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: '2.6rem', fontWeight: 700, color: 'var(--navy)', lineHeight: 1, marginBottom: 5 }}>
-                      {item.n.includes('+') || item.n.startsWith('USD') || item.n === '0'
-                        ? <>{item.n.replace('+','')}<span style={{ color: 'var(--blue)' }}>{item.n.includes('+') ? '+' : ''}</span></>
-                        : item.n}
-                    </div>
-                    <div style={{ fontSize: '.7rem', textTransform: 'uppercase', letterSpacing: '.1em', color: 'var(--text3)', lineHeight: 1.45 }}>
-                      {item.l.split('\n').map((line, j) => <span key={j}>{line}{j === 0 && <br/>}</span>)}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </AnimOnScroll>
+
+          <h1 style={{
+            fontFamily: 'var(--font-playfair,var(--serif))',
+            fontSize: 'clamp(3.25rem, 6.5vw, 5.5rem)',
+            fontWeight: 300, lineHeight: 1.05, letterSpacing: '-.01em',
+            color: '#F5F3EF', marginBottom: 8,
+          }}>
+            Decisiones<br/>financieras con<br/>
+            <em style={{ fontStyle: 'italic', fontWeight: 400, color: '#E8C98A' }}>precisión real</em>
+          </h1>
+
+          <p style={{
+            fontSize: '.83rem', fontWeight: 300, lineHeight: 1.9, letterSpacing: '.02em',
+            color: 'rgba(245,243,239,0.55)', maxWidth: 460, margin: '28px 0 44px',
+          }}>
+            Asesoría de nivel corporativo para startups, pymes y empresas medianas en crecimiento que exigen la misma profundidad técnica que las Big Four — con la agilidad y dedicación exclusiva de una firma boutique.
+          </p>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: 32, flexWrap: 'wrap' }}>
+            <Link href="/contacto" style={{
+              display: 'inline-flex', alignItems: 'center', gap: 9,
+              fontSize: '.72rem', fontWeight: 500, letterSpacing: '.16em', textTransform: 'uppercase',
+              color: '#0A0F1C', background: 'var(--gold)', padding: '14px 36px',
+              transition: 'background .3s, transform .2s',
+            }} className="btn-hero-primary">
+              Agendar una reunión <ArrowIcon />
+            </Link>
+            <Link href="#servicios" style={{
+              display: 'inline-flex', alignItems: 'center', gap: 9,
+              fontSize: '.72rem', fontWeight: 400, letterSpacing: '.13em', textTransform: 'uppercase',
+              color: 'rgba(245,243,239,0.75)',
+              borderBottom: '1px solid rgba(201,169,110,0.4)', paddingBottom: 3,
+              transition: 'color .3s, border-color .3s',
+            }} className="btn-hero-secondary">
+              Ver servicios
+            </Link>
           </div>
         </div>
- 
+
+        {/* Métricas — inferior derecha */}
+        <div style={{
+          position: 'absolute', bottom: 90, right: 80, zIndex: 3,
+          display: 'flex', gap: 44, alignItems: 'flex-end',
+        }} className="hero-metrics-bar">
+          {([
+            { n: '20', suffix: '+', l: 'Años en finanzas\ncorporativas' },
+            { n: 'USD 15', suffix: 'M', l: 'En deuda\nreestructurada' },
+            { n: '34', suffix: '', l: 'Empresas bajo IFRS\nsin observaciones' },
+            { n: '0', suffix: '', l: 'Observaciones en\nauditorías Big Four' },
+          ] as { n: string; suffix: string; l: string }[]).flatMap((item, i) => {
+            const els = []
+            if (i > 0) els.push(
+              <div key={`d${i}`} style={{ width: 1, height: 56, background: 'rgba(201,169,110,0.2)', alignSelf: 'center', flexShrink: 0 }} />
+            )
+            els.push(
+              <div key={`m${i}`} style={{ textAlign: 'right' }}>
+                <div style={{
+                  fontFamily: 'var(--font-playfair,var(--serif))',
+                  fontSize: '2.6rem', fontWeight: 300, color: '#F5F3EF', lineHeight: 1,
+                }}>
+                  {item.n}<span style={{ color: 'var(--gold)', fontSize: '1.5rem' }}>{item.suffix}</span>
+                </div>
+                <div style={{
+                  fontSize: '.55rem', fontWeight: 400, letterSpacing: '.15em',
+                  textTransform: 'uppercase', color: 'rgba(245,243,239,0.4)',
+                  marginTop: 6, lineHeight: 1.5,
+                }}>
+                  {item.l.split('\n').map((line, j) => <span key={j}>{line}{j === 0 && <br/>}</span>)}
+                </div>
+              </div>
+            )
+            return els
+          })}
+        </div>
+
         <style>{`
-          .btn-hover-navy:hover { background:var(--navy2)!important; transform:translateY(-1px); }
-          .btn-hover-outline:hover { background:var(--navy)!important; color:#fff!important; }
-          @media(max-width:1100px){ .hero-grid { grid-template-columns:1fr!important; gap:52px!important; } }
-          @media(max-width:768px){ section > div[style*="padding: 100px"] { padding:90px 22px 80px!important; } }
-          @media(max-width:480px){ section > div[style*="padding: 100px"] { padding:70px 18px 60px!important; } }
+          .btn-hero-primary:hover { background: #E8C98A !important; transform: translateY(-1px); }
+          .btn-hero-secondary:hover { color: var(--gold) !important; border-color: var(--gold) !important; }
+          @media(max-width:1200px){ .hero-metrics-bar { right:36px!important; gap:28px!important; } }
+          @media(max-width:920px){ .hero-metrics-bar { display:none!important; } }
+          @media(max-width:768px){ .hero-section-wrap { padding:0 28px 70px!important; } .hero-line-left { display:none!important; } }
+          @media(max-width:480px){ .hero-section-wrap { padding:0 18px 60px!important; } }
           @media(max-width:768px){ .cred-bar { display:none!important; } }
         `}</style>
       </section>
