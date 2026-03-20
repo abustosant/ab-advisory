@@ -125,11 +125,13 @@ export default function Home() {
           .btn-hover-outline:hover { background:var(--navy)!important; color:#fff!important; }
           @media(max-width:1100px){ .hero-grid { grid-template-columns:1fr!important; gap:52px!important; } }
           @media(max-width:768px){ section > div[style*="padding: 100px"] { padding:90px 22px 80px!important; } }
+          @media(max-width:480px){ section > div[style*="padding: 100px"] { padding:70px 18px 60px!important; } }
+          @media(max-width:768px){ .cred-bar { display:none!important; } }
         `}</style>
       </section>
  
       {/* ═══════════════════ CREDENTIAL BAR ═══════════════════ */}
-      <div style={{ background: 'var(--navy)', height: 46, overflow: 'hidden', display: 'flex', alignItems: 'center' }}>
+      <div className="cred-bar" style={{ background: 'var(--navy)', height: 46, overflow: 'hidden', display: 'flex', alignItems: 'center' }}>
         <div className="ticker-track">
           {doubledTicker.map(([label, val], i) => (
             <span key={i} style={{
@@ -185,6 +187,7 @@ export default function Home() {
               <h3 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.25rem,2vw,1.7rem)', fontWeight: 600, color: 'var(--navy)', marginBottom: 6, lineHeight: 1.3 }}>
                 El estándar que marca<br/>la diferencia.
               </h3>
+              <div className="table-scroll">
               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.81rem', marginTop: 30 }}>
                 <thead>
                   <tr>
@@ -214,6 +217,7 @@ export default function Home() {
                   ))}
                 </tbody>
               </table>
+              </div>
             </AnimOnScroll>
           </div>
         </div>
@@ -224,6 +228,7 @@ export default function Home() {
             .diff-l { padding:76px 0!important; border-right:none!important; border-bottom:1px solid var(--border)!important; }
             .diff-r { padding:56px 0 76px!important; }
           }
+          @media(max-width:768px){ .table-scroll { overflow-x:auto; } }
         `}</style>
       </section>
  
@@ -283,6 +288,7 @@ export default function Home() {
           .svcs-head { flex-wrap:wrap; gap:16px; }
           @media(max-width:1100px){ .svc-grid { grid-template-columns:1fr!important; } .svc-card { border-right:none!important; border-bottom:1px solid var(--border)!important; } }
           @media(max-width:768px){ .svcs-head { flex-direction:column!important; align-items:flex-start!important; } }
+          @media(max-width:480px){ .svc-card { padding:28px 20px!important; } }
         `}</style>
       </section>
  
