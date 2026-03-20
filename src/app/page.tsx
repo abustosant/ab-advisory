@@ -36,12 +36,6 @@ export default function Home() {
         background: 'linear-gradient(135deg, #EBF4FD 0%, #D2E8F7 40%, #C0DDEE 70%, #B8D5E8 100%)',
       }}>
         <HeroCanvas />
-        <div style={{
-          position: 'absolute', inset: 0,
-          backgroundImage: `url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=80')`,
-          backgroundSize: 'cover', backgroundPosition: 'center 40%',
-          opacity: .07, mixBlendMode: 'multiply',
-        }} />
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: 'var(--blue)', zIndex: 2 }} />
         <div style={{ position: 'absolute', bottom: -1, left: 0, right: 0, zIndex: 2, height: 80, overflow: 'hidden' }}>
           <svg viewBox="0 0 1440 80" preserveAspectRatio="none" style={{ width: '100%', height: '100%', display: 'block' }}>
