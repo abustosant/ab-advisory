@@ -1,21 +1,51 @@
 'use client'
 
 import Link from 'next/link'
-import ContactForm from '@/components/ContactForm'
-import { SITE, FOUNDER } from '@/lib/data'
+import { useEffect } from 'react'
+import { SITE } from '@/lib/data'
 
 export default function ContactoContent() {
+
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.type = 'text/javascript'
+    script.innerHTML = `
+      (function (C, A, L) {
+        let p = function (a, ar) { a.q.push(ar); };
+        let d = C.document;
+        C.Cal = C.Cal || function () {
+          let cal = C.Cal; let ar = arguments;
+          if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; }
+          if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;}
+          p(cal, ar);
+        };
+      })(window, "https://app.cal.eu/embed/embed.js", "init");
+      Cal("init", "reunion", {origin:"https://app.cal.eu"});
+      Cal.ns.reunion("inline", {
+        elementOrSelector:"#cal-embed-reunion",
+        config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+        calLink: "abadvisory/reunion",
+      });
+      Cal.ns.reunion("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+    `
+    document.head.appendChild(script)
+    return () => {
+      document.head.removeChild(script)
+    }
+  }, [])
+
   return (
     <main style={{ fontFamily: 'var(--font-dm-sans, DM Sans, sans-serif)', background: '#fff' }}>
 
       {/* HERO */}
       <section style={{
-        background: 'linear-gradient(135deg, #EEF2F7 0%, #F5F7FA 50%, #EEF2F7 100%)',
+        background: 'linear-gradient(135deg, #E8F4FD 0%, #F0F7FF 50%, #EAF3FB 100%)',
         paddingTop: '7rem',
         paddingBottom: '4rem',
-        borderBottom: '1px solid var(--border)',
+        borderBottom: '1px solid rgba(13,43,69,0.08)',
       }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 2rem' }}>
+
           {/* Breadcrumb */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.78rem', color: '#6B7280', marginBottom: '2.5rem' }}>
             <Link href="/" style={{ color: '#4A5568', textDecoration: 'none' }}>Inicio</Link>
@@ -24,11 +54,12 @@ export default function ContactoContent() {
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
-            <div style={{ width: '2.5rem', height: '2px', background: 'var(--blue, #1A73A7)' }} />
-            <span style={{ color: 'var(--blue, #1A73A7)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
+            <div style={{ width: '2.5rem', height: '2px', background: 'var(--blue)' }} />
+            <span style={{ color: 'var(--blue)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
               Conversemos
             </span>
           </div>
+
           <h1 style={{
             fontFamily: 'var(--font-playfair, Georgia, serif)',
             fontSize: 'clamp(2rem, 4vw, 3rem)',
@@ -36,117 +67,81 @@ export default function ContactoContent() {
             color: 'var(--navy, #0D2B45)',
             lineHeight: 1.1,
             letterSpacing: '-0.02em',
-            marginBottom: '1rem',
+            marginBottom: '1.25rem',
           }}>
-            Diagnóstico gratuito.<br/>Sin compromiso.
+            Agende una reunión inicial.
           </h1>
-          <p style={{ fontSize: '1.05rem', color: '#4A5568', lineHeight: 1.75, maxWidth: '560px' }}>
-            Cuéntenos su desafío. Andrés revisará su caso personalmente y le responderá en menos de 24 horas hábiles.
+
+          <p style={{ fontSize: '1.05rem', color: '#4A5568', lineHeight: 1.75, maxWidth: '560px', marginBottom: '1.5rem' }}>
+            Seleccione el día y horario que prefiera. Un socio de la firma confirmará la reunión y se pondrá en contacto a la brevedad.
           </p>
+
+          <a href={`mailto:${SITE.email}`} style={{
+            display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+            fontSize: '0.88rem', color: 'var(--blue)',
+            textDecoration: 'none', fontWeight: 500,
+          }}>
+            <span style={{ fontSize: '0.9rem' }}>✉</span>
+            {SITE.email}
+          </a>
         </div>
       </section>
 
-      {/* MAIN CONTENT */}
-      <section style={{ maxWidth: '1200px', margin: '0 auto', padding: '5rem 2rem' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 420px', gap: '5rem', alignItems: 'start' }} className="contact-grid">
-
-          {/* Form */}
-          <div>
-            <h2 style={{
-              fontFamily: 'var(--font-playfair, Georgia, serif)',
-              fontSize: '1.4rem', fontWeight: 700,
-              color: 'var(--navy, #0D2B45)', marginBottom: '0.5rem',
+      {/* CALENDARIO EMBED */}
+      <section style={{ maxWidth: '900px', margin: '0 auto', padding: '4rem 2rem 6rem' }}>
+        <div style={{
+          border: '1px solid rgba(13,43,69,0.08)',
+          borderRadius: '8px',
+          overflow: 'hidden',
+          background: '#fff',
+          boxShadow: '0 4px 24px rgba(13,43,69,0.06)',
+        }}>
+          {/* Header */}
+          <div style={{
+            padding: '1.5rem 2rem',
+            borderBottom: '1px solid rgba(13,43,69,0.06)',
+            display: 'flex', alignItems: 'center', gap: '1rem',
+          }}>
+            <div style={{
+              width: '36px', height: '36px', borderRadius: '50%',
+              background: 'var(--navy, #0D2B45)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              flexShrink: 0,
             }}>
-              Solicitar diagnóstico
-            </h2>
-            <p style={{ fontSize: '0.84rem', color: '#6B7280', marginBottom: '2rem', lineHeight: 1.65 }}>
-              Completa el formulario o escríbenos directamente. Toda consulta es confidencial.
-            </p>
-            <ContactForm />
-          </div>
-
-          {/* Info panel */}
-          <div style={{ position: 'sticky', top: '6rem' }}>
-            {/* Direct contact */}
-            <div style={{ border: '1px solid var(--border)', padding: '2rem', marginBottom: '1.5rem' }}>
-              <h3 style={{
-                fontFamily: 'var(--font-playfair, Georgia, serif)',
-                fontSize: '1rem', fontWeight: 700,
-                color: 'var(--navy, #0D2B45)', marginBottom: '1.5rem',
-              }}>
-                Contacto directo
-              </h3>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                <a href={`mailto:${SITE.email}`} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', textDecoration: 'none', color: 'inherit' }}>
-                  <span style={{ fontSize: '1rem', marginTop: '0.1rem' }}>✉</span>
-                  <div>
-                    <div style={{ fontSize: '0.68rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase' as const, color: '#9CA3AF', marginBottom: '0.2rem' }}>Email</div>
-                    <div style={{ fontSize: '0.88rem', color: 'var(--blue, #1A73A7)', fontWeight: 500 }}>{SITE.email}</div>
-                  </div>
-                </a>
-                <a href={`tel:${SITE.phoneRaw}`} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', textDecoration: 'none', color: 'inherit' }}>
-                  <span style={{ fontSize: '1rem', marginTop: '0.1rem' }}>☎</span>
-                  <div>
-                    <div style={{ fontSize: '0.68rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase' as const, color: '#9CA3AF', marginBottom: '0.2rem' }}>Teléfono</div>
-                    <div style={{ fontSize: '0.88rem', color: 'var(--navy, #0D2B45)', fontWeight: 500 }}>{SITE.phone}</div>
-                  </div>
-                </a>
-                <a href={SITE.whatsapp} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', textDecoration: 'none', color: 'inherit' }}>
-                  <span style={{ fontSize: '1rem', marginTop: '0.1rem' }}>💬</span>
-                  <div>
-                    <div style={{ fontSize: '0.68rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase' as const, color: '#9CA3AF', marginBottom: '0.2rem' }}>WhatsApp</div>
-                    <div style={{ fontSize: '0.88rem', color: 'var(--blue, #1A73A7)', fontWeight: 500 }}>Respuesta inmediata</div>
-                  </div>
-                </a>
-                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-                  <span style={{ fontSize: '1rem', marginTop: '0.1rem' }}>📍</span>
-                  <div>
-                    <div style={{ fontSize: '0.68rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase' as const, color: '#9CA3AF', marginBottom: '0.2rem' }}>Ubicación</div>
-                    <div style={{ fontSize: '0.88rem', color: 'var(--navy, #0D2B45)', fontWeight: 500, lineHeight: 1.5 }}>{SITE.location}</div>
-                  </div>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-                  <span style={{ fontSize: '1rem', marginTop: '0.1rem' }}>🕐</span>
-                  <div>
-                    <div style={{ fontSize: '0.68rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase' as const, color: '#9CA3AF', marginBottom: '0.2rem' }}>Horario</div>
-                    <div style={{ fontSize: '0.88rem', color: 'var(--navy, #0D2B45)', fontWeight: 500 }}>{SITE.schedule}</div>
-                  </div>
-                </div>
-              </div>
-
-              <a href={SITE.whatsapp} target="_blank" rel="noopener noreferrer" style={{
-                display: 'block', textAlign: 'center',
-                marginTop: '1.5rem', padding: '0.75rem 1.5rem',
-                background: '#25D366', color: '#fff',
-                fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase' as const,
-                textDecoration: 'none', transition: 'opacity 0.2s',
-              }}>
-                Escribir por WhatsApp →
-              </a>
+              <span style={{ color: '#fff', fontWeight: 700, fontSize: '0.75rem' }}>AB</span>
             </div>
-
-            {/* Founder card */}
-            <div style={{ border: '1px solid var(--border)', padding: '1.5rem', background: 'var(--canvas, #F5F7FA)' }}>
-              <div style={{ fontSize: '0.68rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase' as const, color: '#9CA3AF', marginBottom: '0.75rem' }}>
-                Con quien hablarás
-              </div>
-              <div style={{ fontFamily: 'var(--font-playfair, Georgia, serif)', fontSize: '1rem', fontWeight: 700, color: 'var(--navy, #0D2B45)', marginBottom: '0.2rem' }}>
-                {FOUNDER.name}
-              </div>
-              <div style={{ fontSize: '0.78rem', color: '#6B7280', marginBottom: '0.75rem' }}>
-                {FOUNDER.role}
-              </div>
-              <p style={{ fontSize: '0.78rem', color: '#4A5568', lineHeight: 1.65, margin: 0 }}>
-                Respuesta directa del experto — sin intermediarios ni traspasos a juniors.
+            <div>
+              <p style={{ fontWeight: 700, color: 'var(--navy, #0D2B45)', fontSize: '0.9rem', margin: 0 }}>
+                Reunión Inicial — AB Advisory
+              </p>
+              <p style={{ fontSize: '0.78rem', color: '#6B7280', margin: '0.1rem 0 0' }}>
+                35 minutos · Zoom · Santiago de Chile
               </p>
             </div>
           </div>
+
+          {/* Cal.eu embed */}
+          <div
+            id="cal-embed-reunion"
+            style={{ width: '100%', minHeight: '600px', overflow: 'scroll' }}
+          />
         </div>
+
+        <p style={{
+          textAlign: 'center' as const,
+          fontSize: '0.78rem', color: '#9CA3AF',
+          marginTop: '1.5rem', lineHeight: 1.6,
+        }}>
+          Toda consulta es estrictamente confidencial. Para consultas generales escriba a{' '}
+          <a href={`mailto:${SITE.email}`} style={{ color: 'var(--blue)', textDecoration: 'none' }}>
+            {SITE.email}
+          </a>
+        </p>
       </section>
 
       <style>{`
-        @media(max-width: 900px) {
-          .contact-grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
+        @media(max-width: 640px) {
+          #cal-embed-reunion { min-height: 500px; }
         }
       `}</style>
     </main>

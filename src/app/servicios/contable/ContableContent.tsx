@@ -149,7 +149,7 @@ export default function ContableContent() {
             onMouseEnter={e => (e.currentTarget.style.background = '#16A34A')}
             onMouseLeave={e => (e.currentTarget.style.background = 'var(--navy, #0D2B45)')}
           >
-            Solicitar diagnóstico gratuito →
+            Agendar una reunión →
           </Link>
         </AnimOnScroll>
       </div>
@@ -364,7 +364,7 @@ export default function ContableContent() {
             ¿Su contabilidad está lista para<br />una auditoría internacional?
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1rem', maxWidth: '480px', margin: '0 auto 2.5rem' }}>
-            Le ayudamos a saberlo. Diagnóstico inicial sin costo, respuesta en menos de 24 horas hábiles.
+            Le ayudamos a saberlo. Un socio de la firma analizará su situación y le presentará una propuesta a medida.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' as const }}>
             <Link href="/contacto" style={{
@@ -374,7 +374,7 @@ export default function ContableContent() {
               fontWeight: 700, fontSize: '0.9rem', textDecoration: 'none',
               letterSpacing: '0.08em', textTransform: 'uppercase' as const,
             }}>
-              Solicitar diagnóstico gratuito →
+              Agendar una reunión →
             </Link>
             <Link href="/#servicios" style={{
               display: 'inline-flex', alignItems: 'center',

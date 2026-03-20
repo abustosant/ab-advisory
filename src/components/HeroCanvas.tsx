@@ -25,7 +25,6 @@ export default function HeroCanvas() {
     let animId: number
     let nodes: Node[] = []
 
-    const NODE_COUNT = 110
     const MAX_DIST = 200
     const MIN_SPEED = 0.12
     const MAX_SPEED = 0.28
@@ -37,9 +36,10 @@ export default function HeroCanvas() {
     }
 
     const initNodes = () => {
+      const nodeCount = canvas.width < 768 ? 60 : 110
       const W = canvas.width
       const H = canvas.height
-      nodes = Array.from({ length: NODE_COUNT }, () => {
+      nodes = Array.from({ length: nodeCount }, () => {
         // Distribute with slight center bias
         const angle = Math.random() * Math.PI * 2
         const r = Math.random()

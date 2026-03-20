@@ -89,7 +89,7 @@ export default function ContactForm() {
       </div>
       {status === 'error' && (
         <div style={{ padding: '10px 14px', background: '#FEF2F2', border: '1px solid #FECACA', fontSize: '.78rem', color: '#B91C1C', marginBottom: 13 }}>
-          Hubo un error al enviar. Intente de nuevo o contáctenos por WhatsApp directamente.
+          Hubo un error al enviar. Intente de nuevo o escríbanos directamente a {SITE.email}.
         </div>
       )}
       <button type="submit" disabled={status === 'sending'} style={{

@@ -2,31 +2,30 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { SITE } from '@/lib/data'
-
+ 
 export default function Navbar() {
   const [solid, setSolid] = useState(true)
   const [mobileOpen, setMobileOpen] = useState(false)
-
+ 
   useEffect(() => {
     const onScroll = () => setSolid(window.scrollY > 50)
     window.addEventListener('scroll', onScroll, { passive: true })
     onScroll()
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
-
+ 
   const links = [
     { href: '/#servicios', label: 'Servicios' },
     { href: '/nosotros', label: 'Nosotros' },
     { href: '/insights', label: 'Insights' },
-    { href: '/contacto', label: 'Contacto' },
   ]
-
+ 
   return (
     <>
       <nav
         style={{
           position: 'fixed', top: 0, left: 0, right: 0, zIndex: 900,
-          height: 62, display: 'flex', alignItems: 'center',
+          height: 80, display: 'flex', alignItems: 'center',
           padding: '0 52px',
           transition: 'background .3s, box-shadow .3s',
           background: solid ? 'rgba(13,43,69,.97)' : 'transparent',
@@ -36,20 +35,20 @@ export default function Navbar() {
       >
         <div style={{ maxWidth: 1180, width: '100%', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           {/* Logo */}
-<Link href="/" style={{ display: 'flex', flexDirection: 'column', lineHeight: 1, textDecoration: 'none', gap: 4 }}>
-  <span style={{
-    fontFamily: 'var(--font-playfair, var(--serif))',
-    fontSize: '1.3rem', fontWeight: 700, letterSpacing: '-.02em',
-    color: solid ? '#fff' : 'var(--navy)',
-    transition: 'color .3s',
-  }}>AB Advisory</span>
-  <span style={{
-    fontSize: '.45rem', letterSpacing: '.22em', textTransform: 'uppercase',
-    color: solid ? 'rgba(255,255,255,.4)' : 'var(--blue)',
-    transition: 'color .3s',
-  }}>Strategic Partners</span>
+<Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+  <img
+    src="/logo_nav.png"
+    alt="AB Advisory — Strategic Partners"
+    style={{
+      height: 52,
+      width: 'auto',
+      maxWidth: 190,
+      filter: solid ? 'brightness(0) invert(1)' : 'none',
+      transition: 'filter .3s',
+    }}
+  />
 </Link>
-
+ 
           {/* Desktop links */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 2 }} className="nav-links-desktop">
             {links.map(l => (
@@ -74,7 +73,7 @@ export default function Navbar() {
               Conversemos
             </Link>
           </div>
-
+ 
           {/* Hamburger */}
           <button onClick={() => setMobileOpen(!mobileOpen)} className="ham-btn" style={{
             display: 'none', flexDirection: 'column', gap: 5, padding: 8,
@@ -89,11 +88,11 @@ export default function Navbar() {
           </button>
         </div>
       </nav>
-
+ 
       {/* Mobile menu */}
       {mobileOpen && (
         <div style={{
-          position: 'fixed', top: 62, left: 0, right: 0, bottom: 0,
+          position: 'fixed', top: 80, left: 0, right: 0, bottom: 0,
           background: 'var(--navy)', padding: '40px 32px',
           display: 'flex', flexDirection: 'column', zIndex: 899,
         }}>
@@ -113,7 +112,7 @@ export default function Navbar() {
           </Link>
         </div>
       )}
-
+ 
       <style>{`
         @media (max-width: 768px) {
           .nav-links-desktop { display: none !important; }
