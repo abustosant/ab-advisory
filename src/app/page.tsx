@@ -477,8 +477,8 @@ export default function Home() {
         `}</style>
       </section>
  
-      {/* ═══════════════════ TESTIMONIALS ═══════════════════ */}
-      <section style={{ ...sectionStyle, background: 'var(--canvas)' }}>
+      {/* ═══════════════════ TESTIMONIALS (desactivado — descomentar para activar) ═══════════════════ */}
+      {/* <section style={{ ...sectionStyle, background: 'var(--canvas)' }}>
         <div style={wrapStyle}>
           <AnimOnScroll style={{ textAlign: 'center', maxWidth: 500, margin: '0 auto 52px' }}>
             <div style={{ ...eyebrowStyle, justifyContent: 'center' }}>
@@ -517,7 +517,7 @@ export default function Home() {
           .test-card:hover .test-author { border-top-color:rgba(255,255,255,.09)!important; }
           @media(max-width:1100px){ .test-grid { grid-template-columns:1fr!important; } .test-card { border-right:none!important; border-bottom:1px solid var(--border)!important; } .test-card:last-child { border-bottom:none!important; } }
         `}</style>
-      </section>
+      </section> */}
  
       {/* ═══════════════════ CTA BAND ═══════════════════ */}
       <section style={{ background: 'var(--navy)', padding: '100px 0', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
