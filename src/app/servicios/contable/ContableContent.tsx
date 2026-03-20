@@ -107,8 +107,8 @@ export default function ContableContent() {
       <div>
         <AnimOnScroll direction="up" delay={0.05}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
-            <div style={{ width: '2.5rem', height: '2px', background: COLOR }} />
-            <span style={{ color: COLOR, fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
+            <div style={{ width: '2.5rem', height: '2px', background: 'var(--gold)' }} />
+            <span style={{ color: 'var(--gold)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
               02 · CONTABILIDAD · IFRS
             </span>
           </div>
@@ -203,8 +203,8 @@ export default function ContableContent() {
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <AnimOnScroll direction="up">
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
-              <div style={{ width: '2.5rem', height: '2px', background: COLOR }} />
-              <span style={{ color: COLOR, fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
+              <div style={{ width: '2.5rem', height: '2px', background: 'var(--gold)' }} />
+              <span style={{ color: 'var(--gold)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
                 ALCANCE DEL SERVICIO
               </span>
             </div>
@@ -256,8 +256,8 @@ export default function ContableContent() {
           }}>
             <AnimOnScroll direction="up">
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
-                <div style={{ width: '2.5rem', height: '2px', background: COLOR }} />
-                <span style={{ color: COLOR, fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
+                <div style={{ width: '2.5rem', height: '2px', background: 'var(--gold)' }} />
+                <span style={{ color: 'var(--gold)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
                   PERFIL DEL CLIENTE
                 </span>
               </div>
@@ -317,8 +317,8 @@ export default function ContableContent() {
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <AnimOnScroll direction="up">
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
-              <div style={{ width: '2.5rem', height: '2px', background: COLOR }} />
-              <span style={{ color: COLOR, fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
+              <div style={{ width: '2.5rem', height: '2px', background: 'var(--gold)' }} />
+              <span style={{ color: 'var(--gold)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
                 PREGUNTAS FRECUENTES
               </span>
             </div>
@@ -353,7 +353,7 @@ export default function ContableContent() {
       {/* CTA FINAL */}
       <section style={{ background: NAVY, padding: '5rem 2rem', textAlign: 'center' as const }}>
         <AnimOnScroll direction="up">
-          <p style={{ color: COLOR, fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const, marginBottom: '1.5rem' }}>
+          <p style={{ color: 'var(--gold)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const, marginBottom: '1.5rem' }}>
             PRIMERA CONVERSACIÓN SIN COSTO
           </p>
           <h2 style={{
