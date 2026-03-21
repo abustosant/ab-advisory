@@ -141,12 +141,12 @@ export default function NosotrosContent() {
           />
           {/* Gradiente lateral hacia el texto */}
           <div style={{
-            position: 'absolute', inset: 0,
+            position: 'absolute', top: 0, right: 0, bottom: 0, left: 0,
             background: 'linear-gradient(to right, #0A0F1C 0%, rgba(10,15,28,0.3) 30%, transparent 60%)',
           }} />
           {/* Gradiente inferior */}
           <div style={{
-            position: 'absolute', inset: 0,
+            position: 'absolute', top: 0, right: 0, bottom: 0, left: 0,
             background: 'linear-gradient(to top, rgba(10,15,28,0.7) 0%, transparent 35%)',
           }} />
         </div>
@@ -378,7 +378,7 @@ export default function NosotrosContent() {
         textAlign: 'center', position: 'relative', overflow: 'hidden',
       }}>
         <div style={{
-          position: 'absolute', inset: 0,
+          position: 'absolute', top: 0, right: 0, bottom: 0, left: 0,
           background: 'radial-gradient(ellipse 60% 50% at 50% 100%, rgba(201,169,110,0.06), transparent)',
         }} />
         <AnimOnScroll style={{ position: 'relative', zIndex: 1, maxWidth: 560, margin: '0 auto' }}>

@@ -22,7 +22,7 @@ export const FOUNDER = {
   nameShort: 'Andrés Bustos',
   role: 'Founder & Director Ejecutivo · AB Advisory',
   eyebrow: 'Director Fundador',
-  statement: '"Cada empresa en Chile — sin importar su tamaño — merece el mismo estándar técnico que exigen las empresas de alto desempeño global. Eso no es un privilegio: es la base para crecer con solidez."',
+  statement: '"Las empresas que aspiran a competir en los más altos estándares merecen asesoría con el mismo rigor técnico de las grandes firmas internacionales — y la atención exclusiva que solo una boutique puede ofrecer."',
   expertise: [
     'Finanzas Corporativas',
     'IFRS & Consolidación',
