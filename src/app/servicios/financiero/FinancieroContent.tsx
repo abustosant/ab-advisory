@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import AnimOnScroll from '@/components/AnimOnScroll'
 
-const COLOR = '#0284C7'
+const COLOR = '#0F4C7A'
 const NAVY = '#0D2B45'
 
 const alcance = [
@@ -74,7 +74,7 @@ export default function FinancieroContent() {
 
 {/* HERO */}
 <section style={{
-  background: 'linear-gradient(135deg, #E0F2FE 0%, #F0F9FF 50%, #E0F2FE 100%)',
+  background: 'linear-gradient(135deg, #EEF2F7 0%, #F5F7FA 50%, #EEF2F7 100%)',
   paddingTop: '7rem',
   paddingBottom: '5rem',
   position: 'relative',
@@ -82,7 +82,7 @@ export default function FinancieroContent() {
 }}>
   <div style={{
     position: 'absolute', inset: 0,
-    backgroundImage: `radial-gradient(circle at 70% 30%, rgba(2,132,199,0.1) 0%, transparent 55%)`,
+    backgroundImage: `radial-gradient(circle at 70% 30%, rgba(15,76,122,0.07) 0%, transparent 55%)`,
     pointerEvents: 'none',
   }} />
   <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem', position: 'relative' }}>
@@ -371,7 +371,7 @@ export default function FinancieroContent() {
       <section style={{ background: NAVY, padding: '5rem 2rem', textAlign: 'center' as const }}>
         <AnimOnScroll direction="up">
           <p style={{ color: 'var(--gold)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const, marginBottom: '1.5rem' }}>
-            PRIMERA CONVERSACIÓN SIN COSTO
+            MANDATOS DE ASESORÍA A MEDIDA
           </p>
           <h2 style={{
             fontFamily: 'var(--font-playfair, Playfair Display, serif)',

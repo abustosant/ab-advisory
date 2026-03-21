@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
 import AnimOnScroll from '@/components/AnimOnScroll'
 
 const COLOR = '#0F4C7A'
@@ -9,66 +8,66 @@ const NAVY = '#0D2B45'
 
 const alcance = [
   {
-    titulo: 'Implementación y actualización IFRS/NIC',
-    descripcion: 'Diagnóstico de brechas entre normativa local y IFRS, diseño del plan de convergencia e implementación completa. Actualización permanente ante cambios normativos del IASB con impacto en Chile.',
+    titulo: 'Diseño y ejecución de auditorías internas',
+    descripcion: 'Planificación y ejecución de auditorías internas bajo metodologías COSO y estándares IIA. Identificación de riesgos, evaluación de controles y emisión de informes con hallazgos y recomendaciones priorizadas.',
   },
   {
-    titulo: 'Consolidación de grupos empresariales',
-    descripcion: 'Consolidación contable de grupos con múltiples entidades — experiencia comprobada en consolidación de hasta 34 empresas simultáneas sin observaciones de auditores externos.',
-  },
-  {
-    titulo: 'Shared Services Center contable',
-    descripcion: 'Diseño e implementación de centros de servicios compartidos para grupos empresariales, estandarizando procesos, reduciendo costos y mejorando el control interno.',
+    titulo: 'Revisión de controles internos y procesos',
+    descripcion: 'Evaluación del sistema de control interno por área funcional: finanzas, operaciones, RRHH y compras. Diseño de matrices de riesgo y control alineadas con los objetivos estratégicos de la empresa.',
   },
   {
     titulo: 'Preparación para auditorías Big Four',
-    descripcion: 'Preparación técnica exhaustiva para enfrentar auditorías de Deloitte, PwC, EY y KPMG. Revisión de estados financieros, notas y documentación de soporte bajo estándares internacionales.',
+    descripcion: 'Acompañamiento técnico completo para enfrentar auditorías de Deloitte, PwC, EY y KPMG. Revisión previa de estados financieros, notas, documentación de soporte y respuestas a hallazgos preliminares.',
   },
   {
-    titulo: 'Cierre contable y reporting mensual',
-    descripcion: 'Gestión del proceso de cierre mensual con metodologías que reducen los tiempos en hasta un 40%. Preparación de estados financieros bajo IFRS y normativa SII.',
+    titulo: 'Informes de hallazgos y recomendaciones',
+    descripcion: 'Elaboración de informes ejecutivos con hallazgos clasificados por nivel de riesgo (crítico, alto, medio), causa raíz identificada, impacto estimado y recomendaciones de remediación con responsables y plazos.',
   },
   {
-    titulo: 'Integración ERP & sistemas contables',
-    descripcion: 'Configuración y operación de plataformas ERP para el área financiera. Experiencia en implantaciones corporativas de gran escala con foco en precisión y trazabilidad.',
+    titulo: 'Seguimiento de planes de remediación',
+    descripcion: 'Monitoreo periódico del avance en la implementación de acciones correctivas. Reportería al directorio y al comité de auditoría con evidencia de cierre de hallazgos.',
+  },
+  {
+    titulo: 'Auditoría de procesos financieros y contables',
+    descripcion: 'Revisión específica de ciclos de ingresos, egresos, tesorería, activos fijos e inventarios. Verificación de la correcta aplicación de IFRS y normativa SII en los registros contables.',
   },
 ]
 
 const paraQuien = [
-  'Grupos empresariales con múltiples entidades que deben consolidar',
-  'Empresas que requieren reportes bajo IFRS para bancos o socios extranjeros',
-  'Compañías que enfrentan auditorías Big Four y necesitan preparación técnica',
-  'CFOs que quieren reducir tiempos de cierre sin comprometer la calidad',
-  'Empresas en proceso de implementación o actualización de su ERP financiero',
+  'Empresas que enfrentan auditorías Big Four y necesitan preparación técnica exhaustiva',
+  'Directorios y comités de auditoría que requieren visibilidad independiente del control interno',
+  'CFOs que identifican riesgos en sus procesos y buscan un diagnóstico objetivo',
+  'Grupos empresariales con múltiples sociedades que deben auditar de forma integrada',
+  'Empresas que han recibido hallazgos de auditores externos y necesitan remediarlos',
 ]
 
 const resultados = [
-  { valor: '34', label: 'Empresas consolidadas sin observaciones' },
-  { valor: '40%', label: 'Reducción en tiempos de cierre' },
-  { valor: '100%', label: 'Cumplimiento normativa SII e IFRS' },
-  { valor: 'Big 4', label: 'Auditorías superadas sin salvedades' },
+  { valor: '0', label: 'Observaciones sin respuesta en procesos Big Four' },
+  { valor: '34+', label: 'Entidades auditadas bajo estándares internacionales' },
+  { valor: '100%', label: 'Cumplimiento normativo en mandatos ejecutados' },
+  { valor: 'COSO', label: 'Marco de referencia para control interno' },
 ]
 
 const faqs = [
   {
-    pregunta: '¿Qué diferencia hay entre IFRS y las normas contables chilenas?',
-    respuesta: 'Las IFRS (International Financial Reporting Standards) son normas internacionales emitidas por el IASB. Chile adoptó IFRS para empresas que cotizan en bolsa y grupos con reporte internacional. La diferencia principal está en el reconocimiento de activos, leasing (IFRS 16), instrumentos financieros e impuestos diferidos, entre otros.',
+    pregunta: '¿En qué se diferencia una auditoría interna de una auditoría externa?',
+    respuesta: 'La auditoría externa es realizada por una firma independiente (como las Big Four) y emite una opinión sobre los estados financieros. La auditoría interna es un proceso continuo que evalúa los controles y procesos internos para reducir riesgos operacionales y preparar a la empresa para enfrentar la auditoría externa sin sorpresas.',
   },
   {
-    pregunta: '¿Cuánto tiempo toma implementar IFRS en una empresa mediana?',
-    respuesta: 'Un proyecto de convergencia completo toma entre 6 y 18 meses, dependiendo de la complejidad de la empresa y el nivel de preparación inicial. Lo dividimos en fases: diagnóstico, diseño, implementación y monitoreo, para minimizar el impacto operacional.',
+    pregunta: '¿Cuánto tiempo toma un proceso de auditoría interna?',
+    respuesta: 'Depende del alcance. Una auditoría de ciclo específico (por ejemplo, tesorería o ciclo de ingresos) puede completarse en 3 a 6 semanas. Una auditoría integral de toda la empresa toma entre 2 y 4 meses, incluyendo planificación, trabajo de campo y emisión del informe final.',
   },
   {
-    pregunta: '¿Pueden tomar a cargo la contabilidad completa de nuestra empresa?',
-    respuesta: 'Sí, operamos en modalidad de outsourcing contable completo o como soporte técnico especializado al equipo interno. Definimos el alcance según sus necesidades específicas y el tamaño de su operación.',
+    pregunta: '¿Pueden acompañarnos durante una fiscalización de la CMF o SII?',
+    respuesta: 'Sí. Brindamos soporte técnico durante procesos de fiscalización, preparamos la documentación requerida, coordinamos las respuestas con su equipo y acompañamos las reuniones con el organismo regulador para minimizar contingencias.',
   },
   {
-    pregunta: '¿Trabajan con ERP y sistemas contables?',
-    respuesta: 'Tenemos experiencia en implantaciones ERP corporativas de gran escala. Trabajamos con el sistema que su empresa utilice — la herramienta se adapta a sus procesos, no al revés.',
+    pregunta: '¿Trabajan bajo metodología COSO o IIA?',
+    respuesta: 'Trabajamos bajo el marco COSO (Committee of Sponsoring Organizations) para la evaluación de control interno y seguimos los estándares profesionales del IIA (Institute of Internal Auditors) en la ejecución de auditorías. Esto garantiza comparabilidad con estándares internacionales y aceptación por auditores externos.',
   },
 ]
 
-export default function ContableContent() {
+export default function AuditoriaContent() {
   return (
     <main style={{ fontFamily: 'var(--font-dm-sans, DM Sans, sans-serif)' }}>
 
@@ -82,19 +81,18 @@ export default function ContableContent() {
 }}>
   <div style={{
     position: 'absolute', inset: 0,
-    backgroundImage: `radial-gradient(circle at 70% 30%, rgba(15,76,122,0.07) 0%, transparent 55%)`,
+    backgroundImage: 'radial-gradient(circle at 70% 30%, rgba(15,76,122,0.07) 0%, transparent 55%)',
     pointerEvents: 'none',
   }} />
   <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem', position: 'relative' }}>
 
-    {/* Breadcrumb */}
     <AnimOnScroll direction="up">
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '2rem', fontSize: '0.8rem' }}>
         <Link href="/" style={{ color: '#4A5568', textDecoration: 'none' }}>Inicio</Link>
         <span style={{ color: '#9CA3AF' }}>→</span>
         <Link href="/#servicios" style={{ color: '#4A5568', textDecoration: 'none' }}>Servicios</Link>
         <span style={{ color: '#9CA3AF' }}>→</span>
-        <span style={{ color: COLOR }}>Contabilidad & IFRS</span>
+        <span style={{ color: COLOR }}>Auditoría & Control Interno</span>
       </div>
     </AnimOnScroll>
 
@@ -109,7 +107,7 @@ export default function ContableContent() {
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
             <div style={{ width: '2.5rem', height: '2px', background: 'var(--gold)' }} />
             <span style={{ color: 'var(--gold)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
-              02 · CONTABILIDAD · IFRS
+              04 · AUDITORÍA & CONTROL INTERNO
             </span>
           </div>
         </AnimOnScroll>
@@ -122,7 +120,7 @@ export default function ContableContent() {
             lineHeight: 1.15, marginBottom: '1.5rem',
             letterSpacing: '-0.02em',
           }}>
-            Contabilidad IFRS sin observaciones. Siempre.
+            Control interno y auditoría con criterio Big Four.
           </h1>
         </AnimOnScroll>
 
@@ -131,51 +129,55 @@ export default function ContableContent() {
             fontSize: '1.05rem', color: '#4A5568',
             lineHeight: 1.75, marginBottom: '2.5rem', maxWidth: '500px',
           }}>
-            Implementación IFRS/NIC, consolidación de grupos y outsourcing contable para empresas con exigencias de reporte internacional. Preparación técnica para auditorías Big Four.
+            Diseño de controles, ejecución de auditorías internas y preparación técnica para enfrentar revisiones de auditores externos con estándares de las firmas más exigentes del mercado.
           </p>
         </AnimOnScroll>
 
         <AnimOnScroll direction="up" delay={0.2}>
-          <Link
-            href="/contacto"
-            style={{
-              display: 'inline-flex', alignItems: 'center',
-              background: 'var(--navy, #0D2B45)', color: '#fff',
-              padding: '0.85rem 2rem', borderRadius: '4px',
-              fontWeight: 600, fontSize: '0.9rem', textDecoration: 'none',
-              letterSpacing: '0.05em', textTransform: 'uppercase' as const,
-              transition: 'background 0.2s',
-            }}
-            onMouseEnter={e => (e.currentTarget.style.background = '#0F4C7A')}
-            onMouseLeave={e => (e.currentTarget.style.background = 'var(--navy, #0D2B45)')}
-          >
+          <Link href="/contacto" style={{
+            display: 'inline-flex', alignItems: 'center',
+            background: 'var(--navy, #0D2B45)', color: '#fff',
+            padding: '0.85rem 2rem',
+            fontWeight: 600, fontSize: '0.9rem', textDecoration: 'none',
+            letterSpacing: '0.05em', textTransform: 'uppercase' as const,
+          }}>
             Agendar una reunión →
           </Link>
         </AnimOnScroll>
       </div>
 
-      {/* Imagen */}
+      {/* Stat panel en lugar de imagen */}
       <AnimOnScroll direction="left" delay={0.15}>
         <div style={{
-          borderRadius: '6px', overflow: 'hidden',
+          background: NAVY, padding: '2.5rem',
+          borderRadius: '6px',
           boxShadow: '0 24px 60px rgba(13,43,69,0.15)',
-          border: '1px solid rgba(13,43,69,0.06)',
         }}>
-          <Image
-            src="/images/servicios/contable.webp"
-            alt="Contabilidad IFRS — AB Advisory"
-            width={560}
-            height={380}
-            style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' as const }}
-            priority
-          />
+          <div style={{ color: 'var(--gold)', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const, marginBottom: '1.5rem' }}>
+            Marco de referencia
+          </div>
+          {[
+            { label: 'Marco de control interno', value: 'COSO 2013' },
+            { label: 'Estándares profesionales', value: 'IIA · ISACA' },
+            { label: 'Normativa local', value: 'CMF · SII · DT' },
+            { label: 'Experiencia Big Four', value: 'Deloitte · PwC · EY · KPMG' },
+          ].map((item) => (
+            <div key={item.label} style={{
+              borderTop: '1px solid rgba(255,255,255,0.08)',
+              padding: '1rem 0',
+              display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+            }}>
+              <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.82rem' }}>{item.label}</span>
+              <span style={{ color: '#fff', fontSize: '0.88rem', fontWeight: 600 }}>{item.value}</span>
+            </div>
+          ))}
         </div>
       </AnimOnScroll>
     </div>
   </div>
 </section>
 
-      {/* MÉTRICAS */}
+      {/* RESULTADOS */}
       <section style={{ background: COLOR, padding: '2.5rem 2rem' }}>
         <div style={{
           maxWidth: '1200px', margin: '0 auto',
@@ -214,7 +216,7 @@ export default function ContableContent() {
               fontWeight: 700, color: NAVY,
               lineHeight: 1.2, marginBottom: '3rem',
             }}>
-              ¿Qué incluye el servicio contable?
+              ¿Qué incluye la auditoría & control interno?
             </h2>
           </AnimOnScroll>
 
@@ -231,13 +233,10 @@ export default function ContableContent() {
                   borderTop: `3px solid ${COLOR}`,
                   borderRadius: '6px',
                   background: '#fff',
+                  transition: 'box-shadow 0.2s',
                 }}>
-                  <h3 style={{ fontWeight: 700, fontSize: '0.95rem', color: NAVY, marginBottom: '0.75rem' }}>
-                    {item.titulo}
-                  </h3>
-                  <p style={{ color: '#4A5568', fontSize: '0.875rem', lineHeight: 1.7, margin: 0 }}>
-                    {item.descripcion}
-                  </p>
+                  <h3 style={{ fontWeight: 700, fontSize: '0.95rem', color: NAVY, marginBottom: '0.75rem' }}>{item.titulo}</h3>
+                  <p style={{ color: '#4A5568', fontSize: '0.875rem', lineHeight: 1.7, margin: 0 }}>{item.descripcion}</p>
                 </div>
               </AnimOnScroll>
             ))}
@@ -251,8 +250,7 @@ export default function ContableContent() {
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '4rem',
-            alignItems: 'center',
+            gap: '4rem', alignItems: 'center',
           }}>
             <AnimOnScroll direction="up">
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
@@ -264,8 +262,7 @@ export default function ContableContent() {
               <h2 style={{
                 fontFamily: 'var(--font-playfair, Playfair Display, serif)',
                 fontSize: 'clamp(1.8rem, 3vw, 2.6rem)',
-                fontWeight: 700, color: NAVY,
-                lineHeight: 1.2, marginBottom: '2rem',
+                fontWeight: 700, color: NAVY, lineHeight: 1.2, marginBottom: '2rem',
               }}>
                 ¿Es este servicio para su empresa?
               </h2>
@@ -287,12 +284,11 @@ export default function ContableContent() {
               </div>
             </AnimOnScroll>
 
-            {/* Quote */}
             <AnimOnScroll direction="left" delay={0.1}>
               <div style={{ background: NAVY, borderRadius: '8px', padding: '2.5rem', position: 'relative' }}>
-                <div style={{ fontFamily: 'Georgia, serif', fontSize: '4rem', color: COLOR, lineHeight: 1, marginBottom: '1rem', opacity: 0.6 }}>"</div>
+                <div style={{ fontFamily: 'Georgia, serif', fontSize: '4rem', color: 'var(--gold)', lineHeight: 1, marginBottom: '1rem', opacity: 0.6 }}>"</div>
                 <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '1rem', lineHeight: 1.75, fontStyle: 'italic', marginBottom: '2rem' }}>
-                  Consolidamos 34 empresas bajo IFRS sin una sola observación de auditoría. Ese es el estándar que llevamos a cada cliente.
+                  El hallazgo que no se identifica antes de la auditoría externa siempre cuesta más — en tiempo, en reputación y en credibilidad ante el directorio. Prefiero encontrarlo yo primero.
                 </p>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                   <div style={{
@@ -325,21 +321,17 @@ export default function ContableContent() {
             <h2 style={{
               fontFamily: 'var(--font-playfair, Playfair Display, serif)',
               fontSize: 'clamp(1.8rem, 3vw, 2.6rem)',
-              fontWeight: 700, color: NAVY,
-              lineHeight: 1.2, marginBottom: '3rem',
+              fontWeight: 700, color: NAVY, lineHeight: 1.2, marginBottom: '3rem',
             }}>
               Preguntas que nos hacen frecuentemente.
             </h2>
           </AnimOnScroll>
-
           <div style={{ display: 'flex', flexDirection: 'column' as const, gap: '1.5rem' }}>
             {faqs.map((faq, i) => (
               <AnimOnScroll key={i} direction="up" delay={i * 0.08}>
                 <div style={{
-                  padding: '1.75rem',
-                  background: 'var(--canvas, #F8FAFC)',
-                  borderRadius: '6px',
-                  borderLeft: `3px solid ${COLOR}`,
+                  padding: '1.75rem', background: 'var(--canvas, #F8FAFC)',
+                  borderRadius: '6px', borderLeft: `3px solid ${COLOR}`,
                 }}>
                   <h3 style={{ fontWeight: 700, fontSize: '0.95rem', color: NAVY, marginBottom: '0.75rem' }}>{faq.pregunta}</h3>
                   <p style={{ color: '#4A5568', fontSize: '0.875rem', lineHeight: 1.7, margin: 0 }}>{faq.respuesta}</p>
@@ -361,29 +353,29 @@ export default function ContableContent() {
             fontSize: 'clamp(1.8rem, 3vw, 2.8rem)',
             fontWeight: 700, color: '#fff', lineHeight: 1.2, marginBottom: '1.5rem',
           }}>
-            ¿Su contabilidad está lista para<br />una auditoría internacional?
+            ¿Su empresa está lista para<br />una auditoría de nivel internacional?
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1rem', maxWidth: '480px', margin: '0 auto 2.5rem' }}>
-            Le ayudamos a saberlo. Un socio de la firma analizará su situación y le presentará una propuesta a medida.
+            Cuéntenos su situación. Un socio de la firma revisará su caso y presentará una propuesta con alcance y plazos definidos.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' as const }}>
             <Link href="/contacto" style={{
               display: 'inline-flex', alignItems: 'center',
               background: COLOR, color: '#fff',
-              padding: '1rem 2.5rem', borderRadius: '4px',
+              padding: '1rem 2.5rem',
               fontWeight: 700, fontSize: '0.9rem', textDecoration: 'none',
               letterSpacing: '0.08em', textTransform: 'uppercase' as const,
             }}>
               Agendar una reunión →
             </Link>
-            <Link href="/#servicios" style={{
+            <Link href="/servicios/compliance" style={{
               display: 'inline-flex', alignItems: 'center',
               border: '1px solid rgba(255,255,255,0.3)', color: 'rgba(255,255,255,0.85)',
-              padding: '1rem 2.5rem', borderRadius: '4px',
+              padding: '1rem 2.5rem',
               fontWeight: 600, fontSize: '0.9rem', textDecoration: 'none',
               letterSpacing: '0.08em', textTransform: 'uppercase' as const,
             }}>
-              Ver todos los servicios
+              Ver Compliance Corporativo
             </Link>
           </div>
         </AnimOnScroll>

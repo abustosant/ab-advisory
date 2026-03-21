@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
 import AnimOnScroll from '@/components/AnimOnScroll'
 
 const COLOR = '#0F4C7A'
@@ -9,66 +8,66 @@ const NAVY = '#0D2B45'
 
 const alcance = [
   {
-    titulo: 'Implementación y actualización IFRS/NIC',
-    descripcion: 'Diagnóstico de brechas entre normativa local y IFRS, diseño del plan de convergencia e implementación completa. Actualización permanente ante cambios normativos del IASB con impacto en Chile.',
+    titulo: 'Due diligence financiero y contable',
+    descripcion: 'Revisión exhaustiva de los estados financieros históricos, políticas contables, contingencias fiscales y estructura de capital. Identificación de ajustes al precio de transacción y riesgos no revelados en la documentación inicial.',
   },
   {
-    titulo: 'Consolidación de grupos empresariales',
-    descripcion: 'Consolidación contable de grupos con múltiples entidades — experiencia comprobada en consolidación de hasta 34 empresas simultáneas sin observaciones de auditores externos.',
+    titulo: 'Revisión de estados financieros históricos',
+    descripcion: 'Análisis de los últimos 3 a 5 años de estados financieros bajo IFRS o normativa local. Evaluación de la consistencia de políticas contables, calidad de los ingresos y sostenibilidad del EBITDA declarado.',
   },
   {
-    titulo: 'Shared Services Center contable',
-    descripcion: 'Diseño e implementación de centros de servicios compartidos para grupos empresariales, estandarizando procesos, reduciendo costos y mejorando el control interno.',
+    titulo: 'Identificación de contingencias y riesgos',
+    descripcion: 'Mapeo de contingencias fiscales, laborales, legales y regulatorias. Cuantificación de pasivos contingentes no registrados y evaluación de su impacto en la valorización de la empresa objetivo.',
   },
   {
-    titulo: 'Preparación para auditorías Big Four',
-    descripcion: 'Preparación técnica exhaustiva para enfrentar auditorías de Deloitte, PwC, EY y KPMG. Revisión de estados financieros, notas y documentación de soporte bajo estándares internacionales.',
+    titulo: 'Análisis de flujo de caja y deuda neta',
+    descripcion: 'Reconciliación del EBITDA reportado con el flujo de caja operacional real. Revisión de la estructura de deuda, covenants, garantías y compromisos financieros fuera de balance.',
   },
   {
-    titulo: 'Cierre contable y reporting mensual',
-    descripcion: 'Gestión del proceso de cierre mensual con metodologías que reducen los tiempos en hasta un 40%. Preparación de estados financieros bajo IFRS y normativa SII.',
+    titulo: 'Informe ejecutivo para directorio o inversionistas',
+    descripcion: 'Elaboración del informe de due diligence con hallazgos priorizados, ajustes recomendados al precio, condiciones precedentes para el cierre y red flags para negociación. Formato ejecutivo adaptado al perfil de la audiencia.',
   },
   {
-    titulo: 'Integración ERP & sistemas contables',
-    descripcion: 'Configuración y operación de plataformas ERP para el área financiera. Experiencia en implantaciones corporativas de gran escala con foco en precisión y trazabilidad.',
+    titulo: 'Soporte en negociación y cierre',
+    descripcion: 'Acompañamiento técnico en la negociación de representaciones y garantías (R&W), ajuste de precio post-cierre (working capital adjustment) y revisión de la documentación definitiva de la transacción.',
   },
 ]
 
 const paraQuien = [
-  'Grupos empresariales con múltiples entidades que deben consolidar',
-  'Empresas que requieren reportes bajo IFRS para bancos o socios extranjeros',
-  'Compañías que enfrentan auditorías Big Four y necesitan preparación técnica',
-  'CFOs que quieren reducir tiempos de cierre sin comprometer la calidad',
-  'Empresas en proceso de implementación o actualización de su ERP financiero',
+  'Inversionistas y fondos que evalúan adquisiciones en el mercado chileno',
+  'Directorios que requieren una opinión técnica independiente antes de aprobar una transacción',
+  'Empresas vendedoras que desean preparar un vendor due diligence para acelerar el proceso',
+  'CFOs que participan en procesos de M&A y necesitan soporte técnico especializado',
+  'Grupos empresariales en proceso de desinversión o reorganización corporativa',
 ]
 
 const resultados = [
-  { valor: '34', label: 'Empresas consolidadas sin observaciones' },
-  { valor: '40%', label: 'Reducción en tiempos de cierre' },
-  { valor: '100%', label: 'Cumplimiento normativa SII e IFRS' },
-  { valor: 'Big 4', label: 'Auditorías superadas sin salvedades' },
+  { valor: 'M&A', label: 'Soporte en transacciones de compra y venta' },
+  { valor: 'IFRS', label: 'Estándar de revisión de estados financieros' },
+  { valor: '100%', label: 'Confidencialidad en todos los mandatos' },
+  { valor: 'DDI', label: 'Informes ejecutivos para directorio e inversores' },
 ]
 
 const faqs = [
   {
-    pregunta: '¿Qué diferencia hay entre IFRS y las normas contables chilenas?',
-    respuesta: 'Las IFRS (International Financial Reporting Standards) son normas internacionales emitidas por el IASB. Chile adoptó IFRS para empresas que cotizan en bolsa y grupos con reporte internacional. La diferencia principal está en el reconocimiento de activos, leasing (IFRS 16), instrumentos financieros e impuestos diferidos, entre otros.',
+    pregunta: '¿Qué es un due diligence financiero y cuándo es necesario?',
+    respuesta: 'Es un proceso de revisión exhaustiva de la situación financiera, contable y fiscal de una empresa antes de una transacción de compra, venta, fusión o inversión. Es necesario en cualquier proceso de M&A para identificar riesgos no revelados, validar la valorización y establecer las bases de la negociación definitiva.',
   },
   {
-    pregunta: '¿Cuánto tiempo toma implementar IFRS en una empresa mediana?',
-    respuesta: 'Un proyecto de convergencia completo toma entre 6 y 18 meses, dependiendo de la complejidad de la empresa y el nivel de preparación inicial. Lo dividimos en fases: diagnóstico, diseño, implementación y monitoreo, para minimizar el impacto operacional.',
+    pregunta: '¿Cuánto tiempo toma un due diligence financiero?',
+    respuesta: 'Un due diligence estándar toma entre 3 y 6 semanas, dependiendo del tamaño de la empresa, la disponibilidad de documentación y la complejidad de la estructura societaria. Podemos adaptarnos a plazos más ajustados cuando la transacción lo requiere, sin comprometer la profundidad del análisis.',
   },
   {
-    pregunta: '¿Pueden tomar a cargo la contabilidad completa de nuestra empresa?',
-    respuesta: 'Sí, operamos en modalidad de outsourcing contable completo o como soporte técnico especializado al equipo interno. Definimos el alcance según sus necesidades específicas y el tamaño de su operación.',
+    pregunta: '¿Qué es un vendor due diligence?',
+    respuesta: 'Es un due diligence encargado por el vendedor antes de iniciar el proceso de venta. Permite al vendedor identificar y resolver contingencias antes de la negociación, acelerar el proceso con compradores y reducir el riesgo de renegociación del precio en las etapas finales. Es una práctica habitual en transacciones de mercado medio en Chile y Latam.',
   },
   {
-    pregunta: '¿Trabajan con ERP y sistemas contables?',
-    respuesta: 'Tenemos experiencia en implantaciones ERP corporativas de gran escala. Trabajamos con el sistema que su empresa utilice — la herramienta se adapta a sus procesos, no al revés.',
+    pregunta: '¿Cómo garantizan la confidencialidad del proceso?',
+    respuesta: 'Operamos bajo acuerdos de confidencialidad (NDA) estrictos desde el inicio de cada mandato. Toda la documentación se maneja en entornos seguros y el acceso a la información está restringido exclusivamente al equipo asignado al proyecto. La confidencialidad es absoluta — es un principio no negociable de nuestra práctica.',
   },
 ]
 
-export default function ContableContent() {
+export default function DueDiligenceContent() {
   return (
     <main style={{ fontFamily: 'var(--font-dm-sans, DM Sans, sans-serif)' }}>
 
@@ -82,19 +81,18 @@ export default function ContableContent() {
 }}>
   <div style={{
     position: 'absolute', inset: 0,
-    backgroundImage: `radial-gradient(circle at 70% 30%, rgba(15,76,122,0.07) 0%, transparent 55%)`,
+    backgroundImage: 'radial-gradient(circle at 70% 30%, rgba(15,76,122,0.07) 0%, transparent 55%)',
     pointerEvents: 'none',
   }} />
   <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem', position: 'relative' }}>
 
-    {/* Breadcrumb */}
     <AnimOnScroll direction="up">
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '2rem', fontSize: '0.8rem' }}>
         <Link href="/" style={{ color: '#4A5568', textDecoration: 'none' }}>Inicio</Link>
         <span style={{ color: '#9CA3AF' }}>→</span>
         <Link href="/#servicios" style={{ color: '#4A5568', textDecoration: 'none' }}>Servicios</Link>
         <span style={{ color: '#9CA3AF' }}>→</span>
-        <span style={{ color: COLOR }}>Contabilidad & IFRS</span>
+        <span style={{ color: COLOR }}>Due Diligence Financiero</span>
       </div>
     </AnimOnScroll>
 
@@ -109,7 +107,7 @@ export default function ContableContent() {
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
             <div style={{ width: '2.5rem', height: '2px', background: 'var(--gold)' }} />
             <span style={{ color: 'var(--gold)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
-              02 · CONTABILIDAD · IFRS
+              06 · DUE DILIGENCE FINANCIERO
             </span>
           </div>
         </AnimOnScroll>
@@ -122,7 +120,7 @@ export default function ContableContent() {
             lineHeight: 1.15, marginBottom: '1.5rem',
             letterSpacing: '-0.02em',
           }}>
-            Contabilidad IFRS sin observaciones. Siempre.
+            Decisiones de inversión con información verificada.
           </h1>
         </AnimOnScroll>
 
@@ -131,51 +129,54 @@ export default function ContableContent() {
             fontSize: '1.05rem', color: '#4A5568',
             lineHeight: 1.75, marginBottom: '2.5rem', maxWidth: '500px',
           }}>
-            Implementación IFRS/NIC, consolidación de grupos y outsourcing contable para empresas con exigencias de reporte internacional. Preparación técnica para auditorías Big Four.
+            Análisis financiero profundo para procesos de M&A, inversión o desinversión. Informes ejecutivos con hallazgos priorizados para directorio e inversionistas. Confidencialidad absoluta en cada mandato.
           </p>
         </AnimOnScroll>
 
         <AnimOnScroll direction="up" delay={0.2}>
-          <Link
-            href="/contacto"
-            style={{
-              display: 'inline-flex', alignItems: 'center',
-              background: 'var(--navy, #0D2B45)', color: '#fff',
-              padding: '0.85rem 2rem', borderRadius: '4px',
-              fontWeight: 600, fontSize: '0.9rem', textDecoration: 'none',
-              letterSpacing: '0.05em', textTransform: 'uppercase' as const,
-              transition: 'background 0.2s',
-            }}
-            onMouseEnter={e => (e.currentTarget.style.background = '#0F4C7A')}
-            onMouseLeave={e => (e.currentTarget.style.background = 'var(--navy, #0D2B45)')}
-          >
+          <Link href="/contacto" style={{
+            display: 'inline-flex', alignItems: 'center',
+            background: 'var(--navy, #0D2B45)', color: '#fff',
+            padding: '0.85rem 2rem',
+            fontWeight: 600, fontSize: '0.9rem', textDecoration: 'none',
+            letterSpacing: '0.05em', textTransform: 'uppercase' as const,
+          }}>
             Agendar una reunión →
           </Link>
         </AnimOnScroll>
       </div>
 
-      {/* Imagen */}
       <AnimOnScroll direction="left" delay={0.15}>
         <div style={{
-          borderRadius: '6px', overflow: 'hidden',
+          background: NAVY, padding: '2.5rem',
+          borderRadius: '6px',
           boxShadow: '0 24px 60px rgba(13,43,69,0.15)',
-          border: '1px solid rgba(13,43,69,0.06)',
         }}>
-          <Image
-            src="/images/servicios/contable.webp"
-            alt="Contabilidad IFRS — AB Advisory"
-            width={560}
-            height={380}
-            style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' as const }}
-            priority
-          />
+          <div style={{ color: 'var(--gold)', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const, marginBottom: '1.5rem' }}>
+            Áreas de revisión
+          </div>
+          {[
+            { label: 'Estados financieros', value: 'IFRS · PCGA · Normativa local' },
+            { label: 'Estructura de deuda', value: 'Bancaria · Bonos · Covenants' },
+            { label: 'Contingencias', value: 'Fiscal · Laboral · Legal' },
+            { label: 'Calidad del EBITDA', value: 'Ajustes · Normalización · Run-rate' },
+          ].map((item) => (
+            <div key={item.label} style={{
+              borderTop: '1px solid rgba(255,255,255,0.08)',
+              padding: '1rem 0',
+              display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+            }}>
+              <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.82rem' }}>{item.label}</span>
+              <span style={{ color: '#fff', fontSize: '0.82rem', fontWeight: 600, textAlign: 'right' as const, maxWidth: '55%' }}>{item.value}</span>
+            </div>
+          ))}
         </div>
       </AnimOnScroll>
     </div>
   </div>
 </section>
 
-      {/* MÉTRICAS */}
+      {/* RESULTADOS */}
       <section style={{ background: COLOR, padding: '2.5rem 2rem' }}>
         <div style={{
           maxWidth: '1200px', margin: '0 auto',
@@ -187,7 +188,7 @@ export default function ContableContent() {
             <div key={r.label}>
               <p style={{
                 fontFamily: 'var(--font-playfair, Playfair Display, serif)',
-                fontSize: 'clamp(1.6rem, 3vw, 2.2rem)',
+                fontSize: 'clamp(1.3rem, 2.5vw, 1.9rem)',
                 fontWeight: 700, color: '#fff', margin: 0,
               }}>{r.valor}</p>
               <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.82rem', margin: '0.25rem 0 0', lineHeight: 1.4 }}>
@@ -204,40 +205,23 @@ export default function ContableContent() {
           <AnimOnScroll direction="up">
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
               <div style={{ width: '2.5rem', height: '2px', background: 'var(--gold)' }} />
-              <span style={{ color: 'var(--gold)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
-                ALCANCE DEL SERVICIO
-              </span>
+              <span style={{ color: 'var(--gold)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>ALCANCE DEL SERVICIO</span>
             </div>
             <h2 style={{
               fontFamily: 'var(--font-playfair, Playfair Display, serif)',
               fontSize: 'clamp(1.8rem, 3vw, 2.8rem)',
-              fontWeight: 700, color: NAVY,
-              lineHeight: 1.2, marginBottom: '3rem',
-            }}>
-              ¿Qué incluye el servicio contable?
-            </h2>
+              fontWeight: 700, color: NAVY, lineHeight: 1.2, marginBottom: '3rem',
+            }}>¿Qué incluye el due diligence financiero?</h2>
           </AnimOnScroll>
-
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: '1.5rem',
-          }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '1.5rem' }}>
             {alcance.map((item, i) => (
               <AnimOnScroll key={item.titulo} direction="up" delay={i * 0.08}>
                 <div style={{
-                  padding: '1.75rem',
-                  border: '1px solid rgba(13,43,69,0.08)',
-                  borderTop: `3px solid ${COLOR}`,
-                  borderRadius: '6px',
-                  background: '#fff',
+                  padding: '1.75rem', border: '1px solid rgba(13,43,69,0.08)',
+                  borderTop: `3px solid ${COLOR}`, borderRadius: '6px', background: '#fff',
                 }}>
-                  <h3 style={{ fontWeight: 700, fontSize: '0.95rem', color: NAVY, marginBottom: '0.75rem' }}>
-                    {item.titulo}
-                  </h3>
-                  <p style={{ color: '#4A5568', fontSize: '0.875rem', lineHeight: 1.7, margin: 0 }}>
-                    {item.descripcion}
-                  </p>
+                  <h3 style={{ fontWeight: 700, fontSize: '0.95rem', color: NAVY, marginBottom: '0.75rem' }}>{item.titulo}</h3>
+                  <p style={{ color: '#4A5568', fontSize: '0.875rem', lineHeight: 1.7, margin: 0 }}>{item.descripcion}</p>
                 </div>
               </AnimOnScroll>
             ))}
@@ -248,27 +232,17 @@ export default function ContableContent() {
       {/* PARA QUIÉN */}
       <section style={{ background: 'var(--canvas, #F8FAFC)', padding: '6rem 2rem' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '4rem',
-            alignItems: 'center',
-          }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'center' }}>
             <AnimOnScroll direction="up">
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
                 <div style={{ width: '2.5rem', height: '2px', background: 'var(--gold)' }} />
-                <span style={{ color: 'var(--gold)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
-                  PERFIL DEL CLIENTE
-                </span>
+                <span style={{ color: 'var(--gold)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>PERFIL DEL CLIENTE</span>
               </div>
               <h2 style={{
                 fontFamily: 'var(--font-playfair, Playfair Display, serif)',
                 fontSize: 'clamp(1.8rem, 3vw, 2.6rem)',
-                fontWeight: 700, color: NAVY,
-                lineHeight: 1.2, marginBottom: '2rem',
-              }}>
-                ¿Es este servicio para su empresa?
-              </h2>
+                fontWeight: 700, color: NAVY, lineHeight: 1.2, marginBottom: '2rem',
+              }}>¿Es este servicio para su empresa?</h2>
               <div style={{ display: 'flex', flexDirection: 'column' as const, gap: '1rem' }}>
                 {paraQuien.map((item, i) => (
                   <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
@@ -287,17 +261,15 @@ export default function ContableContent() {
               </div>
             </AnimOnScroll>
 
-            {/* Quote */}
             <AnimOnScroll direction="left" delay={0.1}>
-              <div style={{ background: NAVY, borderRadius: '8px', padding: '2.5rem', position: 'relative' }}>
-                <div style={{ fontFamily: 'Georgia, serif', fontSize: '4rem', color: COLOR, lineHeight: 1, marginBottom: '1rem', opacity: 0.6 }}>"</div>
+              <div style={{ background: NAVY, borderRadius: '8px', padding: '2.5rem' }}>
+                <div style={{ fontFamily: 'Georgia, serif', fontSize: '4rem', color: 'var(--gold)', lineHeight: 1, marginBottom: '1rem', opacity: 0.6 }}>"</div>
                 <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '1rem', lineHeight: 1.75, fontStyle: 'italic', marginBottom: '2rem' }}>
-                  Consolidamos 34 empresas bajo IFRS sin una sola observación de auditoría. Ese es el estándar que llevamos a cada cliente.
+                  Una transacción mal analizada no solo destruye valor: puede comprometer la reputación del directorio que la aprobó. Nuestro trabajo es que eso no ocurra.
                 </p>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                   <div style={{
-                    width: '40px', height: '40px', borderRadius: '50%',
-                    background: COLOR,
+                    width: '40px', height: '40px', borderRadius: '50%', background: COLOR,
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     fontWeight: 700, color: '#fff', fontSize: '0.9rem',
                   }}>AB</div>
@@ -318,29 +290,18 @@ export default function ContableContent() {
           <AnimOnScroll direction="up">
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
               <div style={{ width: '2.5rem', height: '2px', background: 'var(--gold)' }} />
-              <span style={{ color: 'var(--gold)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>
-                PREGUNTAS FRECUENTES
-              </span>
+              <span style={{ color: 'var(--gold)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' as const }}>PREGUNTAS FRECUENTES</span>
             </div>
             <h2 style={{
               fontFamily: 'var(--font-playfair, Playfair Display, serif)',
               fontSize: 'clamp(1.8rem, 3vw, 2.6rem)',
-              fontWeight: 700, color: NAVY,
-              lineHeight: 1.2, marginBottom: '3rem',
-            }}>
-              Preguntas que nos hacen frecuentemente.
-            </h2>
+              fontWeight: 700, color: NAVY, lineHeight: 1.2, marginBottom: '3rem',
+            }}>Preguntas que nos hacen frecuentemente.</h2>
           </AnimOnScroll>
-
           <div style={{ display: 'flex', flexDirection: 'column' as const, gap: '1.5rem' }}>
             {faqs.map((faq, i) => (
               <AnimOnScroll key={i} direction="up" delay={i * 0.08}>
-                <div style={{
-                  padding: '1.75rem',
-                  background: 'var(--canvas, #F8FAFC)',
-                  borderRadius: '6px',
-                  borderLeft: `3px solid ${COLOR}`,
-                }}>
+                <div style={{ padding: '1.75rem', background: 'var(--canvas, #F8FAFC)', borderRadius: '6px', borderLeft: `3px solid ${COLOR}` }}>
                   <h3 style={{ fontWeight: 700, fontSize: '0.95rem', color: NAVY, marginBottom: '0.75rem' }}>{faq.pregunta}</h3>
                   <p style={{ color: '#4A5568', fontSize: '0.875rem', lineHeight: 1.7, margin: 0 }}>{faq.respuesta}</p>
                 </div>
@@ -361,30 +322,25 @@ export default function ContableContent() {
             fontSize: 'clamp(1.8rem, 3vw, 2.8rem)',
             fontWeight: 700, color: '#fff', lineHeight: 1.2, marginBottom: '1.5rem',
           }}>
-            ¿Su contabilidad está lista para<br />una auditoría internacional?
+            ¿Tiene una transacción en curso<br />que requiere análisis independiente?
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1rem', maxWidth: '480px', margin: '0 auto 2.5rem' }}>
-            Le ayudamos a saberlo. Un socio de la firma analizará su situación y le presentará una propuesta a medida.
+            Cuéntenos el contexto de la transacción. Un socio de la firma revisará su caso bajo estricta confidencialidad y presentará una propuesta con alcance y plazos definidos.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' as const }}>
             <Link href="/contacto" style={{
               display: 'inline-flex', alignItems: 'center',
-              background: COLOR, color: '#fff',
-              padding: '1rem 2.5rem', borderRadius: '4px',
+              background: COLOR, color: '#fff', padding: '1rem 2.5rem',
               fontWeight: 700, fontSize: '0.9rem', textDecoration: 'none',
               letterSpacing: '0.08em', textTransform: 'uppercase' as const,
-            }}>
-              Agendar una reunión →
-            </Link>
-            <Link href="/#servicios" style={{
+            }}>Agendar una reunión →</Link>
+            <Link href="/servicios/financiero" style={{
               display: 'inline-flex', alignItems: 'center',
               border: '1px solid rgba(255,255,255,0.3)', color: 'rgba(255,255,255,0.85)',
-              padding: '1rem 2.5rem', borderRadius: '4px',
+              padding: '1rem 2.5rem',
               fontWeight: 600, fontSize: '0.9rem', textDecoration: 'none',
               letterSpacing: '0.08em', textTransform: 'uppercase' as const,
-            }}>
-              Ver todos los servicios
-            </Link>
+            }}>Ver Asesoría Financiera</Link>
           </div>
         </AnimOnScroll>
       </section>
