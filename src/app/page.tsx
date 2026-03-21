@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 
 import AnimOnScroll from '@/components/AnimOnScroll'
 import { KPIS, SERVICES, DIFFERENTIATORS, INSIGHTS, FOUNDER } from '@/lib/data'
@@ -259,9 +258,7 @@ export default function Home() {
                 background: '#fff', position: 'relative', overflow: 'hidden', transition: 'background .3s',
                 display: 'flex', flexDirection: 'column',
               }}>
-                <div style={{ position: 'relative', width: '100%', height: 175, marginBottom: 30, overflow: 'hidden' }}>
-                  <Image src={svc.image} alt={svc.title} fill style={{ objectFit: 'cover', filter: 'grayscale(15%)', transition: 'filter .4s' }} sizes="(max-width:1100px) 100vw, 33vw" />
-                </div>
+                <img src={svc.image} alt={svc.title} style={{ width: '100%', height: '175px', objectFit: 'cover', marginBottom: '30px', filter: 'grayscale(15%)', display: 'block' }} />
                 <div style={{ fontSize: '.6rem', fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 11, transition: 'color .3s' }}>
                   {svc.num} · {svc.category}
                 </div>
@@ -298,9 +295,7 @@ export default function Home() {
                 background: '#fff', position: 'relative', overflow: 'hidden', transition: 'background .3s',
                 display: 'flex', flexDirection: 'column',
               }}>
-                <div style={{ position: 'relative', width: '100%', height: 175, marginBottom: 30, overflow: 'hidden' }}>
-                  <Image src={svc.image} alt={svc.title} fill style={{ objectFit: 'cover', filter: 'grayscale(15%)', transition: 'filter .4s' }} sizes="(max-width:1100px) 100vw, 33vw" />
-                </div>
+                <img src={svc.image} alt={svc.title} style={{ width: '100%', height: '175px', objectFit: 'cover', marginBottom: '30px', filter: 'grayscale(15%)', display: 'block' }} />
                 <div style={{ fontSize: '.6rem', fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 11, transition: 'color .3s' }}>
                   {svc.num} · {svc.category}
                 </div>
