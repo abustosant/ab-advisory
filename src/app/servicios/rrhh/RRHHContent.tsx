@@ -46,7 +46,7 @@ const resultados = [
   { valor: '100%', label: 'Cumplimiento laboral y previsional' },
   { valor: '0', label: 'Observaciones en fiscalizaciones DT' },
   { valor: '40%', label: 'Reducción de errores en liquidaciones' },
-  { valor: '+50', label: 'Procesos internos automatizados' },
+  { valor: '30–500+', label: 'Colaboradores gestionados por mandato' },
 ]
 
 const faqs = [

@@ -69,7 +69,7 @@ export default function ContactoContent() {
             letterSpacing: '-0.02em',
             marginBottom: '1.25rem',
           }}>
-            Agende una reunión inicial.
+            Agende una reunión de trabajo.
           </h1>
 
           <p style={{ fontSize: '1.05rem', color: '#4A5568', lineHeight: 1.75, maxWidth: '560px', marginBottom: '1.5rem' }}>

@@ -56,7 +56,7 @@ export const SERVICES = [
     num: '01',
     category: 'Finanzas Corporativas',
     title: 'Asesoría Financiera',
-    description: 'Estructuración de deuda, modelamiento financiero y planificación estratégica para CFOs y directorios que exigen precisión técnica real.',
+    description: 'Estructuración de deuda, modelamiento financiero y planificación estratégica para CFOs y directorios que exigen respaldo técnico de primer nivel.',
     image: '/images/servicios/financiero.webp',
     items: [
       'Reestructuración y refinanciamiento de deuda',
@@ -299,7 +299,7 @@ export const INSIGHTS = [
       },
       {
         type: 'paragraph',
-        text: 'En AB Advisory acompañamos procesos de convergencia y actualización normativa IFRS en empresas chilenas con exigencias de reporte internacional. Si necesita evaluar el impacto específico de la IFRS 18 en sus estados financieros, contáctenos — el diagnóstico inicial no tiene costo.',
+        text: 'En AB Advisory acompañamos procesos de convergencia y actualización normativa IFRS en empresas chilenas con exigencias de reporte internacional. Si necesita evaluar el impacto específico de la IFRS 18 en sus estados financieros, contáctenos para una evaluación técnica de su caso.',
       },
     ],
   },
@@ -359,7 +359,7 @@ export const INSIGHTS = [
       },
       {
         type: 'paragraph',
-        text: 'En AB Advisory hemos acompañado múltiples procesos de convergencia IFRS en empresas chilenas con exigencias de reporte internacional. Si necesita un diagnóstico específico para su caso, contáctenos — el primer análisis no tiene costo.',
+        text: 'En AB Advisory hemos acompañado múltiples procesos de convergencia IFRS en empresas chilenas con exigencias de reporte internacional. Si necesita un diagnóstico técnico para su caso, contáctenos para coordinar una revisión.',
       },
     ],
   },

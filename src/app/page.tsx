@@ -79,7 +79,7 @@ export default function Home() {
             color: '#F5F3EF', marginBottom: 8,
           }}>
             Decisiones<br/>financieras con<br/>
-            <em style={{ fontStyle: 'italic', fontWeight: 400, color: '#E8C98A' }}>precisión real</em>
+            <em style={{ fontStyle: 'italic', fontWeight: 400, color: '#E8C98A' }}>respaldo técnico</em>
           </h1>
 
           <p style={{
@@ -574,7 +574,7 @@ export default function Home() {
               Próximo paso
             </div>
             <h2 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.8rem,3.8vw,3.1rem)', fontWeight: 700, color: '#fff', marginBottom: 16, lineHeight: 1.1 }}>
-              ¿Listo para trabajar con<br/>un verdadero socio financiero?
+              Un socio de primer nivel<br/>para sus decisiones financieras.
             </h2>
             <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,.44)', maxWidth: 450, margin: '0 auto 46px', lineHeight: 1.8 }}>
               Cuéntenos el desafío de su empresa. Cada consulta es evaluada directamente por un socio de la firma.

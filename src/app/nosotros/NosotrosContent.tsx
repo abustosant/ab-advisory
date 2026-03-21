@@ -339,7 +339,7 @@ export default function NosotrosContent() {
             lineHeight: 1.1, marginBottom: '18px',
             letterSpacing: '.02em', textTransform: 'uppercase',
           }}>
-            ¿Listo para trabajar con un<br/>verdadero socio financiero?
+            Un socio de primer nivel<br/>para sus decisiones financieras.
           </h2>
           <p style={{
             fontSize: '.83rem', fontWeight: 300,
