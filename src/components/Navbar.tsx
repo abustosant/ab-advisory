@@ -216,8 +216,7 @@ export default function Navbar() {
           </a>
           <span style={{ width: 1, height: 16, background: 'rgba(255,255,255,.15)' }} />
           <a
-            href={`https://wa.me/${SITE.phoneRaw.replace(/\D/g, '')}`}
-            target="_blank" rel="noopener noreferrer"
+            href={`tel:${SITE.phoneRaw}`}
             style={{
               fontSize: '.78rem', letterSpacing: '.12em', textTransform: 'uppercase',
               color: 'rgba(245,243,239,.45)', textDecoration: 'none',
@@ -226,7 +225,7 @@ export default function Navbar() {
             onMouseEnter={e => e.currentTarget.style.color = 'var(--gold)'}
             onMouseLeave={e => e.currentTarget.style.color = 'rgba(245,243,239,.45)'}
           >
-            WhatsApp
+            {SITE.phone}
           </a>
         </div>
       </div>

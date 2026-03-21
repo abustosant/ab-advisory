@@ -122,7 +122,7 @@ export default function FinancieroContent() {
             lineHeight: 1.15, marginBottom: '1.5rem',
             letterSpacing: '-0.02em',
           }}>
-            Decisiones financieras con respaldo técnico real.
+            Decisiones financieras con respaldo técnico.
           </h1>
         </AnimOnScroll>
 

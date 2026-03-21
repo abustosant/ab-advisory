@@ -12,6 +12,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${insight.title} | AB Advisory`,
     description: insight.description,
+    openGraph: {
+      title: insight.title,
+      description: insight.description,
+      url: `https://www.abadvisory.cl${insight.href}`,
+      type: 'article',
+      images: insight.image ? [{ url: `https://www.abadvisory.cl${insight.image}` }] : undefined,
+    },
   }
 }
 
