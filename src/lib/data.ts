@@ -125,10 +125,11 @@ export const DIFFERENTIATORS = [
 
 export const SERVICES_ADDITIONAL = [
   {
-    num: '04',
+    num: '03',
     category: 'Auditoría',
     title: 'Auditoría & Control Interno',
     description: 'Soporte técnico a procesos de auditoría interna y preparación para revisiones de auditores externos con estándares Big Four.',
+    image: '/images/servicios/auditoria.webp',
     items: [
       'Diseño y ejecución de auditorías internas',
       'Revisión de controles internos y procesos',
@@ -140,10 +141,11 @@ export const SERVICES_ADDITIONAL = [
     ctaSub: 'Experiencia directa en procesos Big Four',
   },
   {
-    num: '05',
+    num: '04',
     category: 'Compliance',
     title: 'Compliance Corporativo',
     description: 'Diseño e implementación de programas de cumplimiento normativo bajo Ley 20.393 y regulaciones sectoriales vigentes en Chile.',
+    image: '/images/servicios/compliance.webp',
     items: [
       'Programa de cumplimiento Ley 20.393',
       'Matriz de riesgos y controles corporativos',
@@ -155,10 +157,11 @@ export const SERVICES_ADDITIONAL = [
     ctaSub: 'Compliance Officer Certificado · UAI',
   },
   {
-    num: '06',
+    num: '05',
     category: 'Due Diligence',
     title: 'Due Diligence Financiero',
     description: 'Análisis financiero profundo para procesos de M&A, inversión o desinversión. Informes ejecutivos para directorio e inversionistas.',
+    image: '/images/servicios/due-diligence.webp',
     items: [
       'Due diligence financiero y contable',
       'Revisión de estados financieros históricos',
