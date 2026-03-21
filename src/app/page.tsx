@@ -1,24 +1,17 @@
-import Image from 'next/image'
 import Link from 'next/link'
 
 import AnimOnScroll from '@/components/AnimOnScroll'
 import Counter from '@/components/Counter'
 import LeadMagnetForm from '@/components/LeadMagnetForm'
-import { SITE, METRICS, KPIS, SERVICES, COMPARISON_TABLE, PROCESS, IMPACT, TESTIMONIALS, INSIGHTS, TICKER_ITEMS, FOUNDER } from '@/lib/data'
- 
-function getPhotoSrc(): string {
-  return '/images/team/andres-bustos.webp'
-}
- 
+import { SITE, METRICS, KPIS, SERVICES, COMPARISON_TABLE, PROCESS, INSIGHTS, FOUNDER } from '@/lib/data'
+
 const ArrowIcon = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ flexShrink: 0, transition: 'transform .2s' }}>
     <path d="M5 12h14M12 5l7 7-7 7"/>
   </svg>
 )
- 
+
 export default function Home() {
-  const photoSrc = getPhotoSrc()
-  const doubledTicker = [...TICKER_ITEMS, ...TICKER_ITEMS]
  
   const eyebrowStyle: React.CSSProperties = {
     fontSize: '.63rem', fontWeight: 600, letterSpacing: '.22em', textTransform: 'uppercase',
@@ -160,26 +153,10 @@ export default function Home() {
           @media(max-width:920px){ .hero-metrics-bar { display:none!important; } }
           @media(max-width:768px){ .hero-section-wrap { padding:0 28px 70px!important; } .hero-line-left { display:none!important; } }
           @media(max-width:480px){ .hero-section-wrap { padding:0 18px 60px!important; } }
-          @media(max-width:768px){ .cred-bar { display:none!important; } }
         `}</style>
       </section>
  
-      {/* ═══════════════════ CREDENTIAL BAR ═══════════════════ */}
-      <div className="cred-bar" style={{ background: 'var(--navy)', height: 46, overflow: 'hidden', display: 'flex', alignItems: 'center' }}>
-        <div className="ticker-track">
-          {doubledTicker.map(([label, val], i) => (
-            <span key={i} style={{
-              display: 'inline-flex', alignItems: 'center', gap: 8,
-              padding: '0 30px', borderRight: '1px solid rgba(255,255,255,.07)',
-              fontSize: '.68rem', color: 'rgba(255,255,255,.38)',
-            }}>
-              <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'var(--blue-mid)', flexShrink: 0 }} />
-              <strong style={{ color: 'rgba(255,255,255,.7)', fontWeight: 600 }}>{label}</strong>
-              {' '}{val}
-            </span>
-          ))}
-        </div>
-      </div>
+
  
       {/* ═══════════════════ DIFFERENTIATOR ═══════════════════ */}
       <section id="diferenciador" style={{ ...sectionStyle, background: '#fff' }}>
@@ -273,7 +250,7 @@ export default function Home() {
             <AnimOnScroll>
               <div style={eyebrowStyle}>
                 <span style={{ width: 24, height: 2, background: 'var(--gold)', display: 'inline-block' }} />
-                Lo que ofrecemos
+                Asesoría financiera · contable · RRHH en Chile
               </div>
               <h2 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.8rem,3vw,2.8rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-.02em', color: 'var(--navy)' }}>
                 Tres pilares.<br/>Un socio estratégico.
@@ -354,105 +331,63 @@ export default function Home() {
         `}</style>
       </section>
  
-      {/* ═══════════════════ PARTNER PROFILE ═══════════════════ */}
-      <section id="nosotros" style={{ ...sectionStyle, background: '#fff' }}>
+      {/* ═══════════════════ FOUNDER TEASER ═══════════════════ */}
+      <section style={{ background: '#fff', borderTop: '1px solid var(--border)', padding: '96px 0' }}>
         <div style={wrapStyle}>
-          <div style={{ borderTop: '1px solid var(--border)' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '420px 1fr', gap: 0, borderBottom: '1px solid var(--border)' }} className="partner-top">
-              <AnimOnScroll direction="left" style={{ borderRight: '1px solid var(--border)', position: 'relative', overflow: 'hidden' }} className="partner-photo-col">
-                <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 4, background: 'var(--blue)', zIndex: 2 }} />
-                {photoSrc ? (
-                  <img src={photoSrc} alt={FOUNDER.name} style={{ width: '100%', aspectRatio: '4/5', objectFit: 'cover', objectPosition: 'top center', display: 'block', filter: 'grayscale(6%)', transition: 'transform .6s, filter .4s' }} className="partner-photo" />
-                ) : (
-                  <div style={{ width: '100%', aspectRatio: '4/5', background: 'var(--ice)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text3)' }}>Foto</div>
-                )}
-              </AnimOnScroll>
- 
-              <AnimOnScroll direction="right" style={{ padding: '56px 60px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }} className="partner-info">
-                <div style={eyebrowStyle}>
-                  <span style={{ width: 24, height: 2, background: 'var(--gold)', display: 'inline-block' }} />
-                  {FOUNDER.eyebrow}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 300px', gap: '80px', alignItems: 'center' }} className="ft-grid">
+
+            <AnimOnScroll>
+              <div style={{ width: 36, height: 2, background: 'var(--gold)', marginBottom: 36 }} />
+              <blockquote style={{
+                fontFamily: 'var(--font-playfair,var(--serif))',
+                fontSize: 'clamp(1.15rem,2vw,1.5rem)',
+                fontWeight: 300, fontStyle: 'italic',
+                color: 'var(--navy)', lineHeight: 1.7,
+                letterSpacing: '-.01em', marginBottom: 36,
+              }}>
+                {FOUNDER.statement.replace(/^"|"$/g, '')}
+              </blockquote>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'wrap' }}>
+                <div>
+                  <div style={{ fontSize: '.88rem', fontWeight: 600, color: 'var(--navy)' }}>{FOUNDER.name}</div>
+                  <div style={{ fontSize: '.72rem', color: 'var(--text3)', marginTop: 3, letterSpacing: '.03em' }}>{FOUNDER.role}</div>
                 </div>
-                <h2 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(2rem,3.5vw,3rem)', fontWeight: 700, color: 'var(--navy)', letterSpacing: '-.025em', lineHeight: 1.05, marginBottom: 8 }}>
-                  Andrés Bustos A.
-                </h2>
-                <div style={{ fontSize: '.68rem', fontWeight: 600, letterSpacing: '.17em', textTransform: 'uppercase', color: 'var(--blue)', marginBottom: 28 }}>
-                  {FOUNDER.role}
-                </div>
-                <p style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: '1.1rem', lineHeight: 1.72, color: 'var(--text2)', fontStyle: 'italic', paddingLeft: 18, borderLeft: '3px solid var(--blue)', marginBottom: 32 }}>
-                  {FOUNDER.statement}
-                </p>
-                <div style={{ fontSize: '.62rem', fontWeight: 600, letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--text3)', marginBottom: 12 }}>Áreas de expertise</div>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 7, marginBottom: 28 }}>
-                  {FOUNDER.expertise.map(tag => (
-                    <span key={tag} className="exp-tag" style={{ fontSize: '.74rem', fontWeight: 600, color: 'var(--navy)', padding: '6px 14px', border: '1.5px solid var(--border2)', transition: 'all .2s', cursor: 'default' }}>{tag}</span>
-                  ))}
-                </div>
-                <div style={{ fontSize: '.62rem', fontWeight: 600, letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--text3)', marginBottom: 10 }}>Sectores con mayor impacto</div>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 28 }}>
-                  {FOUNDER.sectors.map(s => (
-                    <span key={s} style={{ fontSize: '.7rem', color: 'var(--text2)', padding: '4px 12px', background: 'var(--canvas)', border: '1px solid var(--border)' }}>{s}</span>
-                  ))}
-                </div>
-                <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', paddingTop: 24, borderTop: '1px solid var(--border)' }}>
-                  <a href={`mailto:${SITE.email}`} style={{ display: 'flex', alignItems: 'center', gap: 7, fontSize: '.76rem', color: 'var(--blue)', fontWeight: 500 }}>
-                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="var(--blue)" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    {SITE.email}
-                  </a>
-                  <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: 7, fontSize: '.76rem', color: 'var(--blue)', fontWeight: 500 }}>
-                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="var(--blue)" strokeWidth="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                    LinkedIn
-                  </a>
-                </div>
-              </AnimOnScroll>
-            </div>
- 
-            <div style={{ padding: '64px 0 0' }}>
-              <AnimOnScroll style={{ marginBottom: 36 }}>
-                <div style={eyebrowStyle}>
-                  <span style={{ width: 24, height: 2, background: 'var(--gold)', display: 'inline-block' }} />
-                  Impacto demostrado por sector
-                </div>
-                <h3 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.25rem,2vw,1.7rem)', fontWeight: 600, color: 'var(--navy)' }}>Su trabajo habla por él</h3>
-              </AnimOnScroll>
-              <AnimOnScroll style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 0, border: '1px solid var(--border)' }} className="impact-grid">
-                {IMPACT.map((ic, i) => (
-                  <div key={i} className="ic-cell" style={{
-                    padding: '34px 30px',
-                    borderRight: i % 2 === 0 ? '1px solid var(--border)' : 'none',
-                    borderBottom: i < 2 ? '1px solid var(--border)' : 'none',
-                    background: '#fff', transition: 'background .25s',
-                  }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: '.62rem', fontWeight: 600, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--blue)', marginBottom: 12 }}>
-                      <span style={{ width: 5, height: 5, borderRadius: '50%', background: 'var(--blue)', flexShrink: 0 }} />
-                      {ic.sector}
-                    </div>
-                    <h4 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: '1rem', fontWeight: 600, color: 'var(--navy)', marginBottom: 10, lineHeight: 1.3 }}>{ic.title}</h4>
-                    <p style={{ fontSize: '.82rem', lineHeight: 1.72, color: 'var(--text2)' }}>{ic.description}</p>
-                    <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginTop: 13, padding: '5px 12px', background: 'var(--blue-lt)', borderLeft: '2px solid var(--blue)', fontSize: '.73rem', fontWeight: 700, color: 'var(--navy)' }}>
-                      {ic.metric}
-                    </div>
-                  </div>
-                ))}
-              </AnimOnScroll>
-            </div>
+                <Link href="/nosotros" style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontSize: '.74rem', fontWeight: 600, color: 'var(--blue)', letterSpacing: '.04em', borderBottom: '1px solid rgba(15,76,122,.25)', paddingBottom: 2, transition: 'color .2s, border-color .2s' }} className="ft-link">
+                  Conocer al Director Fundador <ArrowIcon />
+                </Link>
+              </div>
+            </AnimOnScroll>
+
+            <AnimOnScroll direction="right">
+              <Link href="/nosotros" style={{ display: 'block', position: 'relative', overflow: 'hidden' }} className="ft-photo-wrap">
+                <img
+                  src="/images/team/andres-bustos.webp"
+                  alt={FOUNDER.name}
+                  style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', objectPosition: 'top center', display: 'block', filter: 'grayscale(8%)', transition: 'transform .6s, filter .4s' }}
+                  className="ft-photo"
+                />
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(13,43,69,0)', transition: 'background .4s' }} className="ft-overlay" />
+              </Link>
+            </AnimOnScroll>
+
           </div>
         </div>
         <style>{`
-          .partner-photo-col:hover .partner-photo { transform:scale(1.02)!important; filter:grayscale(0%)!important; }
-          .exp-tag:hover { background:var(--navy)!important; color:#fff!important; border-color:var(--navy)!important; }
-          .ic-cell:hover { background:var(--ice)!important; }
-          @media(max-width:1100px){ .partner-top { grid-template-columns:1fr!important; } .partner-photo-col { border-right:none!important; border-bottom:1px solid var(--border)!important; } .partner-photo { aspect-ratio:16/9!important; max-height:420px!important; } .partner-info { padding:40px 0!important; } .impact-grid { grid-template-columns:1fr!important; } .ic-cell { border-right:none!important; } }
+          .ft-link:hover { color:var(--navy)!important; border-color:var(--navy)!important; }
+          .ft-photo-wrap:hover .ft-photo { transform:scale(1.03)!important; filter:grayscale(0%)!important; }
+          .ft-photo-wrap:hover .ft-overlay { background:rgba(13,43,69,.08)!important; }
+          @media(max-width:1100px){ .ft-grid { grid-template-columns:1fr!important; } }
+          @media(max-width:768px){ .ft-grid { gap:40px!important; } }
         `}</style>
       </section>
- 
+
       {/* ═══════════════════ PROCESS ═══════════════════ */}
       <section style={{ ...sectionStyle, background: 'var(--canvas)' }}>
         <div style={wrapStyle}>
           <AnimOnScroll style={{ maxWidth: 540, margin: '0 auto 60px', textAlign: 'center' }}>
             <div style={{ ...eyebrowStyle, justifyContent: 'center' }}>
               <span style={{ width: 24, height: 2, background: 'var(--gold)', display: 'inline-block' }} />
-              Cómo trabajamos
+              Metodología
             </div>
             <h2 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.8rem,3vw,2.8rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-.02em', color: 'var(--navy)' }}>
               Un proceso diseñado<br/>para su certeza
