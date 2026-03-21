@@ -121,17 +121,12 @@ export default function Navbar() {
           {/* Servicios — expandido con sub-links */}
           <div style={{ borderBottom: '1px solid rgba(255,255,255,.07)' }}>
             <div style={{
-              fontFamily: '"Playfair Display", Georgia, serif',
-              fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
-              fontWeight: 300,
-              letterSpacing: '-.01em',
+              fontSize: 'clamp(.55rem, 1.2vw, .72rem)',
+              fontWeight: 600,
+              letterSpacing: '.18em',
+              textTransform: 'uppercase',
               color: 'rgba(245,243,239,.45)',
               padding: '18px 0 10px',
-              fontSize: 'clamp(.55rem, 1.2vw, .72rem)',
-              fontFamily: 'var(--sans, DM Sans, sans-serif)',
-              textTransform: 'uppercase',
-              letterSpacing: '.18em',
-              fontWeight: 600,
             }}>Servicios</div>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px 0', paddingBottom: 16 }}>
               {serviceLinks.map((s, i) => (
