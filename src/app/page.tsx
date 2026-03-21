@@ -253,12 +253,13 @@ export default function Home() {
           {(() => {
             const row1 = [SERVICES[0], SERVICES[1], SERVICES_ADDITIONAL[0]]
             return (
-              <div style={{ display: 'flex', border: '1px solid var(--border)', borderBottom: 'none' }} className="svc-row1">
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', border: '1px solid var(--border)', borderBottom: 'none' }} className="svc-row1">
                 {row1.map((svc, i) => (
                   <AnimOnScroll key={svc.num} delay={i * 0.08} className="svc-card" style={{
-                    flex: 1, padding: '42px 34px',
+                    padding: '42px 34px',
                     borderRight: i < 2 ? '1px solid var(--border)' : 'none',
                     background: '#fff', position: 'relative', overflow: 'hidden', transition: 'background .3s',
+                    display: 'flex', flexDirection: 'column',
                   }}>
                     {(svc as unknown as { image?: string }).image && (
                       <img src={(svc as unknown as { image: string }).image} alt={svc.title} style={{ width: '100%', height: 175, objectFit: 'cover', marginBottom: 30, filter: 'grayscale(15%)', transition: 'filter .4s' }} loading="lazy" />
@@ -272,7 +273,7 @@ export default function Home() {
                     <p style={{ fontSize: '.84rem', lineHeight: 1.76, color: 'var(--text2)', marginBottom: 20, transition: 'color .3s' }}>
                       {svc.description}
                     </p>
-                    <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 6, marginBottom: 26 }}>
+                    <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 6, marginBottom: 26, flex: 1 }}>
                       {svc.items.map((item, j) => (
                         <li key={j} style={{ fontSize: '.77rem', color: 'var(--text2)', display: 'flex', alignItems: 'flex-start', gap: 9, transition: 'color .3s' }}>
                           <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'var(--blue)', marginTop: 7, flexShrink: 0 }} />
@@ -302,7 +303,11 @@ export default function Home() {
                     flex: '0 0 calc(100% / 3)', padding: '42px 34px',
                     borderRight: i === 0 ? '1px solid var(--border)' : 'none',
                     background: '#fff', position: 'relative', overflow: 'hidden', transition: 'background .3s',
+                    display: 'flex', flexDirection: 'column',
                   }}>
+                    {(svc as unknown as { image?: string }).image && (
+                      <img src={(svc as unknown as { image: string }).image} alt={svc.title} style={{ width: '100%', height: 175, objectFit: 'cover', marginBottom: 30, filter: 'grayscale(15%)', transition: 'filter .4s' }} loading="lazy" />
+                    )}
                     <div style={{ fontSize: '.6rem', fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 11, transition: 'color .3s' }}>
                       {svc.num} · {svc.category}
                     </div>
@@ -312,7 +317,7 @@ export default function Home() {
                     <p style={{ fontSize: '.84rem', lineHeight: 1.76, color: 'var(--text2)', marginBottom: 20, transition: 'color .3s' }}>
                       {svc.description}
                     </p>
-                    <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 6, marginBottom: 26 }}>
+                    <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 6, marginBottom: 26, flex: 1 }}>
                       {svc.items.map((item, j) => (
                         <li key={j} style={{ fontSize: '.77rem', color: 'var(--text2)', display: 'flex', alignItems: 'flex-start', gap: 9, transition: 'color .3s' }}>
                           <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'var(--blue)', marginTop: 7, flexShrink: 0 }} />
