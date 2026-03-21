@@ -118,40 +118,39 @@ export default function Navbar() {
 
         {/* Nav links */}
         <nav style={{ flex: 1 }}>
-          {/* Servicios — expandido con sub-links */}
-          <div style={{ borderBottom: '1px solid rgba(255,255,255,.07)' }}>
+          {/* Servicios — lista subordinada, visualmente discreta */}
+          <div style={{ borderBottom: '1px solid rgba(255,255,255,.07)', paddingBottom: 20 }}>
             <div style={{
-              fontSize: 'clamp(.55rem, 1.2vw, .72rem)',
+              fontSize: '.58rem',
               fontWeight: 600,
-              letterSpacing: '.18em',
+              letterSpacing: '.22em',
               textTransform: 'uppercase',
-              color: 'rgba(245,243,239,.45)',
-              padding: '18px 0 10px',
+              color: 'var(--gold)',
+              opacity: .7,
+              padding: '20px 0 14px',
             }}>Servicios</div>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px 0', paddingBottom: 16 }}>
-              {serviceLinks.map((s, i) => (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+              {serviceLinks.map((s) => (
                 <Link
                   key={s.href}
                   href={s.href}
                   onClick={() => setMenuOpen(false)}
                   style={{
-                    display: 'block',
-                    width: '50%',
-                    fontFamily: '"Playfair Display", Georgia, serif',
-                    fontSize: 'clamp(1.1rem, 2.2vw, 1.6rem)',
-                    fontWeight: 300,
-                    letterSpacing: '-.01em',
-                    color: 'rgba(245,243,239,.82)',
+                    display: 'inline-block',
+                    fontSize: '.9rem',
+                    fontWeight: 400,
+                    letterSpacing: '.01em',
+                    color: 'rgba(245,243,239,.5)',
                     textDecoration: 'none',
-                    padding: '7px 0',
+                    padding: '5px 0',
                     transition: 'color .2s, padding-left .2s',
                   }}
                   onMouseEnter={e => {
-                    e.currentTarget.style.color = 'var(--gold)'
+                    e.currentTarget.style.color = 'rgba(245,243,239,.9)'
                     e.currentTarget.style.paddingLeft = '8px'
                   }}
                   onMouseLeave={e => {
-                    e.currentTarget.style.color = 'rgba(245,243,239,.82)'
+                    e.currentTarget.style.color = 'rgba(245,243,239,.5)'
                     e.currentTarget.style.paddingLeft = '0px'
                   }}
                 >

@@ -37,7 +37,7 @@ export default function Counter({ target, prefix = '', suffix = '', className = 
 
   return (
     <div ref={ref} className={className}>
-      {prefix}{value}<span style={{ color: 'var(--blue-mid)' }}>{suffix}</span>
+      {prefix}{value}{suffix}
     </div>
   )
 }
