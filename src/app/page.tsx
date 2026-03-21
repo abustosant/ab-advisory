@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import AnimOnScroll from '@/components/AnimOnScroll'
-import { KPIS, SERVICES, SERVICES_ADDITIONAL, DIFFERENTIATORS, INSIGHTS, FOUNDER } from '@/lib/data'
+import { KPIS, SERVICES, DIFFERENTIATORS, INSIGHTS, FOUNDER } from '@/lib/data'
 
 const ArrowIcon = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ flexShrink: 0, transition: 'transform .2s' }}>
@@ -250,93 +250,83 @@ export default function Home() {
             </AnimOnScroll>
           </div>
 
-          {/* Fila superior: 3 tarjetas */}
-          {(() => {
-            const row1 = [SERVICES[0], SERVICES[1], SERVICES_ADDITIONAL[0]]
-            return (
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', border: '1px solid var(--border)', borderBottom: 'none' }} className="svc-row1">
-                {row1.map((svc, i) => (
-                  <AnimOnScroll key={svc.num} delay={i * 0.08} className="svc-card" style={{
-                    padding: '42px 34px',
-                    borderRight: i < 2 ? '1px solid var(--border)' : 'none',
-                    background: '#fff', position: 'relative', overflow: 'hidden', transition: 'background .3s',
-                    display: 'flex', flexDirection: 'column',
-                  }}>
-                    <div style={{ position: 'relative', width: '100%', height: 175, marginBottom: 30, overflow: 'hidden' }}>
-                      <Image src={(svc as { image: string }).image} alt={svc.title} fill style={{ objectFit: 'cover', filter: 'grayscale(15%)', transition: 'filter .4s' }} sizes="(max-width:1100px) 100vw, 33vw" />
-                    </div>
-                    <div style={{ fontSize: '.6rem', fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 11, transition: 'color .3s' }}>
-                      {svc.num} · {svc.category}
-                    </div>
-                    <h3 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: '1.25rem', fontWeight: 600, color: 'var(--navy)', marginBottom: 11, lineHeight: 1.2, transition: 'color .3s' }}>
-                      {svc.title}
-                    </h3>
-                    <p style={{ fontSize: '.84rem', lineHeight: 1.76, color: 'var(--text2)', marginBottom: 20, transition: 'color .3s' }}>
-                      {svc.description}
-                    </p>
-                    <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 6, marginBottom: 26, flex: 1 }}>
-                      {svc.items.map((item, j) => (
-                        <li key={j} style={{ fontSize: '.77rem', color: 'var(--text2)', display: 'flex', alignItems: 'flex-start', gap: 9, transition: 'color .3s' }}>
-                          <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'var(--blue)', marginTop: 7, flexShrink: 0 }} />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                    <div style={{ paddingTop: 17, borderTop: '1px solid var(--border)' }}>
-                      <Link href={svc.href} style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontSize: '.74rem', fontWeight: 600, color: 'var(--navy)', background: 'var(--canvas)', border: '1.5px solid var(--border)', padding: '9px 16px', transition: 'all .2s' }} className="svc-cta-btn">
-                        {svc.cta} <ArrowIcon />
-                      </Link>
-                      <p style={{ fontSize: '.67rem', color: 'var(--text3)', marginTop: 9, letterSpacing: '.03em' }}>{svc.ctaSub}</p>
-                    </div>
-                  </AnimOnScroll>
-                ))}
-              </div>
-            )
-          })()}
+          {/* Fila superior: tarjetas 01–03 */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', border: '1px solid var(--border)', borderBottom: 'none' }} className="svc-row1">
+            {SERVICES.slice(0, 3).map((svc, i) => (
+              <AnimOnScroll key={svc.num} delay={i * 0.08} className="svc-card" style={{
+                padding: '42px 34px',
+                borderRight: i < 2 ? '1px solid var(--border)' : 'none',
+                background: '#fff', position: 'relative', overflow: 'hidden', transition: 'background .3s',
+                display: 'flex', flexDirection: 'column',
+              }}>
+                <div style={{ position: 'relative', width: '100%', height: 175, marginBottom: 30, overflow: 'hidden' }}>
+                  <Image src={svc.image} alt={svc.title} fill style={{ objectFit: 'cover', filter: 'grayscale(15%)', transition: 'filter .4s' }} sizes="(max-width:1100px) 100vw, 33vw" />
+                </div>
+                <div style={{ fontSize: '.6rem', fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 11, transition: 'color .3s' }}>
+                  {svc.num} · {svc.category}
+                </div>
+                <h3 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: '1.25rem', fontWeight: 600, color: 'var(--navy)', marginBottom: 11, lineHeight: 1.2, transition: 'color .3s' }}>
+                  {svc.title}
+                </h3>
+                <p style={{ fontSize: '.84rem', lineHeight: 1.76, color: 'var(--text2)', marginBottom: 20, transition: 'color .3s' }}>
+                  {svc.description}
+                </p>
+                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 6, marginBottom: 26, flex: 1 }}>
+                  {svc.items.map((item, j) => (
+                    <li key={j} style={{ fontSize: '.77rem', color: 'var(--text2)', display: 'flex', alignItems: 'flex-start', gap: 9, transition: 'color .3s' }}>
+                      <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'var(--blue)', marginTop: 7, flexShrink: 0 }} />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <div style={{ paddingTop: 17, borderTop: '1px solid var(--border)' }}>
+                  <Link href={svc.href} style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontSize: '.74rem', fontWeight: 600, color: 'var(--navy)', background: 'var(--canvas)', border: '1.5px solid var(--border)', padding: '9px 16px', transition: 'all .2s' }} className="svc-cta-btn">
+                    {svc.cta} <ArrowIcon />
+                  </Link>
+                  <p style={{ fontSize: '.67rem', color: 'var(--text3)', marginTop: 9, letterSpacing: '.03em' }}>{svc.ctaSub}</p>
+                </div>
+              </AnimOnScroll>
+            ))}
+          </div>
 
-          {/* Fila inferior: 2 tarjetas centradas */}
-          {(() => {
-            const row2 = [SERVICES_ADDITIONAL[1], SERVICES_ADDITIONAL[2]]
-            return (
-              <div style={{ display: 'flex', justifyContent: 'center', border: '1px solid var(--border)' }} className="svc-row2">
-                {row2.map((svc, i) => (
-                  <AnimOnScroll key={svc.num} delay={i * 0.08} className="svc-card" style={{
-                    flex: '0 0 calc(100% / 3)', padding: '42px 34px',
-                    borderRight: i === 0 ? '1px solid var(--border)' : 'none',
-                    background: '#fff', position: 'relative', overflow: 'hidden', transition: 'background .3s',
-                    display: 'flex', flexDirection: 'column',
-                  }}>
-                    <div style={{ position: 'relative', width: '100%', height: 175, marginBottom: 30, overflow: 'hidden' }}>
-                      <Image src={(svc as { image: string }).image} alt={svc.title} fill style={{ objectFit: 'cover', filter: 'grayscale(15%)', transition: 'filter .4s' }} sizes="(max-width:1100px) 100vw, 33vw" />
-                    </div>
-                    <div style={{ fontSize: '.6rem', fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 11, transition: 'color .3s' }}>
-                      {svc.num} · {svc.category}
-                    </div>
-                    <h3 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: '1.25rem', fontWeight: 600, color: 'var(--navy)', marginBottom: 11, lineHeight: 1.2, transition: 'color .3s' }}>
-                      {svc.title}
-                    </h3>
-                    <p style={{ fontSize: '.84rem', lineHeight: 1.76, color: 'var(--text2)', marginBottom: 20, transition: 'color .3s' }}>
-                      {svc.description}
-                    </p>
-                    <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 6, marginBottom: 26, flex: 1 }}>
-                      {svc.items.map((item, j) => (
-                        <li key={j} style={{ fontSize: '.77rem', color: 'var(--text2)', display: 'flex', alignItems: 'flex-start', gap: 9, transition: 'color .3s' }}>
-                          <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'var(--blue)', marginTop: 7, flexShrink: 0 }} />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                    <div style={{ paddingTop: 17, borderTop: '1px solid var(--border)' }}>
-                      <Link href={svc.href} style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontSize: '.74rem', fontWeight: 600, color: 'var(--navy)', background: 'var(--canvas)', border: '1.5px solid var(--border)', padding: '9px 16px', transition: 'all .2s' }} className="svc-cta-btn">
-                        {svc.cta} <ArrowIcon />
-                      </Link>
-                      <p style={{ fontSize: '.67rem', color: 'var(--text3)', marginTop: 9, letterSpacing: '.03em' }}>{svc.ctaSub}</p>
-                    </div>
-                  </AnimOnScroll>
-                ))}
-              </div>
-            )
-          })()}
+          {/* Fila inferior: tarjetas 04–05 centradas */}
+          <div style={{ display: 'flex', justifyContent: 'center', border: '1px solid var(--border)' }} className="svc-row2">
+            {SERVICES.slice(3).map((svc, i) => (
+              <AnimOnScroll key={svc.num} delay={i * 0.08} className="svc-card" style={{
+                flex: '0 0 calc(100% / 3)', padding: '42px 34px',
+                borderRight: i === 0 ? '1px solid var(--border)' : 'none',
+                background: '#fff', position: 'relative', overflow: 'hidden', transition: 'background .3s',
+                display: 'flex', flexDirection: 'column',
+              }}>
+                <div style={{ position: 'relative', width: '100%', height: 175, marginBottom: 30, overflow: 'hidden' }}>
+                  <Image src={svc.image} alt={svc.title} fill style={{ objectFit: 'cover', filter: 'grayscale(15%)', transition: 'filter .4s' }} sizes="(max-width:1100px) 100vw, 33vw" />
+                </div>
+                <div style={{ fontSize: '.6rem', fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 11, transition: 'color .3s' }}>
+                  {svc.num} · {svc.category}
+                </div>
+                <h3 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: '1.25rem', fontWeight: 600, color: 'var(--navy)', marginBottom: 11, lineHeight: 1.2, transition: 'color .3s' }}>
+                  {svc.title}
+                </h3>
+                <p style={{ fontSize: '.84rem', lineHeight: 1.76, color: 'var(--text2)', marginBottom: 20, transition: 'color .3s' }}>
+                  {svc.description}
+                </p>
+                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 6, marginBottom: 26, flex: 1 }}>
+                  {svc.items.map((item, j) => (
+                    <li key={j} style={{ fontSize: '.77rem', color: 'var(--text2)', display: 'flex', alignItems: 'flex-start', gap: 9, transition: 'color .3s' }}>
+                      <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'var(--blue)', marginTop: 7, flexShrink: 0 }} />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <div style={{ paddingTop: 17, borderTop: '1px solid var(--border)' }}>
+                  <Link href={svc.href} style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontSize: '.74rem', fontWeight: 600, color: 'var(--navy)', background: 'var(--canvas)', border: '1.5px solid var(--border)', padding: '9px 16px', transition: 'all .2s' }} className="svc-cta-btn">
+                    {svc.cta} <ArrowIcon />
+                  </Link>
+                  <p style={{ fontSize: '.67rem', color: 'var(--text3)', marginTop: 9, letterSpacing: '.03em' }}>{svc.ctaSub}</p>
+                </div>
+              </AnimOnScroll>
+            ))}
+          </div>
         </div>
         <style>{`
           .svc-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform .35s; }

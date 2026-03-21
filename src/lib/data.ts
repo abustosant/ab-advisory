@@ -67,7 +67,6 @@ export const SERVICES = [
     href: '/servicios/financiero',
     cta: 'Conocer la metodología',
     ctaSub: 'Acceso directo al socio · sin intermediarios',
-    color: '#0F4C7A',
   },
   {
     num: '02',
@@ -84,46 +83,7 @@ export const SERVICES = [
     href: '/servicios/contable',
     cta: 'Ver proceso de implementación',
     ctaSub: 'Mandatos con confidencialidad absoluta',
-    color: '#138040',
   },
-  {
-    num: '03',
-    category: 'Recursos Humanos',
-    title: 'Gestión de RRHH',
-    description: 'Outsourcing de remuneraciones, cumplimiento laboral y Compliance RRHH para empresas con dotaciones significativas y alta complejidad.',
-    image: '/images/servicios/rrhh.webp',
-    items: [
-      'Liquidaciones de sueldo y nómina electrónica',
-      'Contratos, finiquitos y calificaciones',
-      'Compliance Ley 20.393',
-      'Planificación tributaria de remuneraciones',
-    ],
-    href: '/servicios/rrhh',
-    cta: 'Conocer el enfoque de compliance',
-    ctaSub: 'Dedicación exclusiva en cada mandato',
-    color: '#7C3AED',
-  },
-]
-
-export const DIFFERENTIATORS = [
-  {
-    num: '01',
-    title: 'Formación Big Four, enfoque boutique',
-    body: 'Entrenado en los estándares de auditoría y reporte de los entornos corporativos más exigentes — LATAM Airlines Group, grupos multisociedad, procesos Big Four. Ese criterio se aplica íntegramente en cada mandato, sin importar el tamaño del cliente.',
-  },
-  {
-    num: '02',
-    title: 'Acceso directo al socio, sin intermediarios',
-    body: 'No hay delegación. Cada proyecto es gestionado directamente por el Director Fundador, con la misma atención que un socio de firma internacional dedica a su cliente más importante. Usted habla con quien toma las decisiones.',
-  },
-  {
-    num: '03',
-    title: 'Honorarios transparentes, alcance definido',
-    body: 'Propuesta detallada antes de comenzar: alcance, plazos y entregables específicos. Sin sorpresas en la facturación final ni costos por horas no acordadas.',
-  },
-]
-
-export const SERVICES_ADDITIONAL = [
   {
     num: '03',
     category: 'Auditoría',
@@ -173,6 +133,25 @@ export const SERVICES_ADDITIONAL = [
     ctaSub: 'Mandatos con confidencialidad absoluta',
   },
 ]
+
+export const DIFFERENTIATORS = [
+  {
+    num: '01',
+    title: 'Formación Big Four, enfoque boutique',
+    body: 'Entrenado en los estándares de auditoría y reporte de los entornos corporativos más exigentes — LATAM Airlines Group, grupos multisociedad, procesos Big Four. Ese criterio se aplica íntegramente en cada mandato, sin importar el tamaño del cliente.',
+  },
+  {
+    num: '02',
+    title: 'Acceso directo al socio, sin intermediarios',
+    body: 'No hay delegación. Cada proyecto es gestionado directamente por el Director Fundador, con la misma atención que un socio de firma internacional dedica a su cliente más importante. Usted habla con quien toma las decisiones.',
+  },
+  {
+    num: '03',
+    title: 'Honorarios transparentes, alcance definido',
+    body: 'Propuesta detallada antes de comenzar: alcance, plazos y entregables específicos. Sin sorpresas en la facturación final ni costos por horas no acordadas.',
+  },
+]
+
 
 export const PROCESS = [
   {
