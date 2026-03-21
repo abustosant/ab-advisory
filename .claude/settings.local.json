@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.abadvisory.cl)",
+      "Bash(npm run:*)",
+      "Bash(ls *.md)",
+      "Bash(grep -r \"CFO\\\\|mediana\\\\|tamaño\\\\|grupo\\\\|directorio\\\\|inversionista\" /d/desarrollo/ab-advisory/src/app/servicios/ --include=*.tsx)"
+    ]
+  }
+}

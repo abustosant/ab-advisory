@@ -186,6 +186,19 @@ export default function Home() {
                   </div>
                 ))}
               </div>
+
+              {/* ICP — Perfil de cliente explícito */}
+              <div style={{ marginTop: 28, paddingTop: 22, borderTop: '1px solid var(--border)', display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                {['CFOs', 'Gerentes Generales', 'Directores', 'Empresas medianas', 'Grupos empresariales', 'Chile'].map(tag => (
+                  <span key={tag} style={{
+                    fontSize: '.62rem', fontWeight: 500, letterSpacing: '.1em',
+                    textTransform: 'uppercase', color: 'var(--text3)',
+                    border: '1px solid var(--border)', padding: '4px 10px',
+                  }}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </AnimOnScroll>
  
             <AnimOnScroll delay={0.16} style={{ padding: '92px 0 92px 68px' }} className="diff-r">

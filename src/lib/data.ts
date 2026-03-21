@@ -253,6 +253,10 @@ export const INSIGHTS = [
     image: '/images/insights/ifrs-18.webp',
     featured: true,
     href: '/insights/ifrs-18-presentacion',
+    relatedServices: [
+      { label: 'Contabilidad & IFRS', href: '/servicios/contable' },
+      { label: 'Auditoría & Control Interno', href: '/servicios/auditoria' },
+    ],
     description: 'El IASB publicó la IFRS 18 para reemplazar la IAS 1. La nueva norma introduce cambios estructurales en la presentación del estado de resultados, con tres categorías obligatorias que afectarán cómo las empresas chilenas comunican su desempeño a partir del 1 de enero de 2027.',
     body: [
       {
@@ -310,6 +314,10 @@ export const INSIGHTS = [
     author: 'AB Advisory',
     readTime: '8 min lectura',
     date: 'Marzo 2026',
+    relatedServices: [
+      { label: 'Contabilidad & IFRS', href: '/servicios/contable' },
+      { label: 'Auditoría & Control Interno', href: '/servicios/auditoria' },
+    ],
     image: '/images/insights/ifrs-2025.webp',
     featured: false,
     href: '/insights/ifrs-2025',
@@ -370,6 +378,10 @@ export const INSIGHTS = [
     author: 'AB Advisory',
     readTime: '5 min',
     date: 'Marzo 2026',
+    relatedServices: [
+      { label: 'Asesoría Financiera', href: '/servicios/financiero' },
+      { label: 'Due Diligence Financiero', href: '/servicios/due-diligence' },
+    ],
     image: '/images/insights/reestructuracion.webp',
     featured: false,
     href: '/insights/reestructuracion-deuda',
@@ -421,6 +433,10 @@ export const INSIGHTS = [
     author: 'AB Advisory',
     readTime: '6 min',
     date: 'Marzo 2026',
+    relatedServices: [
+      { label: 'Asesoría Financiera', href: '/servicios/financiero' },
+      { label: 'Contabilidad & IFRS', href: '/servicios/contable' },
+    ],
     image: '/images/insights/power-bi.webp',
     featured: false,
     href: '/insights/power-bi-directorios',

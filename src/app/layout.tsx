@@ -4,15 +4,26 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.abadvisory.cl'),
   title: 'AB Advisory | Asesoría Financiera, Contable y RRHH — Santiago, Chile',
   description: 'Firma boutique de asesoría financiera, contabilidad IFRS y gestión de RRHH para empresas en Chile. Excelencia técnica de multinacional, dedicación exclusiva.',
-  keywords: 'asesoría financiera chile, IFRS contabilidad, gestión RRHH, consulting santiago',
+  keywords: 'asesoría financiera chile, IFRS contabilidad, gestión RRHH, consulting santiago, due diligence, compliance ley 20393, reestructuración deuda',
+  alternates: {
+    canonical: 'https://www.abadvisory.cl',
+  },
   openGraph: {
     title: 'AB Advisory | Asesoría Financiera Corporativa',
     description: 'Firma boutique de nivel Big Four para empresas en Chile.',
     type: 'website',
     locale: 'es_CL',
     url: 'https://www.abadvisory.cl',
+    siteName: 'AB Advisory',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AB Advisory | Asesoría Financiera Corporativa',
+    description: 'Firma boutique de nivel Big Four para empresas en Chile.',
+    site: '@abadvisory',
   },
 }
 

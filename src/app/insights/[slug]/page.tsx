@@ -12,6 +12,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${insight.title} | AB Advisory`,
     description: insight.description,
+    alternates: { canonical: `https://www.abadvisory.cl${insight.href}` },
+    twitter: {
+      card: 'summary_large_image' as const,
+      title: insight.title,
+      description: insight.description,
+    },
     openGraph: {
       title: insight.title,
       description: insight.description,

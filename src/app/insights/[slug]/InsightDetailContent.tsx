@@ -173,6 +173,27 @@ export default function InsightDetailContent({ insight }: { insight: Insight }) 
         </div>
       </article>
 
+      {/* RELATED SERVICES */}
+      {'relatedServices' in insight && Array.isArray(insight.relatedServices) && insight.relatedServices.length > 0 && (
+        <section style={{ background: '#fff', padding: '2.5rem 2rem', borderTop: '1px solid var(--border)' }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto', display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
+            <span style={{ fontSize: '.65rem', fontWeight: 600, letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--text3)', flexShrink: 0 }}>
+              Servicios relacionados
+            </span>
+            {(insight.relatedServices as { label: string; href: string }[]).map(s => (
+              <Link key={s.href} href={s.href} style={{
+                display: 'inline-flex', alignItems: 'center', gap: 6,
+                fontSize: '.74rem', fontWeight: 600, color: 'var(--navy)',
+                border: '1.5px solid var(--border)', padding: '7px 14px',
+                textDecoration: 'none', transition: 'all .2s',
+              }} className="rs-link">
+                {s.label} →
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* MORE ARTICLES */}
       {others.length > 0 && (
         <section style={{ background: 'var(--canvas, #F5F7FA)', padding: '4rem 2rem', borderTop: '1px solid var(--border)' }}>
@@ -213,6 +234,7 @@ export default function InsightDetailContent({ insight }: { insight: Insight }) 
 
       <style>{`
         .more-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
+        .rs-link:hover { background: var(--navy) !important; color: #fff !important; border-color: var(--navy) !important; }
         @media(max-width: 640px) { .more-grid { grid-template-columns: 1fr !important; } }
       `}</style>
     </main>
