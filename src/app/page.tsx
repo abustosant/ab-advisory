@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 import AnimOnScroll from '@/components/AnimOnScroll'
 import { KPIS, SERVICES, SERVICES_ADDITIONAL, DIFFERENTIATORS, INSIGHTS, FOUNDER } from '@/lib/data'
@@ -261,9 +262,9 @@ export default function Home() {
                     background: '#fff', position: 'relative', overflow: 'hidden', transition: 'background .3s',
                     display: 'flex', flexDirection: 'column',
                   }}>
-                    {(svc as unknown as { image?: string }).image && (
-                      <img src={(svc as unknown as { image: string }).image} alt={svc.title} style={{ width: '100%', height: 175, objectFit: 'cover', marginBottom: 30, filter: 'grayscale(15%)', transition: 'filter .4s' }} loading="lazy" />
-                    )}
+                    <div style={{ position: 'relative', width: '100%', height: 175, marginBottom: 30, overflow: 'hidden' }}>
+                      <Image src={(svc as { image: string }).image} alt={svc.title} fill style={{ objectFit: 'cover', filter: 'grayscale(15%)', transition: 'filter .4s' }} sizes="(max-width:1100px) 100vw, 33vw" />
+                    </div>
                     <div style={{ fontSize: '.6rem', fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 11, transition: 'color .3s' }}>
                       {svc.num} · {svc.category}
                     </div>
@@ -305,9 +306,9 @@ export default function Home() {
                     background: '#fff', position: 'relative', overflow: 'hidden', transition: 'background .3s',
                     display: 'flex', flexDirection: 'column',
                   }}>
-                    {(svc as unknown as { image?: string }).image && (
-                      <img src={(svc as unknown as { image: string }).image} alt={svc.title} style={{ width: '100%', height: 175, objectFit: 'cover', marginBottom: 30, filter: 'grayscale(15%)', transition: 'filter .4s' }} loading="lazy" />
-                    )}
+                    <div style={{ position: 'relative', width: '100%', height: 175, marginBottom: 30, overflow: 'hidden' }}>
+                      <Image src={(svc as { image: string }).image} alt={svc.title} fill style={{ objectFit: 'cover', filter: 'grayscale(15%)', transition: 'filter .4s' }} sizes="(max-width:1100px) 100vw, 33vw" />
+                    </div>
                     <div style={{ fontSize: '.6rem', fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 11, transition: 'color .3s' }}>
                       {svc.num} · {svc.category}
                     </div>
