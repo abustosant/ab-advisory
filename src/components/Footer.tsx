@@ -4,7 +4,7 @@ import { SITE } from '@/lib/data'
 export default function Footer() {
   return (
     <footer style={{ background: 'var(--navy)', padding: '76px 0 34px' }}>
-      <div style={{ height: 3, background: 'var(--blue)', marginBottom: 76 }} />
+      <div style={{ height: 3, background: 'var(--gold)', marginBottom: 76 }} />
       <div style={{ maxWidth: 1180, margin: '0 auto', padding: '0 52px' }}>
         <div style={{
           display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1.5fr',
@@ -41,8 +41,8 @@ export default function Footer() {
                 { label: 'Asesoría Financiera', href: '/servicios/financiero' },
                 { label: 'Contabilidad & IFRS', href: '/servicios/contable' },
                 { label: 'Gestión de RRHH', href: '/servicios/rrhh' },
-                { label: 'Compliance', href: '/contacto' },
-                { label: 'Due Diligence', href: '/contacto' },
+                { label: 'Compliance', href: '/servicios/compliance' },
+                { label: 'Due Diligence', href: '/servicios/due-diligence' },
               ].map(s => (
                 <li key={s.label}><Link href={s.href} className="foot-link">{s.label}</Link></li>
               ))}

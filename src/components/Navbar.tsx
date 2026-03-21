@@ -22,10 +22,18 @@ export default function Navbar() {
 
   const links = [
     { href: '/', label: 'Inicio' },
-    { href: '/#servicios', label: 'Servicios' },
     { href: '/nosotros', label: 'Nosotros' },
     { href: '/insights', label: 'Insights' },
     { href: '/contacto', label: 'Contacto' },
+  ]
+
+  const serviceLinks = [
+    { href: '/servicios/financiero', label: 'Asesoría Financiera' },
+    { href: '/servicios/contable', label: 'Contabilidad & IFRS' },
+    { href: '/servicios/rrhh', label: 'Gestión de RRHH' },
+    { href: '/servicios/auditoria', label: 'Auditoría & Control Interno' },
+    { href: '/servicios/compliance', label: 'Compliance Corporativo' },
+    { href: '/servicios/due-diligence', label: 'Due Diligence Financiero' },
   ]
 
   return (
@@ -110,6 +118,54 @@ export default function Navbar() {
 
         {/* Nav links */}
         <nav style={{ flex: 1 }}>
+          {/* Servicios — expandido con sub-links */}
+          <div style={{ borderBottom: '1px solid rgba(255,255,255,.07)' }}>
+            <div style={{
+              fontFamily: '"Playfair Display", Georgia, serif',
+              fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
+              fontWeight: 300,
+              letterSpacing: '-.01em',
+              color: 'rgba(245,243,239,.45)',
+              padding: '18px 0 10px',
+              fontSize: 'clamp(.55rem, 1.2vw, .72rem)',
+              fontFamily: 'var(--sans, DM Sans, sans-serif)',
+              textTransform: 'uppercase',
+              letterSpacing: '.18em',
+              fontWeight: 600,
+            }}>Servicios</div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px 0', paddingBottom: 16 }}>
+              {serviceLinks.map((s, i) => (
+                <Link
+                  key={s.href}
+                  href={s.href}
+                  onClick={() => setMenuOpen(false)}
+                  style={{
+                    display: 'block',
+                    width: '50%',
+                    fontFamily: '"Playfair Display", Georgia, serif',
+                    fontSize: 'clamp(1.1rem, 2.2vw, 1.6rem)',
+                    fontWeight: 300,
+                    letterSpacing: '-.01em',
+                    color: 'rgba(245,243,239,.82)',
+                    textDecoration: 'none',
+                    padding: '7px 0',
+                    transition: 'color .2s, padding-left .2s',
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.color = 'var(--gold)'
+                    e.currentTarget.style.paddingLeft = '8px'
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.color = 'rgba(245,243,239,.82)'
+                    e.currentTarget.style.paddingLeft = '0px'
+                  }}
+                >
+                  {s.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
           {links.map((l, i) => (
             <div key={l.href} style={{
               borderBottom: '1px solid rgba(255,255,255,.07)',

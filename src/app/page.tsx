@@ -3,7 +3,7 @@ import Link from 'next/link'
 import AnimOnScroll from '@/components/AnimOnScroll'
 import Counter from '@/components/Counter'
 import LeadMagnetForm from '@/components/LeadMagnetForm'
-import { SITE, METRICS, KPIS, SERVICES, COMPARISON_TABLE, PROCESS, INSIGHTS, FOUNDER } from '@/lib/data'
+import { SITE, METRICS, KPIS, SERVICES, SERVICES_ADDITIONAL, DIFFERENTIATORS, PROCESS, INSIGHTS, FOUNDER } from '@/lib/data'
 
 const ArrowIcon = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ flexShrink: 0, transition: 'transform .2s' }}>
@@ -168,10 +168,10 @@ export default function Home() {
                 ¿Por qué AB Advisory?
               </div>
               <h2 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.8rem,3vw,2.8rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-.02em', color: 'var(--navy)', marginBottom: 16 }}>
-                Excelencia de firma internacional.<br/>Precio y dedicación de boutique.
+                La profundidad de una gran firma.<br/>La atención de un socio exclusivo.
               </h2>
               <p style={{ fontSize: '1.05rem', lineHeight: 1.85, color: 'var(--text2)', marginBottom: 40 }}>
-                Su empresa merece el mismo estándar técnico que exigen los grupos empresariales de primer nivel — implementación IFRS, estructuración de deuda y estrategia financiera real — con la dedicación exclusiva de una firma boutique y acceso directo al experto, no a un equipo de juniors.
+                Su empresa merece el estándar técnico que exigen los grupos empresariales de primer nivel — implementación IFRS, estructuración de deuda y estrategia financiera real — con la dedicación exclusiva de quien responde directamente y sin intermediarios.
               </p>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 0, border: '1px solid var(--border)' }}>
                 {KPIS.map((kpi, i) => (
@@ -193,53 +193,33 @@ export default function Home() {
             <AnimOnScroll delay={0.16} style={{ padding: '92px 0 92px 68px' }} className="diff-r">
               <div style={eyebrowStyle}>
                 <span style={{ width: 24, height: 2, background: 'var(--gold)', display: 'inline-block' }} />
-                Comparativa de valor
+                Lo que nos distingue
               </div>
-              <h3 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.25rem,2vw,1.7rem)', fontWeight: 600, color: 'var(--navy)', marginBottom: 6, lineHeight: 1.3 }}>
-                El estándar que marca<br/>la diferencia.
+              <h3 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.25rem,2vw,1.7rem)', fontWeight: 600, color: 'var(--navy)', marginBottom: 36, lineHeight: 1.3 }}>
+                Tres principios que definen<br/>cada mandato.
               </h3>
-              <div className="table-scroll">
-              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.81rem', marginTop: 30 }}>
-                <thead>
-                  <tr>
-                    <th style={{ background: 'var(--navy)', color: '#fff', padding: '11px 13px', textAlign: 'left', fontSize: '.67rem', fontWeight: 600, letterSpacing: '.07em', textTransform: 'uppercase' }}>Capacidad</th>
-                    <th style={{ background: '#1A3D5C', color: '#fff', padding: '11px 13px', fontSize: '.67rem', fontWeight: 600, textTransform: 'uppercase', textAlign: 'center' }}>AB Advisory</th>
-                    <th style={{ background: 'var(--navy)', color: '#fff', padding: '11px 13px', fontSize: '.67rem', fontWeight: 600, textTransform: 'uppercase', textAlign: 'center' }}>Independiente</th>
-                    <th style={{ background: 'var(--navy)', color: '#fff', padding: '11px 13px', fontSize: '.67rem', fontWeight: 600, textTransform: 'uppercase', textAlign: 'center' }}>Big Four</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {COMPARISON_TABLE.map((row, i) => (
-                    <tr key={i} style={{ background: i % 2 === 1 ? 'var(--canvas)' : '#fff' }}>
-                      <td style={{ padding: '10px 13px', borderBottom: '1px solid var(--border)', color: 'var(--text2)' }}>{row.feature}</td>
-                      <td style={{ padding: '10px 13px', borderBottom: '1px solid var(--border)', background: 'var(--blue-lt)', textAlign: 'center', color: 'var(--navy)', fontWeight: 700 }}>
-                        {row.ab === 'check' && <span style={{ color: '#138040', fontWeight: 700 }}>✓</span>}
-                      </td>
-                      <td style={{ padding: '10px 13px', borderBottom: '1px solid var(--border)', textAlign: 'center' }}>
-                        {row.indie === 'check' && <span style={{ color: '#138040', fontWeight: 700 }}>✓</span>}
-                        {row.indie === 'partial' && <span style={{ fontSize: '.72rem', fontWeight: 600, color: '#996A00' }}>Básico</span>}
-                        {row.indie === 'none' && <span style={{ color: 'var(--border2)' }}>—</span>}
-                      </td>
-                      <td style={{ padding: '10px 13px', borderBottom: '1px solid var(--border)', textAlign: 'center' }}>
-                        {row.big4 === 'check' && <span style={{ color: '#138040', fontWeight: 700 }}>✓</span>}
-                        {row.big4 === 'none' && <span style={{ color: 'var(--border2)' }}>—</span>}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+                {DIFFERENTIATORS.map((d, i) => (
+                  <div key={i} style={{ paddingTop: 28, paddingBottom: 28, borderTop: '1px solid var(--border)', display: 'flex', gap: 20 }} className="diff-pillar">
+                    <div style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: '1.6rem', fontWeight: 700, color: 'var(--gold)', lineHeight: 1, flexShrink: 0, opacity: 0.5, minWidth: 32 }}>{d.num}</div>
+                    <div>
+                      <div style={{ fontSize: '.82rem', fontWeight: 700, color: 'var(--navy)', marginBottom: 7, letterSpacing: '.01em' }}>{d.title}</div>
+                      <p style={{ fontSize: '.8rem', lineHeight: 1.72, color: 'var(--text2)', margin: 0 }}>{d.body}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </AnimOnScroll>
           </div>
         </div>
         <style>{`
           .kpi-cell:hover { background:var(--ice)!important; }
+          .diff-pillar:hover { background:var(--canvas)!important; margin:0 -16px; padding-left:16px!important; padding-right:16px!important; }
           @media(max-width:1100px){
             .diff-grid { grid-template-columns:1fr!important; }
             .diff-l { padding:76px 0!important; border-right:none!important; border-bottom:1px solid var(--border)!important; }
             .diff-r { padding:56px 0 76px!important; }
           }
-          @media(max-width:768px){ .table-scroll { overflow-x:auto; } }
         `}</style>
       </section>
  
@@ -308,6 +288,52 @@ export default function Home() {
         `}</style>
       </section>
  
+      {/* ═══════════════════ SERVICES ADDITIONAL ═══════════════════ */}
+      <section style={{ background: 'var(--navy)', padding: '80px 0', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', inset: 0, opacity: .025, backgroundImage: 'linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px)', backgroundSize: '60px 60px' }} />
+        <div style={{ position: 'relative', zIndex: 1, maxWidth: 1180, margin: '0 auto', padding: '0 52px' }}>
+          <p style={{ ...eyebrowStyle, color: 'var(--gold)' }}>Soluciones complementarias</p>
+          <h2 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.5rem,3vw,2.1rem)', fontWeight: 400, color: '#fff', marginBottom: 48, maxWidth: 560, lineHeight: 1.35 }}>
+            Servicios especializados<br />para mandatos de mayor complejidad.
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 1, background: 'rgba(255,255,255,.07)', border: '1px solid rgba(255,255,255,.07)' }} className="add-grid">
+            {SERVICES_ADDITIONAL.map((svc) => (
+              <AnimOnScroll key={svc.num}>
+                <div className="add-card" style={{ background: 'rgba(255,255,255,.03)', padding: '36px 32px', display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden' }}>
+                  <div style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: '.8rem', color: 'var(--gold)', opacity: .6, marginBottom: 20, letterSpacing: '.05em' }}>{svc.num}</div>
+                  <div style={{ fontSize: '.6rem', textTransform: 'uppercase', letterSpacing: '.18em', color: 'rgba(255,255,255,.3)', marginBottom: 8, fontWeight: 600 }}>{svc.category}</div>
+                  <h3 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: '1.15rem', fontWeight: 600, color: '#fff', marginBottom: 14, lineHeight: 1.3 }}>{svc.title}</h3>
+                  <p style={{ fontSize: '.79rem', color: 'rgba(255,255,255,.45)', lineHeight: 1.7, marginBottom: 24, flex: 1 }}>{svc.description}</p>
+                  <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 7, marginBottom: 28 }}>
+                    {svc.items.map(item => (
+                      <li key={item} style={{ fontSize: '.75rem', color: 'rgba(255,255,255,.4)', display: 'flex', alignItems: 'flex-start', gap: 9, lineHeight: 1.5 }}>
+                        <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'var(--gold)', opacity: .6, marginTop: 7, flexShrink: 0 }} />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <div>
+                    <Link href={svc.href} style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontSize: '.72rem', fontWeight: 600, color: 'rgba(255,255,255,.6)', background: 'rgba(255,255,255,.05)', border: '1px solid rgba(255,255,255,.12)', padding: '8px 14px', transition: 'all .2s', letterSpacing: '.03em' }} className="add-cta-btn">
+                      {svc.cta} <ArrowIcon />
+                    </Link>
+                    <p style={{ fontSize: '.65rem', color: 'rgba(255,255,255,.22)', marginTop: 9, letterSpacing: '.03em' }}>{svc.ctaSub}</p>
+                  </div>
+                </div>
+              </AnimOnScroll>
+            ))}
+          </div>
+        </div>
+        <style>{`
+          .add-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform .35s; }
+          .add-card:hover::before { transform:scaleX(1)!important; }
+          .add-card:hover { background:rgba(255,255,255,.07)!important; }
+          .add-cta-btn:hover { background:var(--gold)!important; color:var(--navy)!important; border-color:var(--gold)!important; }
+          @media(max-width:1100px){ .add-grid { grid-template-columns:1fr 1fr!important; } }
+          @media(max-width:768px){ .add-grid { grid-template-columns:1fr!important; } }
+          @media(max-width:480px){ .add-card { padding:28px 20px!important; } }
+        `}</style>
+      </section>
+
       {/* ═══════════════════ METRICS ═══════════════════ */}
       <section style={{ background: 'var(--navy)', padding: '76px 0', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, opacity: .03, backgroundImage: 'linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px)', backgroundSize: '60px 60px' }} />
