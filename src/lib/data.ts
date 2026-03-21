@@ -105,14 +105,70 @@ export const SERVICES = [
   },
 ]
 
-export const COMPARISON_TABLE = [
-  { feature: 'IFRS / NIC completo', ab: 'check', indie: 'partial', big4: 'check' },
-  { feature: 'Modelamiento financiero', ab: 'check', indie: 'none', big4: 'check' },
-  { feature: 'Acceso directo al experto', ab: 'check', indie: 'check', big4: 'none' },
-  { feature: 'Integración ERP / sistemas contables', ab: 'check', indie: 'none', big4: 'check' },
-  { feature: 'Honorarios transparentes', ab: 'check', indie: 'check', big4: 'none' },
-  { feature: 'Experiencia multinacional', ab: 'check', indie: 'none', big4: 'check' },
-  { feature: 'Power BI / Reporting', ab: 'check', indie: 'none', big4: 'check' },
+export const DIFFERENTIATORS = [
+  {
+    num: '01',
+    title: 'Formación Big Four, enfoque boutique',
+    body: 'Entrenado en los estándares de auditoría y reporte de los entornos corporativos más exigentes — LATAM Airlines Group, grupos multisociedad, procesos Big Four. Ese criterio se aplica íntegramente en cada mandato, sin importar el tamaño del cliente.',
+  },
+  {
+    num: '02',
+    title: 'Acceso directo al socio, sin intermediarios',
+    body: 'No hay delegación. Cada proyecto es gestionado directamente por el Director Fundador, con la misma atención que un socio de firma internacional dedica a su cliente más importante. Usted habla con quien toma las decisiones.',
+  },
+  {
+    num: '03',
+    title: 'Honorarios transparentes, alcance definido',
+    body: 'Propuesta detallada antes de comenzar: alcance, plazos y entregables específicos. Sin sorpresas en la facturación final ni costos por horas no acordadas.',
+  },
+]
+
+export const SERVICES_ADDITIONAL = [
+  {
+    num: '04',
+    category: 'Auditoría',
+    title: 'Auditoría & Control Interno',
+    description: 'Soporte técnico a procesos de auditoría interna y preparación para revisiones de auditores externos con estándares Big Four.',
+    items: [
+      'Diseño y ejecución de auditorías internas',
+      'Revisión de controles internos y procesos',
+      'Preparación para auditorías Big Four',
+      'Informes de hallazgos y recomendaciones',
+    ],
+    href: '/servicios/auditoria',
+    cta: 'Ver alcance de auditoría',
+    ctaSub: 'Experiencia directa en procesos Big Four',
+  },
+  {
+    num: '05',
+    category: 'Compliance',
+    title: 'Compliance Corporativo',
+    description: 'Diseño e implementación de programas de cumplimiento normativo bajo Ley 20.393 y regulaciones sectoriales vigentes en Chile.',
+    items: [
+      'Programa de cumplimiento Ley 20.393',
+      'Matriz de riesgos y controles corporativos',
+      'Políticas internas y manuales de cumplimiento',
+      'Capacitación a equipos directivos',
+    ],
+    href: '/servicios/compliance',
+    cta: 'Ver programa de compliance',
+    ctaSub: 'Compliance Officer Certificado · UAI',
+  },
+  {
+    num: '06',
+    category: 'Due Diligence',
+    title: 'Due Diligence Financiero',
+    description: 'Análisis financiero profundo para procesos de M&A, inversión o desinversión. Informes ejecutivos para directorio e inversionistas.',
+    items: [
+      'Due diligence financiero y contable',
+      'Revisión de estados financieros históricos',
+      'Identificación de contingencias y riesgos',
+      'Informe ejecutivo para directorio o inversionistas',
+    ],
+    href: '/servicios/due-diligence',
+    cta: 'Ver metodología de due diligence',
+    ctaSub: 'Mandatos con confidencialidad absoluta',
+  },
 ]
 
 export const PROCESS = [
