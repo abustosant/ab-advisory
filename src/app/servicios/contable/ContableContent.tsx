@@ -29,8 +29,8 @@ const alcance = [
     descripcion: 'Gestión del proceso de cierre mensual con metodologías que reducen los tiempos en hasta un 40%. Preparación de estados financieros bajo IFRS y normativa SII.',
   },
   {
-    titulo: 'Contabilidad SAP FI/CO',
-    descripcion: 'Configuración, parametrización y operación de módulos SAP FI/CO HANA. Key User certificado con experiencia en implantaciones corporativas de gran escala.',
+    titulo: 'Integración ERP & sistemas contables',
+    descripcion: 'Configuración y operación de plataformas ERP para el área financiera. Experiencia en implantaciones corporativas de gran escala con foco en precisión y trazabilidad.',
   },
 ]
 
@@ -39,7 +39,7 @@ const paraQuien = [
   'Empresas que requieren reportes bajo IFRS para bancos o socios extranjeros',
   'Compañías que enfrentan auditorías Big Four y necesitan preparación técnica',
   'CFOs que quieren reducir tiempos de cierre sin comprometer la calidad',
-  'Empresas en proceso de implementación o actualización SAP FI/CO',
+  'Empresas en proceso de implementación o actualización de su ERP financiero',
 ]
 
 const resultados = [
@@ -63,8 +63,8 @@ const faqs = [
     respuesta: 'Sí, operamos en modalidad de outsourcing contable completo o como soporte técnico especializado al equipo interno. Definimos el alcance según sus necesidades específicas y el tamaño de su operación.',
   },
   {
-    pregunta: '¿Trabajan con SAP u otros ERP?',
-    respuesta: 'Tenemos certificación SAP FI/CO HANA y experiencia en implantaciones corporativas. También trabajamos con otros ERP según el sistema de su empresa. La herramienta se adapta a sus procesos, no al revés.',
+    pregunta: '¿Trabajan con ERP y sistemas contables?',
+    respuesta: 'Tenemos experiencia en implantaciones ERP corporativas de gran escala. Trabajamos con el sistema que su empresa utilice — la herramienta se adapta a sus procesos, no al revés.',
   },
 ]
 

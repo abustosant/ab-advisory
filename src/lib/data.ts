@@ -103,7 +103,7 @@ export const COMPARISON_TABLE = [
   { feature: 'IFRS / NIC completo', ab: 'check', indie: 'partial', big4: 'check' },
   { feature: 'Modelamiento financiero', ab: 'check', indie: 'none', big4: 'check' },
   { feature: 'Acceso directo al experto', ab: 'check', indie: 'check', big4: 'none' },
-  { feature: 'SAP FI/CO avanzado', ab: 'check', indie: 'none', big4: 'check' },
+  { feature: 'Integración ERP / sistemas contables', ab: 'check', indie: 'none', big4: 'check' },
   { feature: 'Honorarios transparentes', ab: 'check', indie: 'check', big4: 'none' },
   { feature: 'Experiencia multinacional', ab: 'check', indie: 'none', big4: 'check' },
   { feature: 'Power BI / Reporting', ab: 'check', indie: 'none', big4: 'check' },
@@ -123,7 +123,7 @@ export const PROCESS = [
   {
     num: '03',
     title: 'Implementación',
-    description: 'Metodologías probadas en multinacionales: SAP, IFRS, Power BI y procesos estandarizados con reportería ejecutiva.',
+    description: 'Metodologías probadas en grandes corporaciones: IFRS, Power BI y procesos estandarizados con reportería ejecutiva.',
   },
   {
     num: '04',
@@ -153,8 +153,8 @@ export const IMPACT = [
   },
   {
     sector: 'Industria & Manufactura',
-    title: 'Transformación digital del área financiera con SAP y Power BI',
-    description: 'Implementación como Key User de SAP FI/CO/MM HANA. Diseño de dashboards ejecutivos en Power BI para reportería a directorio. Estandarización de más de 50 procesos financieros con reducción de errores operacionales.',
+    title: 'Transformación digital del área financiera con Power BI',
+    description: 'Diseño de dashboards ejecutivos en Power BI para reportería a directorio. Estandarización de más de 50 procesos financieros con reducción de errores operacionales.',
     metric: '+50 procesos estandarizados · Reportería en tiempo real',
   },
 ]
@@ -230,7 +230,7 @@ export const INSIGHTS = [
         items: [
           'Revisar la clasificación actual de todas las partidas del estado de resultados bajo los nuevos criterios.',
           'Evaluar si las métricas de rendimiento comunicadas a directorios e inversionistas califican como MPM y requerirán revelación formal.',
-          'Actualizar sistemas ERP (SAP FI/CO y similares) para permitir la extracción de datos bajo la nueva estructura.',
+          'Actualizar sistemas ERP y plataformas contables para permitir la extracción de datos bajo la nueva estructura.',
           'Preparar comparativos del ejercicio 2026 bajo IFRS 18, ya que la norma exige presentación retroactiva.',
           'Capacitar al equipo contable y alinear con el auditor externo con al menos 12 meses de anticipación.',
         ],
@@ -400,7 +400,7 @@ export const INSIGHTS = [
       },
       {
         type: 'paragraph',
-        text: 'La implementación técnica en Power BI, conectada a SAP FI/CO o al ERP de la empresa, toma entre 6 y 10 semanas dependiendo de la complejidad de las fuentes de datos. Si quiere evaluar si esta solución aplica para su grupo empresarial, conversemos.',
+        text: 'La implementación técnica en Power BI, conectada al ERP de la empresa, toma entre 6 y 10 semanas dependiendo de la complejidad de las fuentes de datos. Si quiere evaluar si esta solución aplica para su grupo empresarial, conversemos.',
       },
     ],
   },

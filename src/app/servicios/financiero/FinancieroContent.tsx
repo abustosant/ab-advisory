@@ -60,7 +60,7 @@ const faqs = [
   },
   {
     pregunta: '¿Qué diferencia a AB Advisory de un consultor financiero independiente?',
-    respuesta: 'Experiencia comprobada en roles corporativos de primera línea — CFO, Subgerente de Contabilidad en LATAM Airlines y Besalco — con las herramientas de una firma: SAP FI/CO, IFRS, Power BI y metodologías de multinacional.',
+    respuesta: 'Experiencia comprobada en roles corporativos de primera línea — CFO, Subgerente de Contabilidad en LATAM Airlines y Besalco — con las herramientas de una firma: IFRS, Power BI y metodologías de multinacional.',
   },
   {
     pregunta: '¿Pueden integrarse con nuestro equipo interno?',
