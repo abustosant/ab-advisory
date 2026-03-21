@@ -25,6 +25,9 @@ export const metadata: Metadata = {
     description: 'Firma boutique de nivel Big Four para empresas en Chile.',
     site: '@abadvisory',
   },
+  verification: {
+    google: 'xPmG9m4embv01nhginP2ltv_Y2gR4IbhRIkC3y1uuvs',
+  },
 }
 
 const localBusinessSchema = {
