@@ -92,7 +92,7 @@ export default function Home() {
             fontSize: '.83rem', fontWeight: 300, lineHeight: 1.9, letterSpacing: '.02em',
             color: 'rgba(245,243,239,0.55)', maxWidth: 460, margin: '28px 0 44px',
           }}>
-            Asesoría de nivel corporativo para startups, pymes y empresas medianas en crecimiento que exigen la misma profundidad técnica que las Big Four — con la agilidad y dedicación exclusiva de una firma boutique.
+            Asesoría financiera, contable y de auditoría para empresas y grupos empresariales que exigen el rigor técnico de las Big Four — con acceso directo al socio, dedicación exclusiva y sin estructura de costos de gran firma.
           </p>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 32, flexWrap: 'wrap' }}>
