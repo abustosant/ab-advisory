@@ -234,54 +234,103 @@ export default function Home() {
         `}</style>
       </section>
  
-      {/* ═══════════════════ SERVICES ═══════════════════ */}
+      {/* ═══════════════════ SERVICES (unificado) ═══════════════════ */}
       <section id="servicios" style={{ ...sectionStyle, background: 'var(--canvas)' }}>
         <div style={wrapStyle}>
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: 52, paddingBottom: 26, borderBottom: '1px solid var(--border)' }} className="svcs-head">
             <AnimOnScroll>
               <div style={eyebrowStyle}>
                 <span style={{ width: 24, height: 2, background: 'var(--gold)', display: 'inline-block' }} />
-                Asesoría financiera · contable · RRHH en Chile
+                Asesoría financiera · contable · advisory en Chile
               </div>
               <h2 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.8rem,3vw,2.8rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-.02em', color: 'var(--navy)' }}>
-                Tres pilares.<br/>Un socio estratégico.
+                Cinco pilares.<br/>Un socio estratégico.
               </h2>
             </AnimOnScroll>
           </div>
- 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 0, border: '1px solid var(--border)' }} className="svc-grid">
-            {SERVICES.map((svc, i) => (
-              <AnimOnScroll key={i} delay={i * 0.08} className="svc-card" style={{
-                padding: '42px 34px', borderRight: i < 2 ? '1px solid var(--border)' : 'none',
-                background: '#fff', position: 'relative', overflow: 'hidden', transition: 'background .3s',
-              }}>
-                <img src={svc.image} alt={svc.title} style={{ width: '100%', height: 175, objectFit: 'cover', marginBottom: 30, filter: 'grayscale(15%)', transition: 'filter .4s' }} loading="lazy" />
-                <div style={{ fontSize: '.6rem', fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 11, transition: 'color .3s' }}>
-                  {svc.num} · {svc.category}
-                </div>
-                <h3 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: '1.25rem', fontWeight: 600, color: 'var(--navy)', marginBottom: 11, lineHeight: 1.2, transition: 'color .3s' }}>
-                  {svc.title}
-                </h3>
-                <p style={{ fontSize: '.84rem', lineHeight: 1.76, color: 'var(--text2)', marginBottom: 20, transition: 'color .3s' }}>
-                  {svc.description}
-                </p>
-                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 6, marginBottom: 26 }}>
-                  {svc.items.map((item, j) => (
-                    <li key={j} style={{ fontSize: '.77rem', color: 'var(--text2)', display: 'flex', alignItems: 'flex-start', gap: 9, transition: 'color .3s' }}>
-                      <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'var(--blue)', marginTop: 7, flexShrink: 0 }} />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <div style={{ paddingTop: 17, borderTop: '1px solid var(--border)' }}>
-                  <Link href={svc.href} style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontSize: '.74rem', fontWeight: 600, color: 'var(--navy)', background: 'var(--canvas)', border: '1.5px solid var(--border)', padding: '9px 16px', transition: 'all .2s' }} className="svc-cta-btn">
-                    {svc.cta} <ArrowIcon />
-                  </Link>
-                  <p style={{ fontSize: '.67rem', color: 'var(--text3)', marginTop: 9, letterSpacing: '.03em' }}>{svc.ctaSub}</p>
-                </div>
-              </AnimOnScroll>
-            ))}
-          </div>
+
+          {/* Fila superior: 3 tarjetas */}
+          {(() => {
+            const row1 = [SERVICES[0], SERVICES[1], SERVICES_ADDITIONAL[0]]
+            return (
+              <div style={{ display: 'flex', border: '1px solid var(--border)', borderBottom: 'none' }} className="svc-row1">
+                {row1.map((svc, i) => (
+                  <AnimOnScroll key={svc.num} delay={i * 0.08} className="svc-card" style={{
+                    flex: 1, padding: '42px 34px',
+                    borderRight: i < 2 ? '1px solid var(--border)' : 'none',
+                    background: '#fff', position: 'relative', overflow: 'hidden', transition: 'background .3s',
+                  }}>
+                    {(svc as unknown as { image?: string }).image && (
+                      <img src={(svc as unknown as { image: string }).image} alt={svc.title} style={{ width: '100%', height: 175, objectFit: 'cover', marginBottom: 30, filter: 'grayscale(15%)', transition: 'filter .4s' }} loading="lazy" />
+                    )}
+                    <div style={{ fontSize: '.6rem', fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 11, transition: 'color .3s' }}>
+                      {svc.num} · {svc.category}
+                    </div>
+                    <h3 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: '1.25rem', fontWeight: 600, color: 'var(--navy)', marginBottom: 11, lineHeight: 1.2, transition: 'color .3s' }}>
+                      {svc.title}
+                    </h3>
+                    <p style={{ fontSize: '.84rem', lineHeight: 1.76, color: 'var(--text2)', marginBottom: 20, transition: 'color .3s' }}>
+                      {svc.description}
+                    </p>
+                    <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 6, marginBottom: 26 }}>
+                      {svc.items.map((item, j) => (
+                        <li key={j} style={{ fontSize: '.77rem', color: 'var(--text2)', display: 'flex', alignItems: 'flex-start', gap: 9, transition: 'color .3s' }}>
+                          <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'var(--blue)', marginTop: 7, flexShrink: 0 }} />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                    <div style={{ paddingTop: 17, borderTop: '1px solid var(--border)' }}>
+                      <Link href={svc.href} style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontSize: '.74rem', fontWeight: 600, color: 'var(--navy)', background: 'var(--canvas)', border: '1.5px solid var(--border)', padding: '9px 16px', transition: 'all .2s' }} className="svc-cta-btn">
+                        {svc.cta} <ArrowIcon />
+                      </Link>
+                      <p style={{ fontSize: '.67rem', color: 'var(--text3)', marginTop: 9, letterSpacing: '.03em' }}>{svc.ctaSub}</p>
+                    </div>
+                  </AnimOnScroll>
+                ))}
+              </div>
+            )
+          })()}
+
+          {/* Fila inferior: 2 tarjetas centradas */}
+          {(() => {
+            const row2 = [SERVICES_ADDITIONAL[1], SERVICES_ADDITIONAL[2]]
+            return (
+              <div style={{ display: 'flex', justifyContent: 'center', border: '1px solid var(--border)' }} className="svc-row2">
+                {row2.map((svc, i) => (
+                  <AnimOnScroll key={svc.num} delay={i * 0.08} className="svc-card" style={{
+                    flex: '0 0 calc(100% / 3)', padding: '42px 34px',
+                    borderRight: i === 0 ? '1px solid var(--border)' : 'none',
+                    background: '#fff', position: 'relative', overflow: 'hidden', transition: 'background .3s',
+                  }}>
+                    <div style={{ fontSize: '.6rem', fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 11, transition: 'color .3s' }}>
+                      {svc.num} · {svc.category}
+                    </div>
+                    <h3 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: '1.25rem', fontWeight: 600, color: 'var(--navy)', marginBottom: 11, lineHeight: 1.2, transition: 'color .3s' }}>
+                      {svc.title}
+                    </h3>
+                    <p style={{ fontSize: '.84rem', lineHeight: 1.76, color: 'var(--text2)', marginBottom: 20, transition: 'color .3s' }}>
+                      {svc.description}
+                    </p>
+                    <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 6, marginBottom: 26 }}>
+                      {svc.items.map((item, j) => (
+                        <li key={j} style={{ fontSize: '.77rem', color: 'var(--text2)', display: 'flex', alignItems: 'flex-start', gap: 9, transition: 'color .3s' }}>
+                          <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'var(--blue)', marginTop: 7, flexShrink: 0 }} />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                    <div style={{ paddingTop: 17, borderTop: '1px solid var(--border)' }}>
+                      <Link href={svc.href} style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontSize: '.74rem', fontWeight: 600, color: 'var(--navy)', background: 'var(--canvas)', border: '1.5px solid var(--border)', padding: '9px 16px', transition: 'all .2s' }} className="svc-cta-btn">
+                        {svc.cta} <ArrowIcon />
+                      </Link>
+                      <p style={{ fontSize: '.67rem', color: 'var(--text3)', marginTop: 9, letterSpacing: '.03em' }}>{svc.ctaSub}</p>
+                    </div>
+                  </AnimOnScroll>
+                ))}
+              </div>
+            )
+          })()}
         </div>
         <style>{`
           .svc-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform .35s; }
@@ -293,55 +342,14 @@ export default function Home() {
           .svc-cta-btn:hover { background:var(--navy)!important; color:#fff!important; border-color:var(--navy)!important; }
           .svc-card:hover .svc-cta-btn { background:rgba(255,255,255,.08)!important; color:rgba(255,255,255,.85)!important; border-color:rgba(255,255,255,.15)!important; }
           .svcs-head { flex-wrap:wrap; gap:16px; }
-          @media(max-width:1100px){ .svc-grid { grid-template-columns:1fr!important; } .svc-card { border-right:none!important; border-bottom:1px solid var(--border)!important; } }
+          @media(max-width:1100px){
+            .svc-row1 { flex-direction:column!important; }
+            .svc-row2 { flex-direction:column!important; }
+            .svc-card { border-right:none!important; border-bottom:1px solid var(--border)!important; flex:1 1 auto!important; }
+            .svc-row2 .svc-card { flex:1 1 auto!important; }
+          }
           @media(max-width:768px){ .svcs-head { flex-direction:column!important; align-items:flex-start!important; } }
           @media(max-width:480px){ .svc-card { padding:28px 20px!important; } }
-        `}</style>
-      </section>
- 
-      {/* ═══════════════════ SERVICES ADDITIONAL ═══════════════════ */}
-      <section style={{ background: 'var(--navy)', padding: '80px 0', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, opacity: .025, backgroundImage: 'linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px)', backgroundSize: '60px 60px' }} />
-        <div style={{ position: 'relative', zIndex: 1, maxWidth: 1180, margin: '0 auto', padding: '0 52px' }}>
-          <p style={{ ...eyebrowStyle, color: 'var(--gold)' }}>Soluciones complementarias</p>
-          <h2 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.5rem,3vw,2.1rem)', fontWeight: 400, color: '#fff', marginBottom: 48, maxWidth: 560, lineHeight: 1.35 }}>
-            Servicios especializados<br />para mandatos de mayor complejidad.
-          </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 1, background: 'rgba(255,255,255,.07)', border: '1px solid rgba(255,255,255,.07)' }} className="add-grid">
-            {SERVICES_ADDITIONAL.map((svc) => (
-              <AnimOnScroll key={svc.num}>
-                <div className="add-card" style={{ background: 'rgba(255,255,255,.03)', padding: '36px 32px', display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden' }}>
-                  <div style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: '.8rem', color: 'var(--gold)', opacity: .6, marginBottom: 20, letterSpacing: '.05em' }}>{svc.num}</div>
-                  <div style={{ fontSize: '.6rem', textTransform: 'uppercase', letterSpacing: '.18em', color: 'rgba(255,255,255,.3)', marginBottom: 8, fontWeight: 600 }}>{svc.category}</div>
-                  <h3 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: '1.15rem', fontWeight: 600, color: '#fff', marginBottom: 14, lineHeight: 1.3 }}>{svc.title}</h3>
-                  <p style={{ fontSize: '.79rem', color: 'rgba(255,255,255,.45)', lineHeight: 1.7, marginBottom: 24, flex: 1 }}>{svc.description}</p>
-                  <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 7, marginBottom: 28 }}>
-                    {svc.items.map(item => (
-                      <li key={item} style={{ fontSize: '.75rem', color: 'rgba(255,255,255,.4)', display: 'flex', alignItems: 'flex-start', gap: 9, lineHeight: 1.5 }}>
-                        <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'var(--gold)', opacity: .6, marginTop: 7, flexShrink: 0 }} />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                  <div>
-                    <Link href={svc.href} style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontSize: '.72rem', fontWeight: 600, color: 'rgba(255,255,255,.6)', background: 'rgba(255,255,255,.05)', border: '1px solid rgba(255,255,255,.12)', padding: '8px 14px', transition: 'all .2s', letterSpacing: '.03em' }} className="add-cta-btn">
-                      {svc.cta} <ArrowIcon />
-                    </Link>
-                    <p style={{ fontSize: '.65rem', color: 'rgba(255,255,255,.22)', marginTop: 9, letterSpacing: '.03em' }}>{svc.ctaSub}</p>
-                  </div>
-                </div>
-              </AnimOnScroll>
-            ))}
-          </div>
-        </div>
-        <style>{`
-          .add-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform .35s; }
-          .add-card:hover::before { transform:scaleX(1)!important; }
-          .add-card:hover { background:rgba(255,255,255,.07)!important; }
-          .add-cta-btn:hover { background:var(--gold)!important; color:var(--navy)!important; border-color:var(--gold)!important; }
-          @media(max-width:1100px){ .add-grid { grid-template-columns:1fr 1fr!important; } }
-          @media(max-width:768px){ .add-grid { grid-template-columns:1fr!important; } }
-          @media(max-width:480px){ .add-card { padding:28px 20px!important; } }
         `}</style>
       </section>
 
