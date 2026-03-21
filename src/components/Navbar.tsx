@@ -152,7 +152,7 @@ export default function Navbar() {
           paddingTop: 40, borderTop: '1px solid rgba(255,255,255,.07)',
         }}>
           <a
-            href={`mailto:${SITE.contact.email}`}
+            href={`mailto:${SITE.email}`}
             style={{
               fontSize: '.78rem', letterSpacing: '.12em', textTransform: 'uppercase',
               color: 'rgba(245,243,239,.45)', textDecoration: 'none',
@@ -161,11 +161,11 @@ export default function Navbar() {
             onMouseEnter={e => e.currentTarget.style.color = 'var(--gold)'}
             onMouseLeave={e => e.currentTarget.style.color = 'rgba(245,243,239,.45)'}
           >
-            {SITE.contact.email}
+            {SITE.email}
           </a>
           <span style={{ width: 1, height: 16, background: 'rgba(255,255,255,.15)' }} />
           <a
-            href={`https://wa.me/${SITE.contact.whatsapp.replace(/\D/g, '')}`}
+            href={`https://wa.me/${SITE.phoneRaw.replace(/\D/g, '')}`}
             target="_blank" rel="noopener noreferrer"
             style={{
               fontSize: '.78rem', letterSpacing: '.12em', textTransform: 'uppercase',
