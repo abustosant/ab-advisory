@@ -118,8 +118,44 @@ export default function Navbar() {
 
         {/* Nav links */}
         <nav style={{ flex: 1 }}>
+          {/* Links principales */}
+          {links.map((l, i) => (
+            <div key={l.href} style={{
+              borderBottom: '1px solid rgba(255,255,255,.07)',
+              overflow: 'hidden',
+            }}>
+              <Link
+                href={l.href}
+                onClick={() => setMenuOpen(false)}
+                className="overlay-nav-link"
+                style={{
+                  display: 'block',
+                  fontFamily: '"Playfair Display", Georgia, serif',
+                  fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
+                  fontWeight: 300,
+                  letterSpacing: '-.01em',
+                  color: 'rgba(245,243,239,.82)',
+                  textDecoration: 'none',
+                  padding: '18px 0',
+                  transition: 'color .2s, padding-left .2s',
+                  transitionDelay: menuOpen ? `${i * 60}ms` : '0ms',
+                }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.color = 'var(--gold)'
+                  e.currentTarget.style.paddingLeft = '12px'
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.color = 'rgba(245,243,239,.82)'
+                  e.currentTarget.style.paddingLeft = '0px'
+                }}
+              >
+                {l.label}
+              </Link>
+            </div>
+          ))}
+
           {/* Servicios — lista subordinada, visualmente discreta */}
-          <div style={{ borderBottom: '1px solid rgba(255,255,255,.07)', paddingBottom: 20 }}>
+          <div style={{ paddingBottom: 20 }}>
             <div style={{
               fontSize: '.58rem',
               fontWeight: 600,
@@ -159,41 +195,6 @@ export default function Navbar() {
               ))}
             </div>
           </div>
-
-          {links.map((l, i) => (
-            <div key={l.href} style={{
-              borderBottom: '1px solid rgba(255,255,255,.07)',
-              overflow: 'hidden',
-            }}>
-              <Link
-                href={l.href}
-                onClick={() => setMenuOpen(false)}
-                className="overlay-nav-link"
-                style={{
-                  display: 'block',
-                  fontFamily: '"Playfair Display", Georgia, serif',
-                  fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
-                  fontWeight: 300,
-                  letterSpacing: '-.01em',
-                  color: 'rgba(245,243,239,.82)',
-                  textDecoration: 'none',
-                  padding: '18px 0',
-                  transition: 'color .2s, padding-left .2s',
-                  transitionDelay: menuOpen ? `${i * 60}ms` : '0ms',
-                }}
-                onMouseEnter={e => {
-                  e.currentTarget.style.color = 'var(--gold)'
-                  e.currentTarget.style.paddingLeft = '12px'
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.color = 'rgba(245,243,239,.82)'
-                  e.currentTarget.style.paddingLeft = '0px'
-                }}
-              >
-                {l.label}
-              </Link>
-            </div>
-          ))}
         </nav>
 
         {/* Bottom: contact info */}

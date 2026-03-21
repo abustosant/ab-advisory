@@ -1,9 +1,7 @@
 import Link from 'next/link'
 
 import AnimOnScroll from '@/components/AnimOnScroll'
-import Counter from '@/components/Counter'
-import LeadMagnetForm from '@/components/LeadMagnetForm'
-import { SITE, METRICS, KPIS, SERVICES, SERVICES_ADDITIONAL, DIFFERENTIATORS, PROCESS, INSIGHTS, FOUNDER } from '@/lib/data'
+import { KPIS, SERVICES, SERVICES_ADDITIONAL, DIFFERENTIATORS, INSIGHTS, FOUNDER } from '@/lib/data'
 
 const ArrowIcon = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ flexShrink: 0, transition: 'transform .2s' }}>
@@ -89,7 +87,7 @@ export default function Home() {
             Asesoría financiera, contable y de auditoría para empresas y grupos empresariales que exigen el más alto estándar técnico — con la atención personalizada y la agilidad que solo una firma boutique puede ofrecer.
           </p>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: 32, flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 32, flexWrap: 'wrap' }} className="hero-cta-wrap">
             <Link href="/contacto" style={{
               display: 'inline-flex', alignItems: 'center', gap: 9,
               fontSize: '.72rem', fontWeight: 500, letterSpacing: '.16em', textTransform: 'uppercase',
@@ -151,7 +149,7 @@ export default function Home() {
           .btn-hero-secondary:hover { color: var(--gold) !important; border-color: var(--gold) !important; }
           @media(max-width:1200px){ .hero-metrics-bar { right:36px!important; gap:28px!important; } }
           @media(max-width:920px){ .hero-metrics-bar { display:none!important; } }
-          @media(max-width:768px){ .hero-section-wrap { padding:0 28px 70px!important; } .hero-line-left { display:none!important; } }
+          @media(max-width:768px){ .hero-section-wrap { padding:0 28px 70px!important; } .hero-line-left { display:none!important; } .hero-cta-wrap { margin-bottom:40px!important; } }
           @media(max-width:480px){ .hero-section-wrap { padding:0 18px 60px!important; } }
         `}</style>
       </section>
@@ -334,110 +332,46 @@ export default function Home() {
         `}</style>
       </section>
 
-      {/* ═══════════════════ METRICS ═══════════════════ */}
-      <section style={{ background: 'var(--navy)', padding: '76px 0', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, opacity: .03, backgroundImage: 'linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px)', backgroundSize: '60px 60px' }} />
-        <div style={{ position: 'relative', zIndex: 1, maxWidth: 1180, margin: '0 auto', padding: '0 52px' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)' }} className="met-grid">
-            {METRICS.map((m, i) => (
-              <div key={i} style={{ padding: '32px 24px', borderRight: i < 3 ? '1px solid rgba(255,255,255,.07)' : 'none', textAlign: 'center', transition: 'background .25s' }} className="met-cell">
-                <Counter target={m.value} prefix={m.prefix} suffix={m.suffix} className="met-n" />
-                <div style={{ fontSize: '.66rem', textTransform: 'uppercase', letterSpacing: '.12em', color: 'rgba(255,255,255,.3)', lineHeight: 1.5, marginTop: 9, whiteSpace: 'pre-line' }}>
-                  {m.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        <style>{`
-          .met-n { font-family:var(--font-playfair,var(--serif)); font-size:2.8rem; font-weight:700; color:#fff; line-height:1; }
-          .met-cell:hover { background:rgba(255,255,255,.04)!important; }
-          @media(max-width:1100px){ .met-grid { grid-template-columns:1fr 1fr!important; } .met-cell { border-bottom:1px solid rgba(255,255,255,.07)!important; } .met-cell:nth-child(odd) { border-right:1px solid rgba(255,255,255,.07)!important; } .met-cell:nth-child(even) { border-right:none!important; } .met-cell:nth-last-child(-n+2) { border-bottom:none!important; } }
-          @media(max-width:768px){ .met-grid { grid-template-columns:1fr!important; } .met-cell { border-right:none!important; } }
-        `}</style>
-      </section>
+      {/* ═══════════════════ METRICS (desactivado — métricas duplicadas del hero) ═══════════════════ */}
+      {/* <section style={{ background: 'var(--navy)', padding: '76px 0', position: 'relative', overflow: 'hidden' }}>
+        ... (contadores repetidos — ver hero-metrics-bar en la sección hero)
+      </section> */}
  
       {/* ═══════════════════ FOUNDER TEASER ═══════════════════ */}
-      <section style={{ background: '#fff', borderTop: '1px solid var(--border)', padding: '96px 0' }}>
+      <section style={{ background: '#fff', borderTop: '1px solid var(--border)', padding: '72px 0' }}>
         <div style={wrapStyle}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 300px', gap: '80px', alignItems: 'center' }} className="ft-grid">
-
-            <AnimOnScroll>
-              <div style={{ width: 36, height: 2, background: 'var(--gold)', marginBottom: 36 }} />
-              <blockquote style={{
-                fontFamily: 'var(--font-playfair,var(--serif))',
-                fontSize: 'clamp(1.15rem,2vw,1.5rem)',
-                fontWeight: 300, fontStyle: 'italic',
-                color: 'var(--navy)', lineHeight: 1.7,
-                letterSpacing: '-.01em', marginBottom: 36,
-              }}>
-                {FOUNDER.statement.replace(/^"|"$/g, '')}
-              </blockquote>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'wrap' }}>
-                <div>
-                  <div style={{ fontSize: '.88rem', fontWeight: 600, color: 'var(--navy)' }}>{FOUNDER.name}</div>
-                  <div style={{ fontSize: '.72rem', color: 'var(--text3)', marginTop: 3, letterSpacing: '.03em' }}>{FOUNDER.role}</div>
-                </div>
-                <Link href="/nosotros" style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontSize: '.74rem', fontWeight: 600, color: 'var(--blue)', letterSpacing: '.04em', borderBottom: '1px solid rgba(15,76,122,.25)', paddingBottom: 2, transition: 'color .2s, border-color .2s' }} className="ft-link">
-                  Conocer al Director Fundador <ArrowIcon />
-                </Link>
-              </div>
-            </AnimOnScroll>
-
-            <AnimOnScroll direction="right">
-              <Link href="/nosotros" style={{ display: 'block', position: 'relative', overflow: 'hidden' }} className="ft-photo-wrap">
+          <AnimOnScroll>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 32, flexWrap: 'wrap' }} className="ft-row">
+              <Link href="/nosotros" style={{ display: 'block', position: 'relative', overflow: 'hidden', flexShrink: 0 }} className="ft-photo-wrap">
                 <img
                   src="/images/team/andres-bustos.webp"
                   alt={FOUNDER.name}
-                  style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', objectPosition: 'top center', display: 'block', filter: 'grayscale(8%)', transition: 'transform .6s, filter .4s' }}
+                  style={{ width: 80, height: 80, objectFit: 'cover', objectPosition: 'top center', display: 'block', borderRadius: '50%', filter: 'grayscale(8%)', transition: 'transform .4s, filter .3s' }}
                   className="ft-photo"
                 />
-                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(13,43,69,0)', transition: 'background .4s' }} className="ft-overlay" />
               </Link>
-            </AnimOnScroll>
-
-          </div>
-        </div>
-        <style>{`
-          .ft-link:hover { color:var(--navy)!important; border-color:var(--navy)!important; }
-          .ft-photo-wrap:hover .ft-photo { transform:scale(1.03)!important; filter:grayscale(0%)!important; }
-          .ft-photo-wrap:hover .ft-overlay { background:rgba(13,43,69,.08)!important; }
-          @media(max-width:1100px){ .ft-grid { grid-template-columns:1fr!important; } }
-          @media(max-width:768px){ .ft-grid { gap:40px!important; } }
-        `}</style>
-      </section>
-
-      {/* ═══════════════════ PROCESS ═══════════════════ */}
-      <section style={{ ...sectionStyle, background: 'var(--canvas)' }}>
-        <div style={wrapStyle}>
-          <AnimOnScroll style={{ maxWidth: 540, margin: '0 auto 60px', textAlign: 'center' }}>
-            <div style={{ ...eyebrowStyle, justifyContent: 'center' }}>
-              <span style={{ width: 24, height: 2, background: 'var(--gold)', display: 'inline-block' }} />
-              Metodología
+              <div style={{ flex: 1, minWidth: 200 }}>
+                <div style={{ fontSize: '.6rem', fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 6 }}>Fundador</div>
+                <div style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--navy)', lineHeight: 1.2 }}>{FOUNDER.name}</div>
+                <div style={{ fontSize: '.76rem', color: 'var(--text3)', marginTop: 3, letterSpacing: '.02em' }}>{FOUNDER.role}</div>
+              </div>
+              <Link href="/nosotros" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: '.74rem', fontWeight: 600, color: 'var(--navy)', background: 'var(--canvas)', border: '1.5px solid var(--border)', padding: '10px 18px', flexShrink: 0, transition: 'all .2s' }} className="ft-cta">
+                Conocer al Director Fundador <ArrowIcon />
+              </Link>
             </div>
-            <h2 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.8rem,3vw,2.8rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-.02em', color: 'var(--navy)' }}>
-              Un proceso diseñado<br/>para su certeza
-            </h2>
           </AnimOnScroll>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 0, border: '1px solid var(--border)' }} className="proc-grid">
-            {PROCESS.map((step, i) => (
-              <AnimOnScroll key={i} delay={i * 0.08} className="proc-cell" style={{ padding: '40px 30px', borderRight: i < 3 ? '1px solid var(--border)' : 'none', background: '#fff', transition: 'background .3s' }}>
-                <div style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: '3rem', fontWeight: 700, color: 'var(--gold)', lineHeight: 1, marginBottom: 18, transition: 'color .3s' }} className="proc-num">{step.num}</div>
-                <h4 style={{ fontSize: '.87rem', fontWeight: 700, color: 'var(--navy)', marginBottom: 9, transition: 'color .3s' }} className="proc-title">{step.title}</h4>
-                <p style={{ fontSize: '.79rem', lineHeight: 1.68, color: 'var(--text2)', transition: 'color .3s' }} className="proc-desc">{step.description}</p>
-              </AnimOnScroll>
-            ))}
-          </div>
         </div>
         <style>{`
-          .proc-cell:hover { background:var(--navy)!important; }
-          .proc-cell:hover .proc-num { color:rgba(255,255,255,.09)!important; }
-          .proc-cell:hover .proc-title { color:#fff!important; }
-          .proc-cell:hover .proc-desc { color:rgba(255,255,255,.44)!important; }
-          @media(max-width:1100px){ .proc-grid { grid-template-columns:1fr 1fr!important; } .proc-cell:nth-child(even){ border-right:none!important; } .proc-cell:nth-child(n+3){ border-top:1px solid var(--border)!important; } }
-          @media(max-width:768px){ .proc-grid { grid-template-columns:1fr!important; } .proc-cell{ border-right:none!important; border-bottom:1px solid var(--border)!important; } .proc-cell:last-child{ border-bottom:none!important; } }
+          .ft-photo-wrap:hover .ft-photo { transform:scale(1.05)!important; filter:grayscale(0%)!important; }
+          .ft-cta:hover { background:var(--navy)!important; color:#fff!important; border-color:var(--navy)!important; }
+          @media(max-width:768px){ .ft-row { gap:20px!important; } .ft-cta { width:100%!important; justify-content:center!important; } }
         `}</style>
       </section>
+
+      {/* ═══════════════════ PROCESS — desactivado (descomentar si se quiere mostrar la metodología) ═══════════════════ */}
+      {/* <section style={{ ...sectionStyle, background: 'var(--canvas)' }}>
+        ...Metodología / Cómo trabajamos (4 pasos)...
+      </section> */}
  
       {/* ═══════════════════ INSIGHTS ═══════════════════ */}
       <section id="insights" style={{ ...sectionStyle, background: '#fff' }}>
@@ -525,44 +459,10 @@ export default function Home() {
         `}</style>
       </section> */}
  
-      {/* ═══════════════════ LEAD MAGNET ═══════════════════ */}
-      <section style={{ background: 'var(--canvas)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '80px 0' }}>
-        <div style={wrapStyle}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 400px', gap: '72px', alignItems: 'center' }} className="lm-grid">
-            <AnimOnScroll>
-              <div style={eyebrowStyle}>
-                <span style={{ width: 24, height: 2, background: 'var(--gold)', display: 'inline-block' }} />
-                Documento técnico
-              </div>
-              <h2 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.5rem,2.5vw,2.1rem)', fontWeight: 600, color: 'var(--navy)', lineHeight: 1.15, marginBottom: 14, letterSpacing: '-.015em' }}>
-                Checklist de transición<br/>IFRS 18 para CFOs
-              </h2>
-              <p style={{ fontSize: '.88rem', lineHeight: 1.8, color: 'var(--text2)', marginBottom: 24, maxWidth: 480 }}>
-                La norma IFRS 18 redefine la presentación del estado de resultados con vigencia 2027. Este checklist de 28 puntos recoge los criterios de diagnóstico que aplicamos en nuestras implementaciones para identificar brechas y planificar la transición con anticipación.
-              </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                {[
-                  '28 puntos de control mapeados contra NIC 1 vigente',
-                  'Diagnóstico de brechas por tipo de entidad',
-                  'Basado en consolidaciones de hasta 34 entidades bajo IFRS',
-                ].map((item, i) => (
-                  <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 10, fontSize: '.81rem', color: 'var(--text2)' }}>
-                    <span style={{ width: 5, height: 5, borderRadius: '50%', background: 'var(--gold)', marginTop: 7, flexShrink: 0 }} />
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </AnimOnScroll>
-
-            <AnimOnScroll delay={0.12}>
-              <LeadMagnetForm />
-            </AnimOnScroll>
-          </div>
-        </div>
-        <style>{`
-          @media(max-width:1100px){ .lm-grid { grid-template-columns:1fr!important; gap:40px!important; } }
-        `}</style>
-      </section>
+      {/* ═══════════════════ LEAD MAGNET — desactivado (descomentar para mostrar checklist IFRS 18) ═══════════════════ */}
+      {/* <section style={{ background: 'var(--canvas)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '80px 0' }}>
+        ...Documento técnico: Checklist IFRS 18 para CFOs...
+      </section> */}
 
       {/* ═══════════════════ CTA BAND ═══════════════════ */}
       <section style={{ background: 'var(--navy)', padding: '100px 0', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
