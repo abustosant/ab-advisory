@@ -9,7 +9,7 @@ interface Props {
 }
 
 export default function Counter({ target, prefix = '', suffix = '', className = '' }: Props) {
-  const [value, setValue] = useState(0)
+  const [value, setValue] = useState(target)
   const ref = useRef<HTMLDivElement>(null)
   const animated = useRef(false)
 
@@ -19,6 +19,7 @@ export default function Counter({ target, prefix = '', suffix = '', className = 
     const obs = new IntersectionObserver(([entry]) => {
       if (!entry.isIntersecting || animated.current) return
       animated.current = true
+      setValue(0)
       const start = performance.now()
       const duration = 1800
       const animate = (ts: number) => {

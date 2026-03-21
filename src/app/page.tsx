@@ -304,20 +304,25 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <Link href={svc.href} style={{ display: 'flex', alignItems: 'center', gap: 7, fontSize: '.76rem', fontWeight: 600, color: 'var(--blue)', paddingTop: 17, borderTop: '1px solid var(--border)', transition: 'all .3s' }}>
-                  Ver servicio <ArrowIcon />
-                </Link>
+                <div style={{ paddingTop: 17, borderTop: '1px solid var(--border)' }}>
+                  <Link href={svc.href} style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontSize: '.74rem', fontWeight: 600, color: 'var(--navy)', background: 'var(--canvas)', border: '1.5px solid var(--border)', padding: '9px 16px', transition: 'all .2s' }} className="svc-cta-btn">
+                    {svc.cta} <ArrowIcon />
+                  </Link>
+                  <p style={{ fontSize: '.67rem', color: 'var(--text3)', marginTop: 9, letterSpacing: '.03em' }}>{svc.ctaSub}</p>
+                </div>
               </AnimOnScroll>
             ))}
           </div>
         </div>
         <style>{`
-          .svc-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:var(--blue); transform:scaleX(0); transform-origin:left; transition:transform .35s; }
+          .svc-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform .35s; }
           .svc-card:hover::before { transform:scaleX(1)!important; }
           .svc-card:hover { background:var(--navy)!important; }
           .svc-card:hover img { filter:grayscale(100%) brightness(.3)!important; }
-          .svc-card:hover h3, .svc-card:hover p, .svc-card:hover li, .svc-card:hover a { color:rgba(255,255,255,.7)!important; }
+          .svc-card:hover h3, .svc-card:hover p, .svc-card:hover li { color:rgba(255,255,255,.7)!important; }
           .svc-card:hover div[style*="var(--blue)"] { color:var(--blue-mid)!important; }
+          .svc-cta-btn:hover { background:var(--navy)!important; color:#fff!important; border-color:var(--navy)!important; }
+          .svc-card:hover .svc-cta-btn { background:rgba(255,255,255,.08)!important; color:rgba(255,255,255,.85)!important; border-color:rgba(255,255,255,.15)!important; }
           .svcs-head { flex-wrap:wrap; gap:16px; }
           @media(max-width:1100px){ .svc-grid { grid-template-columns:1fr!important; } .svc-card { border-right:none!important; border-bottom:1px solid var(--border)!important; } }
           @media(max-width:768px){ .svcs-head { flex-direction:column!important; align-items:flex-start!important; } }
@@ -481,7 +486,7 @@ export default function Home() {
                 <span style={{ width: 24, height: 2, background: 'var(--gold)', display: 'inline-block' }} />
                 Conocimiento aplicado
               </div>
-              <h2 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.8rem,3vw,2.8rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-.02em', color: 'var(--navy)' }}>Insights Financieros</h2>
+              <h2 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.8rem,3vw,2.8rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-.02em', color: 'var(--navy)' }}>Análisis IFRS y<br/>Finanzas Corporativas</h2>
             </AnimOnScroll>
             <a href="/insights" style={{ fontSize: '.76rem', fontWeight: 600, color: 'var(--blue)', display: 'flex', alignItems: 'center', gap: 5, flexShrink: 0 }}>Ver todos →</a>
           </div>
@@ -558,6 +563,84 @@ export default function Home() {
         `}</style>
       </section> */}
  
+      {/* ═══════════════════ LEAD MAGNET ═══════════════════ */}
+      <section style={{ background: 'var(--canvas)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '80px 0' }}>
+        <div style={wrapStyle}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 400px', gap: '72px', alignItems: 'center' }} className="lm-grid">
+            <AnimOnScroll>
+              <div style={eyebrowStyle}>
+                <span style={{ width: 24, height: 2, background: 'var(--gold)', display: 'inline-block' }} />
+                Documento técnico
+              </div>
+              <h2 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.5rem,2.5vw,2.1rem)', fontWeight: 600, color: 'var(--navy)', lineHeight: 1.15, marginBottom: 14, letterSpacing: '-.015em' }}>
+                Checklist de transición<br/>IFRS 18 para CFOs
+              </h2>
+              <p style={{ fontSize: '.88rem', lineHeight: 1.8, color: 'var(--text2)', marginBottom: 24, maxWidth: 480 }}>
+                La norma IFRS 18 redefine la presentación del estado de resultados con vigencia 2027. Este checklist de 28 puntos recoge los criterios de diagnóstico que aplicamos en nuestras implementaciones para identificar brechas y planificar la transición con anticipación.
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {[
+                  '28 puntos de control mapeados contra NIC 1 vigente',
+                  'Diagnóstico de brechas por tipo de entidad',
+                  'Basado en consolidaciones de hasta 34 entidades bajo IFRS',
+                ].map((item, i) => (
+                  <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 10, fontSize: '.81rem', color: 'var(--text2)' }}>
+                    <span style={{ width: 5, height: 5, borderRadius: '50%', background: 'var(--gold)', marginTop: 7, flexShrink: 0 }} />
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </AnimOnScroll>
+
+            <AnimOnScroll delay={0.12}>
+              <div style={{ background: '#fff', border: '1px solid var(--border)', padding: '36px 32px', position: 'relative' }}>
+                {/* Document preview strip */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 24, padding: '12px 14px', background: 'var(--canvas)', borderLeft: '3px solid var(--gold)' }}>
+                  <div style={{ width: 32, height: 40, background: 'var(--navy)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <span style={{ fontSize: '.52rem', fontWeight: 700, color: 'var(--gold)', letterSpacing: '.05em' }}>PDF</span>
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '.78rem', fontWeight: 600, color: 'var(--navy)', lineHeight: 1.3, marginBottom: 2 }}>Checklist IFRS 18 — Transición</div>
+                    <div style={{ fontSize: '.67rem', color: 'var(--text3)' }}>AB Advisory · 2026 · 8 páginas</div>
+                  </div>
+                </div>
+
+                <h3 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: '1rem', fontWeight: 600, color: 'var(--navy)', marginBottom: 5 }}>Solicitar el documento</h3>
+                <p style={{ fontSize: '.75rem', color: 'var(--text3)', marginBottom: 20, lineHeight: 1.5 }}>Disponible para CFOs y Directores Financieros.</p>
+
+                <form style={{ display: 'flex', flexDirection: 'column', gap: 10 }} onSubmit={e => e.preventDefault()}>
+                  <input
+                    type="text"
+                    placeholder="Nombre y empresa"
+                    style={{ border: '1.5px solid var(--border)', padding: '11px 14px', fontFamily: 'DM Sans, sans-serif', fontSize: '.82rem', color: 'var(--text)', background: 'var(--canvas)', outline: 'none' }}
+                    onFocus={e => { e.currentTarget.style.borderColor = 'var(--navy)'; e.currentTarget.style.background = '#fff' }}
+                    onBlur={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.background = 'var(--canvas)' }}
+                  />
+                  <input
+                    type="email"
+                    placeholder="correo@empresa.cl"
+                    style={{ border: '1.5px solid var(--border)', padding: '11px 14px', fontFamily: 'DM Sans, sans-serif', fontSize: '.82rem', color: 'var(--text)', background: 'var(--canvas)', outline: 'none' }}
+                    onFocus={e => { e.currentTarget.style.borderColor = 'var(--navy)'; e.currentTarget.style.background = '#fff' }}
+                    onBlur={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.background = 'var(--canvas)' }}
+                  />
+                  <button type="submit" style={{ background: 'var(--navy)', color: '#fff', border: 'none', padding: '13px', fontFamily: 'DM Sans, sans-serif', fontSize: '.73rem', fontWeight: 600, letterSpacing: '.12em', textTransform: 'uppercase', cursor: 'pointer', transition: 'background .2s' }}
+                    onMouseEnter={e => (e.currentTarget.style.background = 'var(--navy2)')}
+                    onMouseLeave={e => (e.currentTarget.style.background = 'var(--navy)')}>
+                    Solicitar el documento →
+                  </button>
+                </form>
+                <p style={{ fontSize: '.67rem', color: 'var(--text3)', marginTop: 12, textAlign: 'center', letterSpacing: '.02em' }}>
+                  Su información es tratada con estricta confidencialidad.
+                </p>
+              </div>
+            </AnimOnScroll>
+          </div>
+        </div>
+        <style>{`
+          @media(max-width:1100px){ .lm-grid { grid-template-columns:1fr!important; gap:40px!important; } }
+        `}</style>
+      </section>
+
       {/* ═══════════════════ CTA BAND ═══════════════════ */}
       <section style={{ background: 'var(--navy)', padding: '100px 0', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 70% 50% at 50% 110%, rgba(15,76,122,.18), transparent)' }} />

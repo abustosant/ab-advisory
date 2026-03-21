@@ -65,6 +65,8 @@ export const SERVICES = [
       'Dashboards Power BI para directorio',
     ],
     href: '/servicios/financiero',
+    cta: 'Conocer la metodología',
+    ctaSub: 'Acceso directo al socio · sin intermediarios',
     color: '#0F4C7A',
   },
   {
@@ -80,6 +82,8 @@ export const SERVICES = [
       'Preparación auditorías Big Four',
     ],
     href: '/servicios/contable',
+    cta: 'Ver proceso de implementación',
+    ctaSub: 'Mandatos con confidencialidad absoluta',
     color: '#138040',
   },
   {
@@ -95,6 +99,8 @@ export const SERVICES = [
       'Planificación tributaria de remuneraciones',
     ],
     href: '/servicios/rrhh',
+    cta: 'Conocer el enfoque de compliance',
+    ctaSub: 'Dedicación exclusiva en cada mandato',
     color: '#7C3AED',
   },
 ]
