@@ -42,7 +42,7 @@ export default function InsightsContent() {
             letterSpacing: '-0.02em',
             marginBottom: '1rem',
           }}>
-            Insights
+            Análisis técnico para<br/>CFOs y equipos financieros
           </h1>
           <p style={{ fontSize: '1.05rem', color: '#4A5568', lineHeight: 1.75, maxWidth: '560px' }}>
             Análisis técnico sobre IFRS, finanzas corporativas y gestión empresarial en Chile — desde la perspectiva de quien lo ha implementado en primera línea.

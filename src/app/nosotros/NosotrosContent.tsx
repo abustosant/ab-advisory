@@ -84,7 +84,7 @@ export default function NosotrosContent() {
                 fontSize: '.88rem', fontWeight: 300,
                 lineHeight: 1.9, color: 'rgba(245,243,239,0.82)', margin: 0,
               }}>
-                Fundador y Director Ejecutivo de AB Advisory. Con más de 20 años de trayectoria en finanzas corporativas de alto nivel, ha liderado procesos de reestructuración de deuda por USD 15 millones y dirigido la consolidación contable de 34 empresas bajo IFRS sin observaciones en auditorías Big Four.
+                Fundador y Director Ejecutivo de AB Advisory.
               </p>
 
               <p style={{
@@ -98,14 +98,15 @@ export default function NosotrosContent() {
                 fontSize: '.88rem', fontWeight: 300,
                 lineHeight: 1.9, color: 'rgba(245,243,239,0.82)', margin: 0,
               }}>
-                Magíster en Información Financiero Contable, Universidad de Chile. Ingeniero Comercial y Contador Auditor, UTEM. Compliance Officer Certificado, Universidad Adolfo Ibáñez.
+                Fundó AB Advisory para ofrecer a empresas y grupos empresariales en Chile asesoría con el estándar técnico de las grandes firmas internacionales — con la dedicación exclusiva que solo una boutique puede garantizar.
               </p>
 
               <p style={{
-                fontSize: '.88rem', fontWeight: 300,
-                lineHeight: 1.9, color: 'rgba(245,243,239,0.82)', margin: 0,
+                fontSize: '.7rem', fontWeight: 300,
+                letterSpacing: '.06em', color: 'rgba(245,243,239,0.28)',
+                margin: '4px 0 0', lineHeight: 1.6,
               }}>
-                Fundó AB Advisory para ofrecer a empresas y grupos empresariales en Chile asesoría con el estándar técnico de las grandes firmas internacionales — con la dedicación exclusiva que solo una boutique puede garantizar.
+                Magíster · U. de Chile · Ing. Comercial · UTEM · Compliance Officer · UAI
               </p>
             </div>
 

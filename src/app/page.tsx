@@ -338,33 +338,47 @@ export default function Home() {
       </section> */}
  
       {/* ═══════════════════ FOUNDER TEASER ═══════════════════ */}
-      <section style={{ background: '#fff', borderTop: '1px solid var(--border)', padding: '72px 0' }}>
+      <section style={{ background: '#fff', borderTop: '1px solid var(--border)', padding: '96px 0' }}>
         <div style={wrapStyle}>
-          <AnimOnScroll>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 32, flexWrap: 'wrap' }} className="ft-row">
-              <Link href="/nosotros" style={{ display: 'block', position: 'relative', overflow: 'hidden', flexShrink: 0 }} className="ft-photo-wrap">
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 260px', gap: '72px', alignItems: 'center' }} className="ft-grid">
+
+            <AnimOnScroll>
+              <div style={{ width: 36, height: 2, background: 'var(--gold)', marginBottom: 32 }} />
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: 24, marginBottom: 32, flexWrap: 'wrap' }}>
+                <div>
+                  <div style={{ fontSize: '.6rem', fontWeight: 600, letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 8 }}>Director Fundador</div>
+                  <div style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.4rem,2.5vw,2rem)', fontWeight: 600, color: 'var(--navy)', lineHeight: 1.1, marginBottom: 6 }}>{FOUNDER.name}</div>
+                  <div style={{ fontSize: '.78rem', color: 'var(--text3)', letterSpacing: '.03em' }}>Ex-Head of Corporate Accounting · LATAM Airlines Group</div>
+                </div>
+              </div>
+              <p style={{ fontSize: '.9rem', lineHeight: 1.85, color: 'var(--text2)', maxWidth: 500, marginBottom: 32 }}>
+                {FOUNDER.statement.replace(/^"|"$/g, '')}
+              </p>
+              <Link href="/nosotros" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: '.74rem', fontWeight: 600, color: 'var(--navy)', background: 'var(--canvas)', border: '1.5px solid var(--border)', padding: '11px 20px', transition: 'all .2s' }} className="ft-cta">
+                Conocer al Director Fundador <ArrowIcon />
+              </Link>
+            </AnimOnScroll>
+
+            <AnimOnScroll direction="right">
+              <Link href="/nosotros" style={{ display: 'block', position: 'relative', overflow: 'hidden' }} className="ft-photo-wrap">
                 <img
                   src="/images/team/andres-bustos.webp"
                   alt={FOUNDER.name}
-                  style={{ width: 80, height: 80, objectFit: 'cover', objectPosition: 'top center', display: 'block', borderRadius: '50%', filter: 'grayscale(8%)', transition: 'transform .4s, filter .3s' }}
+                  style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', objectPosition: 'top center', display: 'block', filter: 'grayscale(8%)', transition: 'transform .6s, filter .4s' }}
                   className="ft-photo"
                 />
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(13,43,69,0)', transition: 'background .4s' }} className="ft-overlay" />
               </Link>
-              <div style={{ flex: 1, minWidth: 200 }}>
-                <div style={{ fontSize: '.6rem', fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 6 }}>Fundador</div>
-                <div style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--navy)', lineHeight: 1.2 }}>{FOUNDER.name}</div>
-                <div style={{ fontSize: '.76rem', color: 'var(--text3)', marginTop: 3, letterSpacing: '.02em' }}>{FOUNDER.role}</div>
-              </div>
-              <Link href="/nosotros" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: '.74rem', fontWeight: 600, color: 'var(--navy)', background: 'var(--canvas)', border: '1.5px solid var(--border)', padding: '10px 18px', flexShrink: 0, transition: 'all .2s' }} className="ft-cta">
-                Conocer al Director Fundador <ArrowIcon />
-              </Link>
-            </div>
-          </AnimOnScroll>
+            </AnimOnScroll>
+
+          </div>
         </div>
         <style>{`
-          .ft-photo-wrap:hover .ft-photo { transform:scale(1.05)!important; filter:grayscale(0%)!important; }
+          .ft-photo-wrap:hover .ft-photo { transform:scale(1.03)!important; filter:grayscale(0%)!important; }
+          .ft-photo-wrap:hover .ft-overlay { background:rgba(13,43,69,.06)!important; }
           .ft-cta:hover { background:var(--navy)!important; color:#fff!important; border-color:var(--navy)!important; }
-          @media(max-width:768px){ .ft-row { gap:20px!important; } .ft-cta { width:100%!important; justify-content:center!important; } }
+          @media(max-width:1100px){ .ft-grid { grid-template-columns:1fr!important; } }
+          @media(max-width:768px){ .ft-grid { gap:40px!important; } .ft-cta { width:100%!important; justify-content:center!important; } }
         `}</style>
       </section>
 

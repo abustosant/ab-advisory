@@ -39,7 +39,7 @@ export const FOUNDER = {
 
 export const METRICS = [
   { value: 20, suffix: '+', label: 'Años en finanzas\ncorporativas' },
-  { value: 15, prefix: 'USD ', suffix: 'M', label: 'Deuda reestructurada\n+20% eficiencia de caja' },
+  { value: 20, suffix: '+', label: 'Procesos de reestructuración\ncon mejora de caja >20%' },
   { value: 34, label: 'Empresas consolidadas\nIFRS sin observaciones' },
   { value: 500, prefix: 'USD ', suffix: 'K', label: 'Ahorros anuales via\nnegociación estratégica' },
 ]
@@ -203,7 +203,7 @@ export const IMPACT = [
   },
   {
     sector: 'Reestructuración Financiera',
-    title: 'USD 15 millones reestructurados con mejora de caja',
+    title: 'Reestructuración de deuda corporativa con mejora documentada de caja',
     description: 'Liderazgo de proceso de reestructuración de deuda corporativa en contexto de alta complejidad operativa. Implementación de Rolling Forecast 6QTR con mejora del 25% en precisión de proyecciones de liquidez.',
     metric: '+20% eficiencia de caja · USD 500K ahorros anuales',
   },
@@ -410,7 +410,7 @@ export const INSIGHTS = [
       },
       {
         type: 'paragraph',
-        text: 'En AB Advisory hemos liderado procesos de reestructuración de hasta USD 15M, con mejoras documentadas en eficiencia de caja superiores al 20%. Si está evaluando una reestructuración o quiere entender las opciones disponibles para su estructura de pasivos, solicite un diagnóstico inicial.',
+        text: 'En AB Advisory hemos liderado múltiples procesos de reestructuración de deuda corporativa, con mejoras documentadas en eficiencia de caja superiores al 20%. Si está evaluando una reestructuración o quiere entender las opciones disponibles para su estructura de pasivos, contáctenos para coordinar una revisión.',
       },
     ],
   },
@@ -476,7 +476,7 @@ export const TICKER_ITEMS = [
   ['LATAM Airlines Group', 'Gestión contable multinacional'],
   ['Besalco Maquinarias', 'Sub Gerente de Contabilidad Corporativa'],
   ['Grupo LatamWin', 'CFO · Finanzas Corporativas'],
-  ['USD 15M', 'Deuda reestructurada'],
+  ['Reestructuración', 'Deuda · mejora de caja >20%'],
   ['34 empresas', 'Consolidadas bajo IFRS'],
   ['Ingeniería Comercial', 'UTEM · Santiago'],
   ['Contador Auditor', 'UTEM · Santiago'],

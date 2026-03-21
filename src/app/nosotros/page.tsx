@@ -12,6 +12,30 @@ export const metadata: Metadata = {
   },
 }
 
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Andrés Bustos A.',
+  jobTitle: 'Founder & Director Ejecutivo',
+  worksFor: { '@type': 'Organization', name: 'AB Advisory', url: 'https://www.abadvisory.cl' },
+  url: 'https://www.abadvisory.cl/nosotros',
+  sameAs: ['https://linkedin.com/in/andresbustosant'],
+  alumniOf: [
+    { '@type': 'CollegeOrUniversity', name: 'Universidad de Chile' },
+    { '@type': 'CollegeOrUniversity', name: 'Universidad Tecnológica Metropolitana' },
+    { '@type': 'CollegeOrUniversity', name: 'Universidad Adolfo Ibáñez' },
+  ],
+  knowsAbout: ['Finanzas Corporativas', 'IFRS', 'Reestructuración de Deuda', 'Compliance Corporativo', 'Auditoría'],
+}
+
 export default function Page() {
-  return <NosotrosContent />
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
+      <NosotrosContent />
+    </>
+  )
 }

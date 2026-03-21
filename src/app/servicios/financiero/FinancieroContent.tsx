@@ -10,7 +10,7 @@ const NAVY = '#0D2B45'
 const alcance = [
   {
     titulo: 'Reestructuración y refinanciamiento de deuda',
-    descripcion: 'Diagnóstico de pasivos, negociación con acreedores y diseño de estructuras de deuda sostenibles. Experiencia comprobada en reestructuraciones de USD 15M con mejora del 20% en eficiencia de caja.',
+    descripcion: 'Diagnóstico de pasivos, negociación con acreedores y diseño de estructuras de deuda sostenibles. Múltiples procesos ejecutados con mejora documentada de caja superior al 20%.',
   },
   {
     titulo: 'Modelos DCF, valorización y M&A support',
@@ -43,7 +43,7 @@ const paraQuien = [
 ]
 
 const resultados = [
-  { valor: 'USD 15M', label: 'En deuda reestructurada con mejora de caja' },
+  { valor: '>20%', label: 'Mejora de caja en procesos de reestructuración' },
   { valor: '+25%', label: 'Precisión en proyecciones financieras' },
   { valor: '40%', label: 'Reducción en tiempos de cierre financiero' },
   { valor: '100%', label: 'Cumplimiento SII y normativa local' },

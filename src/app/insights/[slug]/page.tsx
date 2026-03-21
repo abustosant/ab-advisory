@@ -30,5 +30,35 @@ export default async function Page({ params }: Props) {
   const { slug } = await params
   const insight = INSIGHTS.find(i => i.slug === slug)
   if (!insight) notFound()
-  return <InsightDetailContent insight={insight} />
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: insight.title,
+    description: insight.description,
+    author: {
+      '@type': 'Person',
+      name: 'Andrés Bustos A.',
+      url: 'https://www.abadvisory.cl/nosotros',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'AB Advisory',
+      url: 'https://www.abadvisory.cl',
+    },
+    url: `https://www.abadvisory.cl${insight.href}`,
+    image: insight.image ? `https://www.abadvisory.cl${insight.image}` : undefined,
+    articleSection: insight.category,
+    inLanguage: 'es-CL',
+  }
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <InsightDetailContent insight={insight} />
+    </>
+  )
 }
