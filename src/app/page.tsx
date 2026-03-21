@@ -191,10 +191,10 @@ export default function Home() {
                 ¿Por qué AB Advisory?
               </div>
               <h2 style={{ fontFamily: 'var(--font-playfair,var(--serif))', fontSize: 'clamp(1.8rem,3vw,2.8rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-.02em', color: 'var(--navy)', marginBottom: 16 }}>
-                Rigor de firma internacional.<br/>Precio y dedicación de boutique.
+                Excelencia de firma internacional.<br/>Precio y dedicación de boutique.
               </h2>
               <p style={{ fontSize: '1.05rem', lineHeight: 1.85, color: 'var(--text2)', marginBottom: 40 }}>
-                Su empresa merece el mismo rigor técnico que exigen los grupos empresariales de primer nivel — implementación IFRS, estructuración de deuda y estrategia financiera real — con la dedicación exclusiva de una firma boutique y acceso directo al experto, no a un equipo de juniors.
+                Su empresa merece el mismo estándar técnico que exigen los grupos empresariales de primer nivel — implementación IFRS, estructuración de deuda y estrategia financiera real — con la dedicación exclusiva de una firma boutique y acceso directo al experto, no a un equipo de juniors.
               </p>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 0, border: '1px solid var(--border)' }}>
                 {KPIS.map((kpi, i) => (

@@ -21,7 +21,7 @@ export default function Footer() {
               />
             </div>
             <p style={{ fontSize: '.79rem', lineHeight: 1.74, color: 'rgba(255,255,255,.3)', maxWidth: 245, marginBottom: 20 }}>
-              Firma boutique de asesoría financiera, contabilidad IFRS y gestión de RRHH para empresas en Chile. Rigor técnico de multinacional. Dedicación exclusiva.
+              Firma boutique de asesoría financiera, contabilidad IFRS y gestión de RRHH para empresas en Chile. Criterio técnico de multinacional. Dedicación exclusiva.
             </p>
             <div style={{ display: 'flex', gap: 7 }}>
               <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer" className="soc-icon">

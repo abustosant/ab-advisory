@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'AB Advisory | Asesoría Financiera, Contable y RRHH — Santiago, Chile',
-  description: 'Firma boutique de asesoría financiera, contabilidad IFRS y gestión de RRHH para empresas en Chile. Rigor técnico de multinacional, dedicación exclusiva.',
+  description: 'Firma boutique de asesoría financiera, contabilidad IFRS y gestión de RRHH para empresas en Chile. Excelencia técnica de multinacional, dedicación exclusiva.',
   keywords: 'asesoría financiera chile, IFRS contabilidad, gestión RRHH, consulting santiago',
   openGraph: {
     title: 'AB Advisory | Asesoría Financiera Corporativa',

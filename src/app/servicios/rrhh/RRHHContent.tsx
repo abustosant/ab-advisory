@@ -131,7 +131,7 @@ export default function RRHHContent() {
             fontSize: '1.05rem', color: '#4A5568',
             lineHeight: 1.75, marginBottom: '2.5rem', maxWidth: '500px',
           }}>
-            Outsourcing de nómina, compliance laboral y planificación tributaria de remuneraciones para empresas con dotaciones significativas — con el rigor técnico de quien gestionó RRHH en multinacionales.
+            Outsourcing de nómina, compliance laboral y planificación tributaria de remuneraciones para empresas con dotaciones significativas — con la solidez técnica de quien gestionó RRHH en multinacionales.
           </p>
         </AnimOnScroll>
 

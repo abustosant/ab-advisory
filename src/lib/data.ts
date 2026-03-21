@@ -5,7 +5,7 @@
 export const SITE = {
   name: 'AB Advisory',
   tagline: 'Asesoría Financiera · Contable · RRHH',
-  description: 'Firma boutique de asesoría financiera, contabilidad IFRS y gestión de RRHH para empresas en Chile. Rigor técnico de multinacional, dedicación exclusiva.',
+  description: 'Firma boutique de asesoría financiera, contabilidad IFRS y gestión de RRHH para empresas en Chile. Excelencia técnica de multinacional, dedicación exclusiva.',
   phone: '(+56) 9 9308 4548',
   phoneRaw: '+56993084548',
   email: 'contacto@abadvisory.cl',
@@ -22,7 +22,7 @@ export const FOUNDER = {
   nameShort: 'Andrés Bustos',
   role: 'Founder & Director Ejecutivo · AB Advisory',
   eyebrow: 'Director Fundador',
-  statement: '"Las empresas que aspiran a competir en los más altos estándares merecen asesoría con el mismo rigor técnico de las grandes firmas internacionales — y la atención exclusiva que solo una boutique puede ofrecer."',
+  statement: '"Las empresas que aspiran a competir en los más altos estándares merecen asesoría con la misma profundidad analítica y disciplina técnica de las grandes firmas internacionales — y la atención exclusiva que solo una boutique puede ofrecer."',
   expertise: [
     'Finanzas Corporativas',
     'IFRS & Consolidación',
@@ -56,7 +56,7 @@ export const SERVICES = [
     num: '01',
     category: 'Finanzas Corporativas',
     title: 'Asesoría Financiera',
-    description: 'Estructuración de deuda, modelamiento financiero y planificación estratégica para CFOs y directorios que exigen rigor técnico real.',
+    description: 'Estructuración de deuda, modelamiento financiero y planificación estratégica para CFOs y directorios que exigen precisión técnica real.',
     image: '/images/servicios/financiero.webp',
     items: [
       'Reestructuración y refinanciamiento de deuda',

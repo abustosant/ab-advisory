@@ -131,7 +131,7 @@ export default function FinancieroContent() {
             fontSize: '1.05rem', color: '#4A5568',
             lineHeight: 1.75, marginBottom: '2.5rem', maxWidth: '500px',
           }}>
-            Estructuración de deuda, modelamiento financiero y planificación estratégica para CFOs y directorios que exigen el mismo rigor técnico de las Big Four — con acceso directo al experto.
+            Estructuración de deuda, modelamiento financiero y planificación estratégica para CFOs y directorios que exigen la misma exigencia analítica de las Big Four — con acceso directo al experto.
           </p>
         </AnimOnScroll>
 
