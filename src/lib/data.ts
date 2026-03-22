@@ -4,10 +4,8 @@
 
 export const SITE = {
   name: 'AB Advisory',
-  tagline: 'Asesoría Financiera · Contable · RRHH',
-  description: 'Firma boutique de asesoría financiera, contabilidad IFRS y gestión de RRHH para empresas en Chile. Excelencia técnica de multinacional, dedicación exclusiva.',
-  phone: '(+56) 9 9308 4548',
-  phoneRaw: '+56993084548',
+  tagline: 'Asesoría Financiera · Contable · Advisory',
+  description: 'Firma boutique de asesoría financiera, contabilidad IFRS, auditoría y compliance para empresas en Chile. Criterio técnico de multinacional. Dedicación exclusiva.',
   email: 'contacto@abadvisory.cl',
   linkedin: 'https://linkedin.com/in/andresbustosant',
   location: 'Santiago de Chile · Presencial y remoto',

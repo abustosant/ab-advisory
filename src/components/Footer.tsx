@@ -21,7 +21,7 @@ export default function Footer() {
               />
             </div>
             <p style={{ fontSize: '.79rem', lineHeight: 1.74, color: 'rgba(255,255,255,.3)', maxWidth: 245, marginBottom: 20 }}>
-              Firma boutique de asesoría financiera, contabilidad IFRS y gestión de RRHH para empresas en Chile. Criterio técnico de multinacional. Dedicación exclusiva.
+              Firma boutique de asesoría financiera, contabilidad IFRS, auditoría y compliance para empresas en Chile. Criterio técnico de multinacional. Dedicación exclusiva.
             </p>
             <div style={{ display: 'flex', gap: 7 }}>
               <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer" className="soc-icon">
@@ -40,7 +40,7 @@ export default function Footer() {
               {[
                 { label: 'Asesoría Financiera', href: '/servicios/financiero' },
                 { label: 'Contabilidad & IFRS', href: '/servicios/contable' },
-                { label: 'Gestión de RRHH', href: '/servicios/rrhh' },
+                { label: 'Auditoría & Control Interno', href: '/servicios/auditoria' },
                 { label: 'Compliance', href: '/servicios/compliance' },
                 { label: 'Due Diligence', href: '/servicios/due-diligence' },
               ].map(s => (
@@ -73,7 +73,7 @@ export default function Footer() {
 
         <div style={{ borderTop: '1px solid rgba(255,255,255,.06)', paddingTop: 24, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 9 }}>
           <span style={{ fontSize: '.67rem', color: 'rgba(255,255,255,.18)' }}>© {SITE.year} AB Advisory SpA · Santiago de Chile</span>
-          <span style={{ fontSize: '.67rem', color: 'rgba(255,255,255,.18)' }}>Asesoría financiera · Contabilidad IFRS · Gestión de RRHH</span>
+          <span style={{ fontSize: '.67rem', color: 'rgba(255,255,255,.18)' }}>Asesoría financiera · Contabilidad IFRS · Auditoría · Compliance · Due Diligence</span>
         </div>
       </div>
 

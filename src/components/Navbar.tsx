@@ -30,7 +30,6 @@ export default function Navbar() {
   const serviceLinks = [
     { href: '/servicios/financiero', label: 'Asesoría Financiera' },
     { href: '/servicios/contable', label: 'Contabilidad & IFRS' },
-    { href: '/servicios/rrhh', label: 'Gestión de RRHH' },
     { href: '/servicios/auditoria', label: 'Auditoría & Control Interno' },
     { href: '/servicios/compliance', label: 'Compliance Corporativo' },
     { href: '/servicios/due-diligence', label: 'Due Diligence Financiero' },
@@ -213,19 +212,6 @@ export default function Navbar() {
             onMouseLeave={e => e.currentTarget.style.color = 'rgba(245,243,239,.45)'}
           >
             {SITE.email}
-          </a>
-          <span style={{ width: 1, height: 16, background: 'rgba(255,255,255,.15)' }} />
-          <a
-            href={`tel:${SITE.phoneRaw}`}
-            style={{
-              fontSize: '.78rem', letterSpacing: '.12em', textTransform: 'uppercase',
-              color: 'rgba(245,243,239,.45)', textDecoration: 'none',
-              transition: 'color .2s',
-            }}
-            onMouseEnter={e => e.currentTarget.style.color = 'var(--gold)'}
-            onMouseLeave={e => e.currentTarget.style.color = 'rgba(245,243,239,.45)'}
-          >
-            {SITE.phone}
           </a>
         </div>
       </div>

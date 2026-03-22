@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.abadvisory.cl'),
   title: 'AB Advisory | Asesoría Financiera, Contable y Advisory en Chile',
   description: 'Firma boutique de asesoría financiera, contabilidad IFRS, auditoría, compliance y due diligence para empresas en Chile. Criterio técnico de multinacional. Dedicación exclusiva.',
-  keywords: 'asesoría financiera chile, IFRS contabilidad, gestión RRHH, consulting santiago, due diligence, compliance ley 20393, reestructuración deuda',
+  keywords: 'asesoría financiera chile, IFRS contabilidad, auditoría interna, consulting santiago, due diligence, compliance ley 20393, reestructuración deuda',
   alternates: {
     canonical: 'https://www.abadvisory.cl',
   },
@@ -34,9 +34,8 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   name: 'AB Advisory',
-  description: 'Firma boutique de asesoría financiera, contabilidad IFRS y gestión de RRHH para empresas en Chile.',
+  description: 'Firma boutique de asesoría financiera, contabilidad IFRS, auditoría y compliance para empresas en Chile.',
   url: 'https://www.abadvisory.cl',
-  telephone: '+56993084548',
   email: 'contacto@abadvisory.cl',
   address: {
     '@type': 'PostalAddress',
@@ -55,7 +54,6 @@ const localBusinessSchema = {
     itemListElement: [
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Asesoría Financiera Corporativa' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Contabilidad & IFRS' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Gestión de RRHH & Remuneraciones' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Auditoría & Control Interno' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Compliance Corporativo' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Due Diligence Financiero' } },

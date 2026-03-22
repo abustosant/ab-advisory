@@ -3,7 +3,7 @@ import ContactoContent from './ContactoContent'
 
 export const metadata: Metadata = {
   title: 'Conversemos | AB Advisory — Agende una Reunión',
-  description: 'Agende una reunión de trabajo con un socio de AB Advisory. Asesoría financiera, contabilidad IFRS y gestión de RRHH para empresas en Chile.',
+  description: 'Agende una reunión de trabajo con un socio de AB Advisory. Asesoría financiera, contabilidad IFRS, auditoría y compliance para empresas en Chile.',
   alternates: { canonical: 'https://www.abadvisory.cl/contacto' },
   openGraph: {
     title: 'Agende una reunión de trabajo | AB Advisory',

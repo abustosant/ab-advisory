@@ -78,7 +78,9 @@ export default function ContactForm() {
           <option value="" disabled>Seleccione un servicio</option>
           <option>Asesoría Financiera Corporativa</option>
           <option>Contabilidad & IFRS</option>
-          <option>Gestión de Recursos Humanos</option>
+          <option>Auditoría & Control Interno</option>
+          <option>Compliance Corporativo</option>
+          <option>Due Diligence Financiero</option>
           <option>Múltiples servicios</option>
           <option>Consulta general</option>
         </select>
