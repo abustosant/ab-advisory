@@ -25,7 +25,7 @@ export default function Home() {
       <section className="hero-section-wrap" style={{
         minHeight: '100vh', position: 'relative', overflow: 'hidden',
         display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
-        padding: '0 80px 90px', background: '#0A0F1C',
+        padding: '0 52px 90px', background: '#0A0F1C',
       }}>
         {/* Video de fondo */}
         <video autoPlay muted loop playsInline style={{
@@ -47,7 +47,7 @@ export default function Home() {
 
         {/* Línea dorada vertical izquierda */}
         <div className="hero-line-left" style={{
-          position: 'absolute', left: 80, top: 0, bottom: 0, width: 1, zIndex: 2,
+          position: 'absolute', left: 52, top: 0, bottom: 0, width: 1, zIndex: 2,
           background: 'linear-gradient(to bottom, transparent 10%, var(--gold) 40%, var(--gold) 60%, transparent 90%)',
           opacity: 0.28,
         }} />
