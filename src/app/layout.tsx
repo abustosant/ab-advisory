@@ -5,8 +5,8 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.abadvisory.cl'),
-  title: 'AB Advisory | Asesoría Financiera, Contable y RRHH — Santiago, Chile',
-  description: 'Firma boutique de asesoría financiera, contabilidad IFRS y gestión de RRHH para empresas en Chile. Excelencia técnica de multinacional, dedicación exclusiva.',
+  title: 'AB Advisory | Asesoría Financiera, Contable y Advisory en Chile',
+  description: 'Firma boutique de asesoría financiera, contabilidad IFRS, auditoría, compliance y due diligence para empresas en Chile. Criterio técnico de multinacional. Dedicación exclusiva.',
   keywords: 'asesoría financiera chile, IFRS contabilidad, gestión RRHH, consulting santiago, due diligence, compliance ley 20393, reestructuración deuda',
   alternates: {
     canonical: 'https://www.abadvisory.cl',
