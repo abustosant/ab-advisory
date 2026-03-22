@@ -444,7 +444,7 @@ export const INSIGHTS = [
           'Dashboard de P&L en tiempo real: resultado operacional, EBITDA y márgenes por unidad de negocio, actualizado al día anterior al cierre.',
           'Monitor de flujo de caja: posición de caja diaria, proyección a 13 semanas y alertas de tensión de liquidez.',
           'Tablero de KPIs comerciales: pipeline, conversión, ticket promedio y proyección de ingresos vs. presupuesto.',
-          'Dashboard de RRHH y costo de dotación: headcount por área, costo total de personal y desviaciones vs. budget.',
+          'Dashboard de dotación y costos: headcount por área, costo total de personal y desviaciones vs. budget.',
           'Indicadores de cumplimiento: estado de covenants financieros, obligaciones tributarias y cumplimiento normativo SII.',
         ],
       },

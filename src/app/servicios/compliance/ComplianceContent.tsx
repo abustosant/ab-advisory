@@ -28,7 +28,7 @@ const alcance = [
     descripcion: 'Diseño e implementación del canal de denuncias anónimo. Protocolo de investigación y gestión de casos, con reportería al comité de compliance y al directorio.',
   },
   {
-    titulo: 'Compliance de RRHH y normativa laboral',
+    titulo: 'Compliance laboral y normativa vigente',
     descripcion: 'Revisión del cumplimiento de la normativa laboral vigente: Código del Trabajo, Ley 20.393, Ley Karin y regulación de teletrabajo. Identificación de contingencias antes de una fiscalización.',
   },
 ]

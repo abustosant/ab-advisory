@@ -13,7 +13,7 @@ const alcance = [
   },
   {
     titulo: 'Revisión de controles internos y procesos',
-    descripcion: 'Evaluación del sistema de control interno por área funcional: finanzas, operaciones, RRHH y compras. Diseño de matrices de riesgo y control alineadas con los objetivos estratégicos de la empresa.',
+    descripcion: 'Evaluación del sistema de control interno por área funcional: finanzas, operaciones, compras y cumplimiento normativo. Diseño de matrices de riesgo y control alineadas con los objetivos estratégicos de la empresa.',
   },
   {
     titulo: 'Preparación para auditorías Big Four',
